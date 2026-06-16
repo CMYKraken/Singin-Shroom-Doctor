@@ -1,8 +1,11 @@
 extends Control
 
-
+var Input1
+var Input2
 
 func _ready():
+	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "a"
+	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = "d"
 	$Main_Menu.visible = true
 	$Level_Select.visible = false
 	$Settings_Menu.visible = false
@@ -11,7 +14,11 @@ func _ready():
 	$Settings_Menu/Volume_Settings.visible = false
 	$Settings_Menu/Controls_Settings.visible = false
 
-
+func _process(delta):
+	if Input1 == true:
+			Input1 = false
+	if Input2 == true:
+			Input2 = false
 
 #region Main Menu Buttons
 func _on_start_pressed():
@@ -50,9 +57,24 @@ func _on_return_to_menu_pressed():
 
 #endregion
 #region Volume Settings
+func _on_master_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(0, linear_to_db(value))
 
+func _on_sfx_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(1, linear_to_db(value))
+	
+func _on_music_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(3, linear_to_db(value))
+	
+func _on_music_beats_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(2, linear_to_db(value))
 #endregion
 #region Controls Settings
+func _on_input_1_pressed():
+	pass # Replace with function body.
+
+func _on_input_2_pressed():
+	pass # Replace with function body.
 
 #endregion
 func _on_back_to_settings_pressed():
