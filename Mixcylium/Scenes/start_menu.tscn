@@ -1,0 +1,239 @@
+[gd_scene format=3 uid="uid://caulc5up02t54"]
+
+[ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="1_be23h"]
+[ext_resource type="Script" uid="uid://ohii1t75rdck" path="res://Mixcylium/Scripts/start_menu.gd" id="1_m65hu"]
+
+[node name="Start_Menu" type="Control" unique_id=2096915293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m65hu")
+
+[node name="Main_Menu" type="Control" parent="." unique_id=1404796883]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_Title" type="Label" parent="Main_Menu" unique_id=1663638146]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "MIXCYLIUM"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="Main_Menu" unique_id=399667603]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 230.0
+offset_right = 673.5
+offset_bottom = 290.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Settings" type="TextureButton" parent="Main_Menu" unique_id=1540083434]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 294.0
+offset_right = 673.5
+offset_bottom = 354.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Exit" type="TextureButton" parent="Main_Menu" unique_id=1832611305]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 358.0
+offset_right = 673.5
+offset_bottom = 418.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Settings_Menu" type="Control" parent="." unique_id=1648289953]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings_Main" type="Control" parent="Settings_Menu" unique_id=363551740]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings_Title" type="Label" parent="Settings_Menu/Settings_Main" unique_id=170828842]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="General" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1721584303]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 149.0
+offset_right = 678.0
+offset_bottom = 209.0
+texture_normal = ExtResource("1_be23h")
+ignore_texture_size = true
+
+[node name="Volume" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=16511466]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 212.0
+offset_right = 678.0
+offset_bottom = 272.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Controls" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1032138219]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 276.0
+offset_right = 678.0
+offset_bottom = 336.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Return_To_Menu" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1106214768]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 340.0
+offset_right = 678.0
+offset_bottom = 400.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="General_Settings" type="Control" parent="Settings_Menu" unique_id=2041792452]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/General_Settings" unique_id=872384814]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 230.0
+offset_right = 673.5
+offset_bottom = 290.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="General_Settings_Title" type="Label" parent="Settings_Menu/General_Settings" unique_id=1978621546]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "GENERAL SETTINGS"
+horizontal_alignment = 1
+
+[node name="Volume_Settings" type="Control" parent="Settings_Menu" unique_id=489232059]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/Volume_Settings" unique_id=1726540316]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 230.0
+offset_right = 673.5
+offset_bottom = 290.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Volume_Settings_Title" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=2082697021]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "VOLUME SETTINGS"
+horizontal_alignment = 1
+
+[node name="Controls_Settings" type="Control" parent="Settings_Menu" unique_id=1685011507]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=29514817]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 230.0
+offset_right = 673.5
+offset_bottom = 290.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Controls_Settings_Title" type="Label" parent="Settings_Menu/Controls_Settings" unique_id=1254269901]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "CONTROLS SETTINGS"
+horizontal_alignment = 1
+
+[node name="Level_Select" type="Control" parent="." unique_id=2033108005]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="pressed" from="Main_Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main_Menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main_Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/General" to="." method="_on_general_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Settings_Menu/General_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
+[connection signal="pressed" from="Settings_Menu/Volume_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
