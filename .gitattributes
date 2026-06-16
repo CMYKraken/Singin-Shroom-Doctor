@@ -1,2 +1,17 @@
 # Normalize EOL for all files that Git considers text files.
 * text=auto eol=lf
+
+#audio
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.opus
+
+#Images
+*.png
+*.jpg
+
+#3d Assets 
+*.fbx
+*.obj
