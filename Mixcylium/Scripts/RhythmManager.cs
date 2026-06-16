@@ -36,7 +36,7 @@ public partial class RhythmManager : Node3D
 	{
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
-		GetNode<AudioStreamPlayer>("Player").Play();
+		GetNode<AudioStreamPlayer>("AudioPlayer").Play();
 
 		//_notes = _levelManager.getNotes();
 	}
