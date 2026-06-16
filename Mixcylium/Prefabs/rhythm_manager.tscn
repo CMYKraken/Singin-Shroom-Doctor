@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ctswisjdwcapd"]
+
+[ext_resource type="Script" uid="uid://c6usfwr6w1duy" path="res://Mixcylium/Scripts/RhythmManager.cs" id="1_khmpd"]
+
+[node name="RhythmManager" type="Node3D" unique_id=1891333420]
+script = ExtResource("1_khmpd")
