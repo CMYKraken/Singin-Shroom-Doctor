@@ -16,21 +16,16 @@ public partial class RhythmManager : AudioStreamPlayer
 
 	public Chart _chart;
 
-	private int NoteSpawnerPos;
-	private int NoteCheckerPos;
-
+	private int _noteSpawnerPos;
+	private int _noteCheckerPos;
+	private int _screenHeight;
 	private double CurrentPlaybackTime;
-
 	private double _BeatsPerSecond;
-
 	private double _SpeedCoefficient;
-
 	private double _noteSpeed;
-
 	private double _timeBegin;
 	private double _timeDelay;
-
-	private int _screenHeight;
+	
 	
 	public enum ESpeedModifier{
 		Half = 5,
@@ -71,30 +66,32 @@ public partial class RhythmManager : AudioStreamPlayer
 	}
 	private void CheckNextNoteToSpawn()
 	{
-		if(_noteData.Count()<= NoteSpawnerPos) return;
+		if(_noteData.Count()<= _noteSpawnerPos) return;
 		
-		if(CurrentPlaybackTime >= _noteData[NoteSpawnerPos].beatTimestamp)
+		if(CurrentPlaybackTime >= _noteData[_noteSpawnerPos].beatTimestamp)
 		{
-			SpawnNote(_noteData[NoteSpawnerPos].beatColumn);
-			NoteSpawnerPos++;
+			SpawnNote(_noteData[_noteSpawnerPos].beatColumn);
+			_noteSpawnerPos++;
 			CheckNextNoteToSpawn();
 		}
 	}
 
 	private void SpawnNote(NoteData.ECollumn collumn){
-		_chart.CreateNoteInCollumn(_noteSpeed,collumn);
+		_chart.CreateNoteInCollumn(collumn);
 	}
 
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_chart = new();
+		
 
 		_screenHeight = GetWindow().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
 		_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
 		_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
+
+		_chart = new(_noteSpeed);
 
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
