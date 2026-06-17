@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://yp3mydirnsfp"]
+
+[ext_resource type="Script" uid="uid://b602wujhr7t7i" path="res://Mixcylium/Scripts/LevelManager.cs" id="1_mdxxl"]
+[ext_resource type="PackedScene" uid="uid://ctswisjdwcapd" path="res://Mixcylium/Prefabs/rhythm_manager.tscn" id="2_tolt0"]
+
+[node name="LevelManager" type="Node3D" unique_id=527219553]
+script = ExtResource("1_mdxxl")
+
+[node name="RhythmManager" parent="." unique_id=1891333420 instance=ExtResource("2_tolt0")]
