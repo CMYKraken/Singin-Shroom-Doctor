@@ -40,6 +40,12 @@ public partial class RhythmManager : AudioStreamPlayer
 		DoubleandaHalf = 25,
 		Triple = 30
 	}
+	
+	public RhythmManager()
+	{
+		
+	}
+
 	public RhythmManager(NoteData[] allNoteData,ESpeedModifier speedModifier)
 	{
 		_noteData = allNoteData;
