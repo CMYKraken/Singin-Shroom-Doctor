@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Repositories\\Godot\\Singin-Shroom-Doctor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repositories\\Godot\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Mixcylium\\Scripts\\LevelManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43299CBB-E29B-4D22-91D8-AF14F64AA742}|Singin- Shroom Doctor.csproj|c:\\repositories\\godot\\singin-shroom-doctor\\mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43299CBB-E29B-4D22-91D8-AF14F64AA742}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Repositories\\Godot\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\RhythmManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Mixcylium\\Scripts\\RhythmManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43299CBB-E29B-4D22-91D8-AF14F64AA742}|Singin- Shroom Doctor.csproj|c:\\repositories\\godot\\singin-shroom-doctor\\mixcylium\\scripts\\rhythmmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43299CBB-E29B-4D22-91D8-AF14F64AA742}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\rhythmmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -28,9 +28,10 @@
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\RhythmManager.cs",
               "ToolTip": "C:\\Repositories\\Godot\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\RhythmManager.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\RhythmManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-17T14:44:38.565Z"
+              "WhenOpened": "2026-06-17T14:44:38.565Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -40,7 +41,7 @@
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\LevelManager.cs",
               "ToolTip": "C:\\Repositories\\Godot\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\LevelManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAcwA4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-17T13:28:48.631Z",
               "EditorCaption": ""
@@ -51,6 +52,10 @@
           "DockedHeight": 52,
           "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"

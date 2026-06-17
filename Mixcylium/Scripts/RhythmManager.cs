@@ -19,11 +19,10 @@ public partial class RhythmManager : Node3D
 	}
 
 	
-	private void GetCurrentPlaybackTime()
+	public double GetCurrentPlaybackTime()
 	{
 		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
-		time = Math.Max(0.0d,time - _timeDelay);
-		//GD.Print(string.Format("Time is: {0}",time));
+		return time = Math.Max(0.0d,time - _timeDelay);
 	}
 
 	private void UpdateRhythmObjects()
