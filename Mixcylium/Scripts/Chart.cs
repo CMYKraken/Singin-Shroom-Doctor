@@ -19,11 +19,11 @@ public partial class Chart : Node2D
 	{
 	}
 
-	public void CreateNoteInCollumn(int CollumnId)
+	public void CreateNoteInCollumn(double speed,NoteData.ECollumn CollumnId)
 	{
-		Note newNote = new(speedModifier);
+		Note newNote = new(speed);
 		AddChild(newNote);
-		switch (CollumnId)
+		switch ((int)CollumnId)
 		{
 			case 0: Collumn0.Append(newNote);
 			break;

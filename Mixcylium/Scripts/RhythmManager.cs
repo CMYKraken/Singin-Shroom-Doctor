@@ -1,19 +1,31 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class RhythmManager : AudioStreamPlayer
 {
 	[Export]
-	public int bpm { get; set; }= 120;
+	public int bpm { get; set; } = 120;
 	[Export]
 	public int BeatsPerBar = 4;
 	[Export]
 	public ESpeedModifier SpeedModifier {get;set;} = ESpeedModifier.Normal;
 
 	//public LevelManager _levelManager;
-	public Note[] _songNotes;
+	public NoteData[] _noteData;
 
-	private double _secondsPerBeat;
+	public Chart _chart;
+
+	private int NoteSpawnerPos;
+	private int NoteCheckerPos;
+
+	private double CurrentPlaybackTime;
+
+	private double _BeatsPerSecond;
+
+	private double _SpeedCoefficient;
+
+	private double _noteSpeed;
 
 	private double _timeBegin;
 	private double _timeDelay;
@@ -28,10 +40,10 @@ public partial class RhythmManager : AudioStreamPlayer
 		DoubleandaHalf = 25,
 		Triple = 30
 	}
-
-	public void _Init()
+	public RhythmManager(NoteData[] allNoteData,ESpeedModifier speedModifier)
 	{
-		
+		_noteData = allNoteData;
+		SpeedModifier = speedModifier;
 	}
 	//UPDATE TO USE SCORING ENUM AS RETURN VARIABLE
 	public void CheckHitAccuracy()
@@ -47,32 +59,49 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
 		time = Math.Max(0.0d,time - _timeDelay);
-		GD.Print(string.Format("Time is: {0}",time));
+		GD.Print(string.Format("playback: {0}",time));
 		return time;
+
+	}
+	private void CheckNextNoteToSpawn()
+	{
+		if(_noteData.Count()<= NoteSpawnerPos) return;
+		
+		if(CurrentPlaybackTime >= _noteData[NoteSpawnerPos].beatTimestamp)
+		{
+			SpawnNote(_noteData[NoteSpawnerPos].beatColumn);
+			NoteSpawnerPos++;
+			CheckNextNoteToSpawn();
+		}
 	}
 
-	private void SpawnNote(){
-		
+	private void SpawnNote(NoteData.ECollumn collumn){
+		_chart.CreateNoteInCollumn(_noteSpeed,collumn);
 	}
 
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		_chart = new();
+
 		_screenHeight = GetWindow().Size.Y;
-		_secondsPerBeat = 60.0d / bpm;
+		_BeatsPerSecond = bpm/ 60.0d;
+		_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
+		_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
 
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
 		this.Play();
 
-		//_notes = _levelManager.getNotes();
+		//_notes = _levelManager.getNoteData();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		GetCurrentPlaybackTime();
+		CurrentPlaybackTime = GetCurrentPlaybackTime();
+		CheckNextNoteToSpawn();
 	}
 
 }
