@@ -543,7 +543,7 @@ popup/item_5/id = 5
 popup/item_6/text = "Tripple"
 popup/item_6/id = 6
 
-[node name="Start Level" type="TextureButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=812488813]
+[node name="Start_Level_1" type="TextureButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=812488813]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -713,7 +713,7 @@ popup/item_5/id = 5
 popup/item_6/text = "Tripple"
 popup/item_6/id = 6
 
-[node name="Start Level" type="TextureButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=738893603]
+[node name="Start_Level_2" type="TextureButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=738893603]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -883,7 +883,7 @@ popup/item_5/id = 5
 popup/item_6/text = "Tripple"
 popup/item_6/id = 6
 
-[node name="Start Level" type="TextureButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=776197365]
+[node name="Start_Level_3" type="TextureButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=776197365]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1000,3 +1000,9 @@ offset_bottom = 156.0
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 1" to="." method="_on_input_1_pressed"]
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 2" to="." method="_on_input_2_pressed"]
 [connection signal="pressed" from="Level_Select/Left_Side/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" to="." method="_on_start_level_1_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" to="." method="_on_start_level_2_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" to="." method="_on_start_level_3_pressed"]

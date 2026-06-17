@@ -21,6 +21,9 @@ func _ready():
 	$Level_Select/Right_Side/Level_2_Preview.visible = false
 	$Level_Select/Right_Side/Level_3_Preview.visible = false
 
+func _process(delta):
+	Button_Check()
+
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:
 	if Input1 == true:
@@ -146,6 +149,51 @@ func _on_back_to_settings_pressed():
 	$Settings_Menu/Controls_Settings.visible = false
 #endregion
 #region Level Select
-#region Level_1
+#region Level Options
+func _on_level_1_pressed():
+	$Level_Select/Right_Side/Level_1_Preview.visible = true
+	$Level_Select/Right_Side/Level_2_Preview.visible = false
+	$Level_Select/Right_Side/Level_3_Preview.visible = false
 
+func _on_level_2_pressed():
+	$Level_Select/Right_Side/Level_1_Preview.visible = false
+	$Level_Select/Right_Side/Level_2_Preview.visible = true
+	$Level_Select/Right_Side/Level_3_Preview.visible = false
+
+func _on_level_3_pressed():
+	$Level_Select/Right_Side/Level_1_Preview.visible = false
+	$Level_Select/Right_Side/Level_2_Preview.visible = false
+	$Level_Select/Right_Side/Level_3_Preview.visible = true
+#endregion
+#region Button Check
+func Button_Check():
+	if $Level_Select/Right_Side/Level_1_Preview.visible == true:
+		if $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
+			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1".disabled = false
+		else:
+			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1".disabled = true
+	elif $Level_Select/Right_Side/Level_2_Preview.visible == true:
+		if $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
+			$"Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2".disabled = false
+		else:
+			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_2".disabled = true
+	elif $Level_Select/Right_Side/Level_3_Preview.visible == true:
+		if $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
+			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = false
+		else:
+			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = true
+#endregion
+#region Start Level
+func _on_start_level_1_pressed():
+	var speed = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected
+	var difficulty = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected
+	#create level manager
+	$Level_Select.visible = false
+
+func _on_start_level_2_pressed():
+	pass # Replace with function body.
+
+func _on_start_level_3_pressed():
+	pass # Replace with function body.
+#endregion
 #endregion
