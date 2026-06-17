@@ -3,8 +3,6 @@
 [ext_resource type="Script" uid="uid://c6usfwr6w1duy" path="res://Mixcylium/Scripts/RhythmManager.cs" id="1_khmpd"]
 [ext_resource type="AudioStream" uid="uid://baco386ruhhiy" path="res://Mixcylium/Audio/Stage 1 Full Intro Full Composition.wav" id="2_4adii"]
 
-[node name="RhythmManager" type="Node3D" unique_id=1891333420]
-script = ExtResource("1_khmpd")
-
-[node name="AudioPlayer" type="AudioStreamPlayer" parent="." unique_id=764588037]
+[node name="RhythmManager" type="AudioStreamPlayer" unique_id=1952692846]
 stream = ExtResource("2_4adii")
+script = ExtResource("1_khmpd")
