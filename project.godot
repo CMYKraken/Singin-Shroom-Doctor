@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Singin' Shroom Doctor"
-run/main_scene="uid://ctswisjdwcapd"
+run/main_scene="uid://yp3mydirnsfp"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -8,11 +8,12 @@ public partial class LevelManager : Node3D
 	//Used by the Main Menu to start the level and pass in the correct levels
 	public void OnInitialise()//Notes[] notes)
 	{
-		rhythmManager = (RhythmManager)GetChild(0).GetScript();
+		rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
 		//rhythmManager.OnInitialise(notes);
-		sceneNum = 0;
-		currentScene = LoadNextScene(sceneNum);
-	}
+		currentSceneNum = 0;
+		levelMaxSceneNum = sceneOrder.Count;
+		LoadNextScene(sceneOrder[currentSceneNum]);
+    }
 
 
 	float playerHealth;
@@ -26,48 +27,52 @@ public partial class LevelManager : Node3D
 		playerHealth += healthChange;
 	}
 
+	double timer;
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Ready()
+    {
+		timer = 10;
+		OnInitialise();
+    }
+    public override void _Process(double delta)
+    {
+        timer -= delta;
+        if (timer <= 0 && currentSceneNum < levelMaxSceneNum)
+		{
+			timer = 10;
+			//Change data to next scene
+			currentSceneNum++;
+			//Load the next scene
+			GetChild(1).QueueFree();
+			LoadNextScene(sceneOrder[currentSceneNum]);
+        }
+    }
 
 
-	float[] sceneTransitionTimeStamps;
-	int sceneNum;
-	Node3D currentScene;
+    float[] sceneTransitionTimeStamps;
+	int currentSceneNum;
+	int levelMaxSceneNum;
+    /*
 	public void GetTimeStamp()
 	{
-		/*
 		if (rhythmManager.TimeStamp() > sceneTransitionTimeStamps[sceneNum])
 		{
 			//Change data to next scene
 			sceneNum++;
 			//Load the next scene
 			currentScene.Dispose();
-			currentScene = LoadNextScene(sceneNum);
+			currentScene = LoadNextScene(sceneOrder[currentSceneNum]);
 		}
-		*/
 	}
+	*/
 
-
-
-	public enum SceneNames { PATIENT_TALK, SHROOM_PLANT, SHROOM_GROW, SHROOM_PROCESS, PILL_PROD, PILL_GIVE }
-	public SceneNames[] sceneOrder;
+    public enum SceneNames { PATIENT_TALK = 0, SHROOM_PLANT = 1, SHROOM_GROW = 2, SHROOM_PROCESS = 3, PILL_PROD = 4, PILL_GIVE = 5 }
+	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;
+	[Export] public string[] sceneReferencePaths;
 	//Loads the next scene based on the current scene & what that is set to in Scene Order
-	Node3D LoadNextScene(int sceneNumToLoad)
+	void LoadNextScene(SceneNames sceneToLoad)
 	{
-		switch (sceneOrder[sceneNumToLoad])
-		{
-			case SceneNames.PATIENT_TALK:
-				return null; //load Patient Talk scene
-			case SceneNames.SHROOM_PLANT:
-				return null; //load Shroom Planting scene
-			case SceneNames.SHROOM_GROW:
-				return null; //load Shroom Growing scene
-			case SceneNames.SHROOM_PROCESS:
-				return null; //load Shroom Processing scene
-			case SceneNames.PILL_PROD:
-				return null; //load Pill Production scene
-			case SceneNames.PILL_GIVE:
-				return null; //load Pill Give scene
-			default: 
-				return null; //load Pill Give scene if we are giving an outside variable
-		}
-	}
+		PackedScene sceneLoad = ResourceLoader.Load<PackedScene>(sceneReferencePaths[(int)sceneToLoad]);
+        AddChild(sceneLoad.Instantiate());
+    }
 }
