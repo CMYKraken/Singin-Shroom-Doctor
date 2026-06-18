@@ -1,10 +1,8 @@
-[gd_scene format=3 uid="uid://cloixjanfyx27"]
+[gd_scene format=3 uid="uid://c6atn1161w5ei"]
 
-[ext_resource type="Texture2D" uid="uid://dnkpee5r7kf6r" path="res://icon.svg" id="1_4gxke"]
-[ext_resource type="Script" uid="uid://b3jh1flj836cc" path="res://Mixcylium/Scripts/Note.cs" id="1_ctx8d"]
+[ext_resource type="Texture2D" uid="uid://dnkpee5r7kf6r" path="res://icon.svg" id="1_on8l3"]
+[ext_resource type="Script" uid="uid://b3jh1flj836cc" path="res://Mixcylium/Scripts/Note.cs" id="2_wb0tj"]
 
-[node name="Note" type="Node2D" unique_id=327693293]
-script = ExtResource("1_ctx8d")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846891799]
-texture = ExtResource("1_4gxke")
+[node name="Note" type="Sprite2D" unique_id=1085788113]
+texture = ExtResource("1_on8l3")
+script = ExtResource("2_wb0tj")

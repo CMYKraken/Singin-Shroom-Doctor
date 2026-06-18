@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgn6ksp7obwsb"]
+
+[ext_resource type="Script" uid="uid://2lkrdg1jtov" path="res://Mixcylium/Scripts/ChartVisual.cs" id="1_0bwlf"]
+
+[node name="Chart" type="Node2D" unique_id=593323957]
+script = ExtResource("1_0bwlf")
