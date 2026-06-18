@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://b7awdxgkn2pm3"]
+
+[ext_resource type="Texture2D" uid="uid://f17y0wd32kae" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_grass.png" id="5_0q72s"]
+[ext_resource type="Texture2D" uid="uid://uf8dlmd1bjai" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_shroom1.png" id="6_xbffp"]
+[ext_resource type="Texture2D" uid="uid://b1pt8deg655rk" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_shroom2.png" id="7_oaot3"]
+[ext_resource type="Texture2D" uid="uid://fx82lekwqih" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_shroom3.png" id="8_pcppd"]
+[ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="9_ivw5k"]
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC.png" id="9_nr3ta"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a3tqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_0q72s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xbffp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_oaot3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pcppd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Mushroom_Growing_1" type="Node2D" unique_id=1215845971]
+
+[node name="Mushroom_1" type="AnimatedSprite2D" parent="." unique_id=1861079041]
+position = Vector2(761.00006, 331)
+scale = Vector2(0.6486486, 0.671875)
+sprite_frames = SubResource("SpriteFrames_a3tqc")
+frame_progress = 0.8346451
+script = ExtResource("9_ivw5k")
+
+[node name="Mushroom_3" type="AnimatedSprite2D" parent="." unique_id=1021820020]
+position = Vector2(995, 332)
+scale = Vector2(0.6486486, 0.671875)
+sprite_frames = SubResource("SpriteFrames_a3tqc")
+frame_progress = 0.9365379
+script = ExtResource("9_ivw5k")
+
+[node name="DoctorMc" type="Sprite2D" parent="." unique_id=1384114995]
+position = Vector2(192, 395)
+scale = Vector2(0.33826637, 0.38785046)
+texture = ExtResource("9_nr3ta")
