@@ -4,6 +4,7 @@ using System;
 public partial class LevelManager : Node3D
 {
 	public RhythmManager rhythmManager;
+	public PlayerController player;
 	int currentSceneNum;
 	int levelMaxSceneNum;
 	//Used by the Main Menu to start the level and pass in the correct levels
@@ -11,6 +12,8 @@ public partial class LevelManager : Node3D
 	{
 		rhythmManager = new(currentSong,noteData,NoteSpeedModifier);
 		AddChild(rhythmManager);
+		player = new(rhythmManager);
+		AddChild(player);
 		//rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
 		//rhythmManager.OnInitialise(notes);
 		currentSceneNum = 0;

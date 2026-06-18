@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://68asn0o63e3d"]
+
+[ext_resource type="Script" uid="uid://7lk80pf14h4g" path="res://Mixcylium/Scripts/PlayerController.cs" id="1_i8c85"]
+
+[node name="Player" type="Node3D" unique_id=1668873635]
+script = ExtResource("1_i8c85")
