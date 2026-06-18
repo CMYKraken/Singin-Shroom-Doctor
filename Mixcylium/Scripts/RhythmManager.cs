@@ -51,12 +51,15 @@ public partial class RhythmManager : AudioStreamPlayer
 
 	}
 	//UPDATE TO USE SCORING ENUM AS RETURN VARIABLE
-	public void CheckHitAccuracy()
+	public int CheckHitAccuracy(NoteData.ECollumn hitLane)
 	{
+		
 		// Get closest active note
 		// Check if note is out of range 
 		// Check note playback time against current playback time
 		// determine and return a Perfect, good or miss 
+
+		return 0;
 	}
 
 	
