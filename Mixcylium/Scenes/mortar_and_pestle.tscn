@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b5fyh408hnd4n"]
+
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC.png" id="1_yii38"]
+[ext_resource type="Texture2D" uid="uid://c2a4yye5u63lu" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/1.png" id="2_n66w4"]
+[ext_resource type="Texture2D" uid="uid://jhwdktt34enp" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/2.png" id="3_tvsp8"]
+[ext_resource type="Texture2D" uid="uid://b8w3m5lblkbof" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/3.png" id="4_r65x0"]
+[ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="5_n66w4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xghwg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_n66w4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tvsp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r65x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tvsp8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Mortar_And_Pestle" type="Node2D" unique_id=1072006199]
+
+[node name="DoctorMc" type="Sprite2D" parent="." unique_id=600202860]
+position = Vector2(247, 369)
+scale = Vector2(0.3964059, 0.39719626)
+texture = ExtResource("1_yii38")
+
+[node name="Motar_And_Pestle" type="AnimatedSprite2D" parent="." unique_id=1306044132]
+position = Vector2(359.00003, 422)
+scale = Vector2(0.33549985, 0.28399998)
+sprite_frames = SubResource("SpriteFrames_xghwg")
+frame_progress = 0.27018383
+script = ExtResource("5_n66w4")
