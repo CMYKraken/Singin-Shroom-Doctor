@@ -221,32 +221,52 @@ func Button_Check():
 #region Start Level
 func _on_start_level_1_pressed():
 	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected -1
+	var speed = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected
 	var difficulty = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#speed,difficulty)
+	var Scene = Level.instantiate()#difficulty)
 	add_child(Scene)
+	var bpm = get_child(-1).get_child(0).bpm
+	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
+	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
+	get_child(-1).get_child(0).get_child(-1)._noteSpeed = NoteSpeed
 	$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.stop()
 	$Level_Select.visible = false
 
 func _on_start_level_2_pressed():
 	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected -1
+	var speed = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected 
 	var difficulty = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#speed,difficulty)
+	var Scene = Level.instantiate()#difficulty)
 	add_child(Scene)
+	var bpm = get_child(-1).get_child(0).bpm
+	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
+	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
+	get_child(-1).get_child(0).get_child(-1)._noteSpeed = NoteSpeed
 	$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.stop()
 	$Level_Select.visible = false
 
 func _on_start_level_3_pressed():
 	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected -1
+	var speed = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected
 	var difficulty = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#speed,difficulty)
+	var Scene = Level.instantiate()#difficulty)
 	add_child(Scene)
+	var bpm = get_child(-1).get_child(0).bpm
+	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
+	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
+	get_child(-1).get_child(0).get_child(-1)._noteSpeed = NoteSpeed
 	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
 	$Level_Select.visible = false
 #endregion
 #endregion
+
+func Gen_Speed(speed, bpm, BeatsPerBar):
+	var screenHeight = get_window().size.y
+	var BeatsPerSecond = bpm/ 60.0
+	var SpeedCoefficient = BeatsPerBar*1/(float(speed)/10)
+	var NoteSpeed = screenHeight*BeatsPerSecond/SpeedCoefficient
+	print_debug(NoteSpeed)
+	return NoteSpeed

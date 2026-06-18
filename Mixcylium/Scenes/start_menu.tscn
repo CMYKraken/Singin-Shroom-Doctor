@@ -798,7 +798,7 @@ offset_top = 448.0
 offset_right = 552.0
 offset_bottom = 489.0
 
-[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=1512998065]
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=1512998065]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -813,7 +813,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Hard"
 popup/item_3/id = 3
 
-[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=840518936]
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=840518936]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1002,7 +1002,7 @@ offset_top = 448.0
 offset_right = 552.0
 offset_bottom = 489.0
 
-[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1651585054]
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1651585054]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1017,7 +1017,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Hard"
 popup/item_3/id = 3
 
-[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1048600078]
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1048600078]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1206,7 +1206,7 @@ offset_top = 448.0
 offset_right = 552.0
 offset_bottom = 489.0
 
-[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=916490990]
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=916490990]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1221,7 +1221,7 @@ popup/item_2/id = 2
 popup/item_3/text = "Hard"
 popup/item_3/id = 3
 
-[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=416162935]
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=416162935]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
