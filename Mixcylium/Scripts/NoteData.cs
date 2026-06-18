@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public partial class NoteData : Node
+public partial class NoteData : Resource
 {
-	public double beatTimestamp;
+	[Export] public double[] beatTimestamp;
 
-	public ECollumn beatColumn;
+	[Export] public Godot.Collections.Array<ECollumn> beatColumn;
 
 	public enum ECollumn
 	{

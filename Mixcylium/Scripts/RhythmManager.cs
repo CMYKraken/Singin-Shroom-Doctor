@@ -12,7 +12,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	public ESpeedModifier SpeedModifier {get;set;} = ESpeedModifier.Normal;
 
 	//public LevelManager _levelManager;
-	public NoteData[] _noteData;
+	public NoteData _noteData;
 
 	public Chart _chart;
 
@@ -41,7 +41,7 @@ public partial class RhythmManager : AudioStreamPlayer
 		
 	}
 
-	public RhythmManager(NoteData[] allNoteData,ESpeedModifier speedModifier)
+	public RhythmManager(NoteData allNoteData,ESpeedModifier speedModifier)
 	{
 		_noteData = allNoteData;
 		SpeedModifier = speedModifier;
@@ -66,11 +66,11 @@ public partial class RhythmManager : AudioStreamPlayer
 	}
 	private void CheckNextNoteToSpawn()
 	{
-		if(_noteData.Count()<= _noteSpawnerPos) return;
+		if(_noteData.beatTimestamp.Count()<= _noteSpawnerPos) return;
 		
-		if(CurrentPlaybackTime >= _noteData[_noteSpawnerPos].beatTimestamp)
+		if(CurrentPlaybackTime >= _noteData.beatTimestamp[_noteSpawnerPos])
 		{
-			SpawnNote(_noteData[_noteSpawnerPos].beatColumn);
+			SpawnNote(_noteData.beatColumn[_noteSpawnerPos]);
 			_noteSpawnerPos++;
 			CheckNextNoteToSpawn();
 		}

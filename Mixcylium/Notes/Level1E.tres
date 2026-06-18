@@ -1,0 +1,8 @@
+[gd_resource type="Resource" format=3 uid="uid://b3mesg75k61gi"]
+
+[ext_resource type="Script" uid="uid://b81l7tbdb8xqb" path="res://Mixcylium/Scripts/NoteData.cs" id="1_6abrl"]
+
+[resource]
+script = ExtResource("1_6abrl")
+beatTimestamp = PackedFloat64Array(42, 42.25, 42.5, 42.75, 43, 43.25, 43.5, 43.75)
+beatColumn = Array[int]([0, 0, 2, 1, 0, 0, 2, 3])

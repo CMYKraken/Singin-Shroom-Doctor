@@ -9,13 +9,14 @@ public partial class LevelManager : Node3D
     //Used by the Main Menu to start the level and pass in the correct levels
     public void OnInitialise()//Notes[] notes)
 	{
-		rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
+		rhythmManager = new(noteData,NoteSpeedModifier);
+		AddChild(rhythmManager);
+		//rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
 		//rhythmManager.OnInitialise(notes);
 		currentSceneNum = 0;
 		levelMaxSceneNum = sceneOrder.Count;
 		LoadNextScene(sceneOrder[currentSceneNum]);
     }
-
 
 	float playerHealth;
 	public float GetHealth()
@@ -34,6 +35,11 @@ public partial class LevelManager : Node3D
 	{
 		//Run the code to stop the current scene and display the loss screen
 	}
+
+    public override void _Ready()
+    {
+        OnInitialise();
+    }
 
 
     double currentSceneTimer;
@@ -64,6 +70,8 @@ public partial class LevelManager : Node3D
     [Export] double[] sceneTransitionTimeStamps;
     [Export] public Godot.Collections.Array<SceneNames> sceneOrder;
 	[Export] public string[] sceneReferencePaths;
+	[Export] public NoteData noteData;
+	[Export] public RhythmManager.ESpeedModifier NoteSpeedModifier;
 	//Loads the next scene based on the current scene & what that is set to in Scene Order
 	void LoadNextScene(SceneNames sceneToLoad)
 	{
