@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://52sh5w00yius"
+path="res://.godot/imported/Stage 3 Preview.wav-2232aadcc062176905d42e87cee105fa.sample"
+
+[deps]
+
+source_file="res://Mixcylium/Audio/Stage 3 Preview.wav"
+dest_files=["res://.godot/imported/Stage 3 Preview.wav-2232aadcc062176905d42e87cee105fa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
