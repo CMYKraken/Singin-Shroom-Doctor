@@ -208,12 +208,12 @@ func Button_Check():
 		else:
 			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1".disabled = true
 	elif $Level_Select/Right_Side/Level_2_Preview.visible == true:
-		if $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
+		if $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
 			$"Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2".disabled = false
 		else:
 			$"Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2".disabled = true
 	elif $Level_Select/Right_Side/Level_3_Preview.visible == true:
-		if $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
+		if $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
 			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = false
 		else:
 			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = true

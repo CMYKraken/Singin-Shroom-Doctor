@@ -20,7 +20,6 @@ grow_vertical = 2
 script = ExtResource("1_m65hu")
 
 [node name="Main_Menu" type="Control" parent="." unique_id=1404796883]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,6 +49,21 @@ offset_right = 673.5
 offset_bottom = 290.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Main_Menu/Start" unique_id=53244623]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
 [node name="Settings" type="TextureButton" parent="Main_Menu" unique_id=1540083434]
 process_mode = 3
 layout_mode = 0
@@ -59,6 +73,21 @@ offset_right = 673.5
 offset_bottom = 354.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Main_Menu/Settings" unique_id=227517800]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Settings"
+
 [node name="Exit" type="TextureButton" parent="Main_Menu" unique_id=1832611305]
 process_mode = 3
 layout_mode = 0
@@ -67,6 +96,21 @@ offset_top = 358.0
 offset_right = 673.5
 offset_bottom = 418.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Main_Menu/Exit" unique_id=523274507]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit"
 
 [node name="Settings_Menu" type="Control" parent="." unique_id=1648289953]
 visible = false
@@ -109,6 +153,21 @@ offset_bottom = 209.0
 texture_normal = ExtResource("1_be23h")
 ignore_texture_size = true
 
+[node name="Label" type="Label" parent="Settings_Menu/Settings_Main/General" unique_id=577428209]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "General"
+
 [node name="Volume" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=16511466]
 process_mode = 3
 layout_mode = 0
@@ -117,6 +176,21 @@ offset_top = 212.0
 offset_right = 678.0
 offset_bottom = 272.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Settings_Main/Volume" unique_id=1112757192]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Volume"
 
 [node name="Controls" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1032138219]
 process_mode = 3
@@ -127,6 +201,21 @@ offset_right = 678.0
 offset_bottom = 336.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Settings_Menu/Settings_Main/Controls" unique_id=925129961]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Controls"
+
 [node name="Return_To_Menu" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1106214768]
 process_mode = 3
 layout_mode = 0
@@ -135,6 +224,21 @@ offset_top = 340.0
 offset_right = 678.0
 offset_bottom = 400.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Settings_Main/Return_To_Menu" unique_id=950243602]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return To Menu"
 
 [node name="General_Settings" type="Control" parent="Settings_Menu" unique_id=2041792452]
 visible = false
@@ -153,6 +257,21 @@ offset_top = 455.0
 offset_right = 669.0
 offset_bottom = 515.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/General_Settings/Back_To_Settings" unique_id=1035547502]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back To Settings"
 
 [node name="General_Settings_Title" type="Label" parent="Settings_Menu/General_Settings" unique_id=1978621546]
 layout_mode = 1
@@ -206,6 +325,21 @@ offset_top = 452.0
 offset_right = 670.0
 offset_bottom = 512.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Volume_Settings/Back_To_Settings" unique_id=761591824]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back To Settings"
 
 [node name="Master_Slider" type="HSlider" parent="Settings_Menu/Volume_Settings" unique_id=1450175966]
 layout_mode = 0
@@ -316,6 +450,21 @@ offset_right = 666.0
 offset_bottom = 564.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Back_To_Settings" unique_id=553083413]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back To Settings"
+
 [node name="Controls_Settings_Title" type="Label" parent="Settings_Menu/Controls_Settings" unique_id=1254269901]
 layout_mode = 1
 anchors_preset = 5
@@ -337,6 +486,21 @@ offset_right = 603.0
 offset_bottom = 391.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 3" unique_id=1342649351]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Input 3"
+
 [node name="Input 4" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1494398120]
 layout_mode = 0
 offset_left = 413.0
@@ -344,6 +508,21 @@ offset_top = 414.0
 offset_right = 608.0
 offset_bottom = 474.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 4" unique_id=1983665052]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Input 4"
 
 [node name="Input_3_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=267386062]
 layout_mode = 0
@@ -375,6 +554,21 @@ offset_right = 605.0
 offset_bottom = 234.0
 texture_normal = ExtResource("1_be23h")
 
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 1" unique_id=402000910]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Input 1"
+
 [node name="Input 2" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1322835758]
 layout_mode = 0
 offset_left = 410.0
@@ -382,6 +576,21 @@ offset_top = 254.0
 offset_right = 605.0
 offset_bottom = 314.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 2" unique_id=971626814]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Input 2"
 
 [node name="Input_1_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=817703775]
 layout_mode = 0
@@ -406,6 +615,7 @@ layout_mode = 2
 horizontal_alignment = 1
 
 [node name="Level_Select" type="Control" parent="." unique_id=2033108005]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -424,6 +634,21 @@ offset_top = 587.0
 offset_right = 195.0
 offset_bottom = 647.0
 texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Level_Select/Left_Side/Return_To_Menu" unique_id=1791444725]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Return To Menu"
 
 [node name="Level_Options" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=613639445]
 layout_mode = 0
@@ -446,17 +671,62 @@ layout_mode = 2
 texture_normal = ExtResource("1_be23h")
 stretch_mode = 0
 
+[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" unique_id=1716806943]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 1"
+
 [node name="Level_2" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2117327784]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("1_be23h")
 stretch_mode = 0
 
+[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" unique_id=1972428408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 2"
+
 [node name="Level_3" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2028423381]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("1_be23h")
 stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" unique_id=1346467376]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 3"
 
 [node name="Select_A_Level" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=1686682031]
 layout_mode = 0
@@ -572,6 +842,21 @@ texture_normal = ExtResource("1_be23h")
 texture_disabled = ExtResource("3_e5q2p")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" unique_id=1846795581]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1635621249]
 layout_mode = 0
@@ -762,6 +1047,21 @@ texture_disabled = ExtResource("3_e5q2p")
 ignore_texture_size = true
 stretch_mode = 0
 
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" unique_id=1140084879]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=742391240]
 layout_mode = 0
 offset_left = -3.0
@@ -950,6 +1250,21 @@ texture_normal = ExtResource("1_be23h")
 texture_disabled = ExtResource("3_e5q2p")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" unique_id=442922877]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=632942418]
 layout_mode = 0
