@@ -1,0 +1,1008 @@
+[gd_scene format=3 uid="uid://caulc5up02t54"]
+
+[ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="1_be23h"]
+[ext_resource type="Script" uid="uid://ohii1t75rdck" path="res://Mixcylium/Scripts/start_menu.gd" id="1_m65hu"]
+[ext_resource type="Texture2D" uid="uid://phsaxsl6bctu" path="res://Mixcylium/ArtAssets/GUI/Temp/White.png" id="3_e5q2p"]
+
+[node name="Start_Menu" type="Control" unique_id=2096915293]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m65hu")
+
+[node name="Main_Menu" type="Control" parent="." unique_id=1404796883]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_Title" type="Label" parent="Main_Menu" unique_id=1663638146]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "MIXCYLIUM"
+horizontal_alignment = 1
+
+[node name="Start" type="TextureButton" parent="Main_Menu" unique_id=399667603]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 230.0
+offset_right = 673.5
+offset_bottom = 290.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Settings" type="TextureButton" parent="Main_Menu" unique_id=1540083434]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 294.0
+offset_right = 673.5
+offset_bottom = 354.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Exit" type="TextureButton" parent="Main_Menu" unique_id=1832611305]
+process_mode = 3
+layout_mode = 0
+offset_left = 478.5
+offset_top = 358.0
+offset_right = 673.5
+offset_bottom = 418.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Settings_Menu" type="Control" parent="." unique_id=1648289953]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings_Main" type="Control" parent="Settings_Menu" unique_id=363551740]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Settings_Title" type="Label" parent="Settings_Menu/Settings_Main" unique_id=170828842]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="General" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1721584303]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 149.0
+offset_right = 678.0
+offset_bottom = 209.0
+texture_normal = ExtResource("1_be23h")
+ignore_texture_size = true
+
+[node name="Volume" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=16511466]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 212.0
+offset_right = 678.0
+offset_bottom = 272.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Controls" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1032138219]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 276.0
+offset_right = 678.0
+offset_bottom = 336.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Return_To_Menu" type="TextureButton" parent="Settings_Menu/Settings_Main" unique_id=1106214768]
+process_mode = 3
+layout_mode = 0
+offset_left = 483.0
+offset_top = 340.0
+offset_right = 678.0
+offset_bottom = 400.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="General_Settings" type="Control" parent="Settings_Menu" unique_id=2041792452]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/General_Settings" unique_id=872384814]
+process_mode = 3
+layout_mode = 0
+offset_left = 474.0
+offset_top = 455.0
+offset_right = 669.0
+offset_bottom = 515.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="General_Settings_Title" type="Label" parent="Settings_Menu/General_Settings" unique_id=1978621546]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "GENERAL SETTINGS"
+horizontal_alignment = 1
+
+[node name="Window_Mode_Label" type="Label" parent="Settings_Menu/General_Settings" unique_id=489370476]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 133.0
+offset_right = 598.0
+offset_bottom = 161.0
+theme_override_font_sizes/font_size = 20
+text = "Window Mode:"
+
+[node name="Window_Mode_Button" type="OptionButton" parent="Settings_Menu/General_Settings" unique_id=1663183506]
+layout_mode = 0
+offset_left = 605.0
+offset_top = 133.0
+offset_right = 815.0
+offset_bottom = 164.0
+selected = 0
+item_count = 2
+popup/item_0/text = "Windowed"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+
+[node name="Volume_Settings" type="Control" parent="Settings_Menu" unique_id=489232059]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/Volume_Settings" unique_id=1726540316]
+process_mode = 3
+layout_mode = 0
+offset_left = 475.0
+offset_top = 452.0
+offset_right = 670.0
+offset_bottom = 512.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Master_Slider" type="HSlider" parent="Settings_Menu/Volume_Settings" unique_id=1450175966]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 84.0
+offset_right = 802.0
+offset_bottom = 154.0
+tooltip_text = "This controls the total volume"
+max_value = 1.5
+step = 0.05
+value = 0.75
+
+[node name="SFX_Slider" type="HSlider" parent="Settings_Menu/Volume_Settings" unique_id=304425363]
+layout_mode = 0
+offset_left = 356.0
+offset_top = 142.0
+offset_right = 804.0
+offset_bottom = 212.0
+tooltip_text = "This controls the sound effects played in the game"
+max_value = 1.5
+step = 0.05
+value = 0.75
+
+[node name="Music_Beats_Slider" type="HSlider" parent="Settings_Menu/Volume_Settings" unique_id=1419879660]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 319.0
+offset_right = 811.0
+offset_bottom = 389.0
+tooltip_text = "This controls the sound of the beats you need to hit"
+max_value = 1.5
+step = 0.05
+value = 0.75
+
+[node name="Music_Slider" type="HSlider" parent="Settings_Menu/Volume_Settings" unique_id=1801263700]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 228.0
+offset_right = 809.0
+offset_bottom = 298.0
+tooltip_text = "This controls the sound of the background music"
+max_value = 1.5
+step = 0.05
+value = 0.75
+
+[node name="Volume_Settings_Title" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=2082697021]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "VOLUME SETTINGS"
+horizontal_alignment = 1
+
+[node name="Master_Label" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=867820381]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 85.0
+offset_right = 624.0
+offset_bottom = 108.0
+text = "Master Volume"
+
+[node name="Music_Beats_Label" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=1236588426]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 319.0
+offset_right = 618.0
+offset_bottom = 342.0
+text = "Music Beats"
+
+[node name="Music_Label" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=1867152844]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 234.0
+offset_right = 596.0
+offset_bottom = 257.0
+text = "Music"
+
+[node name="SFX_Label" type="Label" parent="Settings_Menu/Volume_Settings" unique_id=2100154020]
+layout_mode = 0
+offset_left = 514.0
+offset_top = 142.0
+offset_right = 619.0
+offset_bottom = 165.0
+text = "Sound Effects"
+
+[node name="Controls_Settings" type="Control" parent="Settings_Menu" unique_id=1685011507]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Back_To_Settings" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=29514817]
+process_mode = 3
+layout_mode = 0
+offset_left = 471.0
+offset_top = 504.0
+offset_right = 666.0
+offset_bottom = 564.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Controls_Settings_Title" type="Label" parent="Settings_Menu/Controls_Settings" unique_id=1254269901]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -112.0
+offset_right = 112.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "CONTROLS SETTINGS"
+horizontal_alignment = 1
+
+[node name="Input 3" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1929259987]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 331.0
+offset_right = 603.0
+offset_bottom = 391.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Input 4" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1494398120]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 414.0
+offset_right = 608.0
+offset_bottom = 474.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Input_3_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=267386062]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 334.0
+offset_right = 687.0
+offset_bottom = 384.0
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_3_Container" unique_id=2129194060]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Input_4_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=1875413200]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 417.0
+offset_right = 688.0
+offset_bottom = 467.0
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_4_Container" unique_id=1804665439]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Input 1" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1871593581]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 174.0
+offset_right = 605.0
+offset_bottom = 234.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Input 2" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1322835758]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 254.0
+offset_right = 605.0
+offset_bottom = 314.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Input_1_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=817703775]
+layout_mode = 0
+offset_left = 631.0
+offset_top = 172.0
+offset_right = 685.0
+offset_bottom = 222.0
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_1_Container" unique_id=1502176237]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Input_2_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=2140411697]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 254.0
+offset_right = 684.0
+offset_bottom = 304.0
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_2_Container" unique_id=628163413]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Level_Select" type="Control" parent="." unique_id=2033108005]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Left_Side" type="Control" parent="Level_Select" unique_id=1673019888]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Return_To_Menu" type="TextureButton" parent="Level_Select/Left_Side" unique_id=211626526]
+layout_mode = 0
+offset_top = 587.0
+offset_right = 195.0
+offset_bottom = 647.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Level_Options" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=613639445]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 585.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Level_Select/Left_Side/Level_Options" unique_id=888282672]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Level_Select/Left_Side/Level_Options/ScrollContainer" unique_id=1107160372]
+process_mode = 4
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Level_1" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=964897537]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("1_be23h")
+stretch_mode = 0
+
+[node name="Level_2" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2117327784]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("1_be23h")
+stretch_mode = 0
+
+[node name="Level_3" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2028423381]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("1_be23h")
+stretch_mode = 0
+
+[node name="Select_A_Level" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=1686682031]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 586.0
+offset_right = 598.0
+offset_bottom = 646.0
+
+[node name="Label" type="Label" parent="Level_Select/Left_Side/Select_A_Level" unique_id=697933722]
+layout_mode = 2
+theme_override_font_sizes/font_size = 31
+text = "Select A Level"
+horizontal_alignment = 1
+
+[node name="Right_Side" type="Control" parent="Level_Select" unique_id=1331030164]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Level_1_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=2127101083]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=865837980]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 448.0
+grow_horizontal = 2
+texture = ExtResource("3_e5q2p")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1418699202]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 419.0
+offset_right = 384.0
+offset_bottom = 442.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Level 1"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1465865852]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 448.0
+offset_right = 552.0
+offset_bottom = 489.0
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=1512998065]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Select Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=840518936]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 7
+popup/item_0/text = "Select Speed"
+popup/item_0/id = 0
+popup/item_1/text = "Half"
+popup/item_1/id = 1
+popup/item_2/text = "Normal"
+popup/item_2/id = 2
+popup/item_3/text = "Normal and a Half"
+popup/item_3/id = 3
+popup/item_4/text = "Double"
+popup/item_4/id = 4
+popup/item_5/text = "Double and a Half"
+popup/item_5/id = 5
+popup/item_6/text = "Tripple"
+popup/item_6/id = 6
+
+[node name="Start_Level_1" type="TextureButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=812488813]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1635621249]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 490.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer" unique_id=1581497899]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=372835021]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=1543502726]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=489565076]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer" unique_id=1528889219]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=337569050]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=658544641]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=395073251]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer" unique_id=539468116]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=734548082]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=1341185713]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=1383644720]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Level_2_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1706485269]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1069824062]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 448.0
+grow_horizontal = 2
+texture = ExtResource("3_e5q2p")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1955486974]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 419.0
+offset_right = 384.0
+offset_bottom = 442.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Level 2"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=291601687]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 448.0
+offset_right = 552.0
+offset_bottom = 489.0
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1651585054]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Select Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1048600078]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 7
+popup/item_0/text = "Select Speed"
+popup/item_0/id = 0
+popup/item_1/text = "Half"
+popup/item_1/id = 1
+popup/item_2/text = "Normal"
+popup/item_2/id = 2
+popup/item_3/text = "Normal and a Half"
+popup/item_3/id = 3
+popup/item_4/text = "Double"
+popup/item_4/id = 4
+popup/item_5/text = "Double and a Half"
+popup/item_5/id = 5
+popup/item_6/text = "Tripple"
+popup/item_6/id = 6
+
+[node name="Start_Level_2" type="TextureButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=738893603]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=742391240]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 490.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=46429876]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1653554320]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1240671701]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=905544923]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=1175331352]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1800801922]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1356268982]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=119467655]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=1145016186]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1970675566]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=88652707]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1678855286]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Level_3_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1511084229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=533370603]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 448.0
+grow_horizontal = 2
+texture = ExtResource("3_e5q2p")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1429408627]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 419.0
+offset_right = 384.0
+offset_bottom = 442.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Level 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1609487370]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 448.0
+offset_right = 552.0
+offset_bottom = 489.0
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=916490990]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Select Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=416162935]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 7
+popup/item_0/text = "Select Speed"
+popup/item_0/id = 0
+popup/item_1/text = "Half"
+popup/item_1/id = 1
+popup/item_2/text = "Normal"
+popup/item_2/id = 2
+popup/item_3/text = "Normal and a Half"
+popup/item_3/id = 3
+popup/item_4/text = "Double"
+popup/item_4/id = 4
+popup/item_5/text = "Double and a Half"
+popup/item_5/id = 5
+popup/item_6/text = "Tripple"
+popup/item_6/id = 6
+
+[node name="Start_Level_3" type="TextureButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=776197365]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=632942418]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 490.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=849283356]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=179772022]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=1956435109]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=720920983]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1130654245]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1417138226]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1682485983]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1885271777]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1426994346]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=377361713]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=2077907118]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=1346678256]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+
+[connection signal="pressed" from="Main_Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main_Menu/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Main_Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/General" to="." method="_on_general_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Settings_Menu/Settings_Main/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Settings_Menu/General_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
+[connection signal="item_selected" from="Settings_Menu/General_Settings/Window_Mode_Button" to="." method="_on_window_mode_button_item_selected"]
+[connection signal="pressed" from="Settings_Menu/Volume_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
+[connection signal="value_changed" from="Settings_Menu/Volume_Settings/Master_Slider" to="." method="_on_master_slider_value_changed"]
+[connection signal="value_changed" from="Settings_Menu/Volume_Settings/SFX_Slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Settings_Menu/Volume_Settings/Music_Beats_Slider" to="." method="_on_music_beats_slider_value_changed"]
+[connection signal="value_changed" from="Settings_Menu/Volume_Settings/Music_Slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Back_To_Settings" to="." method="_on_back_to_settings_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 3" to="." method="_on_input_3_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 4" to="." method="_on_input_4_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 1" to="." method="_on_input_1_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 2" to="." method="_on_input_2_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" to="." method="_on_start_level_1_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" to="." method="_on_start_level_2_pressed"]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" to="." method="_on_start_level_3_pressed"]
