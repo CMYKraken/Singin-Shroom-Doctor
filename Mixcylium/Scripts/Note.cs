@@ -7,7 +7,6 @@ public partial class Note : Sprite2D
 	public Note(){}
 	public Note(double movementSpeed){
 		_Speed = movementSpeed;
-		GD.Print("Note Spawned");
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -20,7 +19,6 @@ public partial class Note : Sprite2D
 	public override void _Process(double delta)
 	{
 		Position += Vector2.Down * (float)(_Speed * delta);
-		//GD.Print((float)(_Speed * delta));
 	}
 
 	public void DestroyNote(double timedelay){

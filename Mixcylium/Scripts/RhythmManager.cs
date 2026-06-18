@@ -39,10 +39,7 @@ public partial class RhythmManager : AudioStreamPlayer
 		Triple = 30
 	}
 	
-	public RhythmManager()
-	{
-		
-	}
+	public RhythmManager(){}
 
 	public RhythmManager(Song theSong,NoteData allNoteData,ESpeedModifier speedModifier)
 	{
@@ -67,7 +64,6 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
 		time = Math.Max(0.0d,time - _timeDelay);
-		//GD.Print(string.Format("playback: {0}",time));
 		return time;
 
 	}
@@ -84,11 +80,9 @@ public partial class RhythmManager : AudioStreamPlayer
 		}
 	}
 
-
 	private void SpawnNote(NoteData.ECollumn collumn){
 		_chart.CreateNoteInCollumn(collumn);
 	}
-
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -106,8 +100,6 @@ public partial class RhythmManager : AudioStreamPlayer
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
 		this.Play();
-
-		//_notes = _levelManager.getNoteData();
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

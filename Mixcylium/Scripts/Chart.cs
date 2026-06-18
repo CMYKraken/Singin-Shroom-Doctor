@@ -6,8 +6,6 @@ public partial class Chart : Node2D
 {
 	public static int SpawnHeight;
 	public Godot.Collections.Array<Note> Collumn0 ,Collumn1, Collumn2, Collumn3;
-	//Used for spawn offset on the X axis
-	public int Collumn0Xposition,Collumn1Xposition,Collumn2Xposition,Collumn3Xposition;
 
 	private ChartVisual _Visual;
 
