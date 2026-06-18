@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://21uem0rckyxg"]
+
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="1_ypaje"]
+[ext_resource type="Texture2D" uid="uid://bdnkmaw3inld8" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC2.png" id="2_rx7oc"]
+[ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="3_rx7oc"]
+[ext_resource type="Texture2D" uid="uid://cdiafntaolics" path="res://Mixcylium/ArtAssets/Sprites/Speech_Bubbles/Speech Bubble 1.png" id="3_vou07"]
+[ext_resource type="Texture2D" uid="uid://d105b1ofuai1f" path="res://Mixcylium/ArtAssets/Sprites/Speech_Bubbles/Speech Bubble 2.png" id="4_unir3"]
+[ext_resource type="Texture2D" uid="uid://bpsxywhvmh7pc" path="res://Mixcylium/ArtAssets/Sprites/Speech_Bubbles/Speech Bubble 3.png" id="5_sp37y"]
+[ext_resource type="Texture2D" uid="uid://i0vxnobolwck" path="res://Mixcylium/ArtAssets/Sprites/Speech_Bubbles/Speech Bubble 4.png" id="6_22wyr"]
+[ext_resource type="Texture2D" uid="uid://ctqb3yram0t5a" path="res://Mixcylium/ArtAssets/Sprites/Patient/Female/Patient_F1.png" id="7_7ofca"]
+[ext_resource type="Texture2D" uid="uid://co2lje6axeeuw" path="res://Mixcylium/ArtAssets/Sprites/Patient/Female/Patient_F2.png" id="8_sp3im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xoqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ypaje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rx7oc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0w41c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_vou07")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_unir3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_sp37y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_22wyr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2eh4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7ofca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sp3im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Consultation" type="Node2D" unique_id=1468905792]
+
+[node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=1138136047]
+position = Vector2(223, 453.99997)
+scale = Vector2(0.4704017, 0.39719626)
+sprite_frames = SubResource("SpriteFrames_4xoqi")
+frame_progress = 0.5237476
+script = ExtResource("3_rx7oc")
+
+[node name="Speech" type="AnimatedSprite2D" parent="." unique_id=1463658524]
+position = Vector2(317.625, 283.37503)
+scale = Vector2(0.37525004, 0.35325)
+sprite_frames = SubResource("SpriteFrames_0w41c")
+frame_progress = 0.89782405
+script = ExtResource("3_rx7oc")
+
+[node name="Female_Patient" type="AnimatedSprite2D" parent="." unique_id=1637127489]
+position = Vector2(1003, 440.00003)
+scale = Vector2(0.3961474, 0.4176707)
+sprite_frames = SubResource("SpriteFrames_2eh4m")
+frame_progress = 0.20711319
+script = ExtResource("3_rx7oc")
+
+[node name="Speech2" type="AnimatedSprite2D" parent="." unique_id=302263990]
+position = Vector2(888, 297.99997)
+scale = Vector2(0.38734826, 0.30382732)
+sprite_frames = SubResource("SpriteFrames_0w41c")
+frame_progress = 0.2219413
+flip_h = true
+script = ExtResource("3_rx7oc")

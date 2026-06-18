@@ -20,6 +20,7 @@ grow_vertical = 2
 script = ExtResource("1_m65hu")
 
 [node name="Main_Menu" type="Control" parent="." unique_id=1404796883]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -615,7 +616,6 @@ layout_mode = 2
 horizontal_alignment = 1
 
 [node name="Level_Select" type="Control" parent="." unique_id=2033108005]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
