@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b602wujhr7t7i" path="res://Mixcylium/Scripts/LevelManager.cs" id="1_mdxxl"]
 [ext_resource type="Resource" uid="uid://b3mesg75k61gi" path="res://Mixcylium/Notes/Level1E.tres" id="2_n33tk"]
-[ext_resource type="PackedScene" uid="uid://ctswisjdwcapd" path="res://Mixcylium/Prefabs/rhythm_manager.tscn" id="2_tolt0"]
+[ext_resource type="Resource" uid="uid://c8fmkv4djwerf" path="res://Mixcylium/Songs/Song1.tres" id="2_r6i15"]
 
 [node name="LevelManager" type="Node3D" unique_id=527219553]
 script = ExtResource("1_mdxxl")
 sceneOrder = Array[int]([0, 1, 2, 4, 5])
 sceneReferencePaths = PackedStringArray("res://Mixcylium/Scenes/Patient_Talking.tscn", "res://Mixcylium/Scenes/Pill_Giving.tscn", "res://Mixcylium/Scenes/Pill_Production.tscn", "res://Mixcylium/Scenes/Shoom_Planting.tscn", "res://Mixcylium/Scenes/Shroom_Growing.tscn", "res://Mixcylium/Scenes/Shroom_Processing.tscn")
+currentSong = ExtResource("2_r6i15")
 noteData = ExtResource("2_n33tk")
 NoteSpeedModifier = 10
-
-[node name="RhythmManager" parent="." unique_id=1891333420 instance=ExtResource("2_tolt0")]

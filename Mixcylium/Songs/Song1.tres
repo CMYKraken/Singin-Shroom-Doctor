@@ -1,0 +1,10 @@
+[gd_resource type="Resource" format=3 uid="uid://c8fmkv4djwerf"]
+
+[ext_resource type="AudioStream" uid="uid://baco386ruhhiy" path="res://Mixcylium/Audio/Stage 1 Full Intro Full Composition.wav" id="1_4w3x4"]
+[ext_resource type="Script" uid="uid://c8d5r0skm3h6r" path="res://Mixcylium/Scripts/Song.cs" id="2_1hgtq"]
+
+[resource]
+script = ExtResource("2_1hgtq")
+Audio = ExtResource("1_4w3x4")
+BeatsPerBar = 4
+bpm = 120

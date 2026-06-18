@@ -41,8 +41,11 @@ public partial class RhythmManager : AudioStreamPlayer
 		
 	}
 
-	public RhythmManager(NoteData allNoteData,ESpeedModifier speedModifier)
+	public RhythmManager(Song theSong,NoteData allNoteData,ESpeedModifier speedModifier)
 	{
+		Stream = theSong.Audio;
+		bpm = theSong.bpm;
+		BeatsPerBar = theSong.BeatsPerBar;
 		_noteData = allNoteData;
 		SpeedModifier = speedModifier;
 	}
@@ -60,7 +63,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
 		time = Math.Max(0.0d,time - _timeDelay);
-		GD.Print(string.Format("playback: {0}",time));
+		//GD.Print(string.Format("playback: {0}",time));
 		return time;
 
 	}
@@ -71,7 +74,7 @@ public partial class RhythmManager : AudioStreamPlayer
 		if(CurrentPlaybackTime >= _noteData.beatTimestamp[_noteSpawnerPos])
 		{
 			SpawnNote(_noteData.beatColumn[_noteSpawnerPos]);
-			_noteSpawnerPos++;
+			_noteSpawnerPos = _noteSpawnerPos + 1;
 			CheckNextNoteToSpawn();
 		}
 	}

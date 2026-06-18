@@ -7,12 +7,13 @@ public partial class Note : Node2D
 	public Note(){}
 	public Note(double movementSpeed){
 		_Speed = movementSpeed;
+		GD.Print("Note Spawned");
 	}
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		GD.Print("Note Spawned");
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
