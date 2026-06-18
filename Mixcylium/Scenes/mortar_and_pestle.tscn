@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b5fyh408hnd4n"]
 
-[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC.png" id="1_yii38"]
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="1_yii38"]
 [ext_resource type="Texture2D" uid="uid://c2a4yye5u63lu" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/1.png" id="2_n66w4"]
 [ext_resource type="Texture2D" uid="uid://jhwdktt34enp" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/2.png" id="3_tvsp8"]
 [ext_resource type="Texture2D" uid="uid://b8w3m5lblkbof" path="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/3.png" id="4_r65x0"]
