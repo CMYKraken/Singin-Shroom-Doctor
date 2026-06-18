@@ -4,17 +4,17 @@ using System;
 public partial class LevelManager : Node3D
 {
 	public RhythmManager rhythmManager;
-    int currentSceneNum;
-    int levelMaxSceneNum;
-    //Used by the Main Menu to start the level and pass in the correct levels
-    public void OnInitialise()//Notes[] notes)
+	int currentSceneNum;
+	int levelMaxSceneNum;
+	//Used by the Main Menu to start the level and pass in the correct levels
+	public void OnInitialise()//Notes[] notes)
 	{
 		rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
 		//rhythmManager.OnInitialise(notes);
 		currentSceneNum = 0;
 		levelMaxSceneNum = sceneOrder.Count;
 		LoadNextScene(sceneOrder[currentSceneNum]);
-    }
+	}
 
 
 	float playerHealth;
@@ -36,38 +36,38 @@ public partial class LevelManager : Node3D
 	}
 
 
-    double currentSceneTimer;
-    public override void _Process(double delta)
-    {
+	double currentSceneTimer;
+	public override void _Process(double delta)
+	{
 		if (playerHealth > 0)
 		{
 			currentSceneTimer -= delta;
 			CheckTimeStamp();
 		}
-    }
+	}
 	void CheckTimeStamp()
 	{
 		if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
-        {           
+		{           
 			//Change data to next scene
-            currentSceneNum++;
-            currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
-            //Load the next scene and discard the previous
-            GetChild(1).QueueFree();
-            LoadNextScene(sceneOrder[currentSceneNum]);
-        }
+			currentSceneNum++;
+			currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
+			//Load the next scene and discard the previous
+			GetChild(1).QueueFree();
+			LoadNextScene(sceneOrder[currentSceneNum]);
+		}
 	}
 
 
 
-    public enum SceneNames { PATIENT_TALK, SHROOM_PLANT, SHROOM_GROW, SHROOM_PROCESS, PILL_PROD, PILL_GIVE }
-    [Export] double[] sceneTransitionTimeStamps;
-    [Export] public Godot.Collections.Array<SceneNames> sceneOrder;
+	public enum SceneNames { PATIENT_TALK, SHROOM_PLANT, SHROOM_GROW, SHROOM_PROCESS, PILL_PROD, PILL_GIVE }
+	[Export] double[] sceneTransitionTimeStamps;
+	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;
 	[Export] public string[] sceneReferencePaths;
 	//Loads the next scene based on the current scene & what that is set to in Scene Order
 	void LoadNextScene(SceneNames sceneToLoad)
 	{
 		PackedScene sceneLoad = ResourceLoader.Load<PackedScene>(sceneReferencePaths[(int)sceneToLoad]);
-        AddChild(sceneLoad.Instantiate());
-    }
+		AddChild(sceneLoad.Instantiate());
+	}
 }
