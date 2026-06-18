@@ -53,12 +53,23 @@ public partial class RhythmManager : AudioStreamPlayer
 	//UPDATE TO USE SCORING ENUM AS RETURN VARIABLE
 	public int CheckHitAccuracy(NoteData.ECollumn hitLane)
 	{
-		
+		double currentTime =GetCurrentPlaybackTime();
 		// Get closest active note
-		// Check if note is out of range 
+		Note nextNoteInLane = _chart.GetNextNoteInCollumn(hitLane);
+		
 		// Check note playback time against current playback time
 		// determine and return a Perfect, good or miss 
-
+		if(nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
+		{
+			_chart.IncrementLanePointer(hitLane);
+			nextNoteInLane.DestroyNote();
+			
+			if(nextNoteInLane._time - currentTime < ScoringUtils.PerfectInterval)
+			{
+				return ScoringUtils.PerfectScore;
+			}
+			return ScoringUtils.EarlyLateScore;
+		}
 		return 0;
 	}
 
@@ -68,7 +79,6 @@ public partial class RhythmManager : AudioStreamPlayer
 		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
 		time = Math.Max(0.0d,time - _timeDelay);
 		return time;
-
 	}
 
 	private void CheckNextNoteToSpawn()
@@ -77,14 +87,16 @@ public partial class RhythmManager : AudioStreamPlayer
 		
 		if(CurrentPlaybackTime +SpawnTimeOffset >= _noteData.beatTimestamp[_noteSpawnerPos])
 		{
-			SpawnNote(_noteData.beatColumn[_noteSpawnerPos]);
+			SpawnNote(_noteData.beatColumn[_noteSpawnerPos],
+						_noteData.beatTimestamp[_noteSpawnerPos]);
+			
 			_noteSpawnerPos = _noteSpawnerPos + 1;
 			CheckNextNoteToSpawn();
 		}
 	}
 
-	private void SpawnNote(NoteData.ECollumn collumn){
-		_chart.CreateNoteInCollumn(collumn);
+	private void SpawnNote(NoteData.ECollumn collumn,double timestamp){
+		_chart.CreateNoteInCollumn(collumn,timestamp);
 	}
 
 	// Called when the node enters the scene tree for the first time.

@@ -3,10 +3,12 @@ using System;
 
 public partial class Note : Sprite2D
 {
+	public double _time;
 	private double _Speed;
 	public Note(){}
-	public Note(double movementSpeed){
+	public Note(double movementSpeed,double noteTime){
 		_Speed = movementSpeed;
+		_time = noteTime;
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -21,7 +23,7 @@ public partial class Note : Sprite2D
 		Position += Vector2.Down * (float)(_Speed * delta);
 	}
 
-	public void DestroyNote(double timedelay){
-		
+	public void DestroyNote(){
+		Visible = false;
 	}
 }

@@ -7,6 +7,8 @@ public partial class Chart : Node2D
 	public static int SpawnHeight;
 	public Godot.Collections.Array<Note> Collumn0 ,Collumn1, Collumn2, Collumn3;
 
+	public int _currentNoteLane0,_currentNoteLane1,_currentNoteLane2,_currentNoteLane3;
+
 	private ChartVisual _Visual;
 
 	private double _noteSpeed;
@@ -44,9 +46,9 @@ public partial class Chart : Node2D
 
 	}
 
-	public void CreateNoteInCollumn(NoteData.ECollumn CollumnId)
+	public void CreateNoteInCollumn(NoteData.ECollumn CollumnId,double noteTime)
 	{
-		Note newNote = new(_noteSpeed);
+		Note newNote = new(_noteSpeed,noteTime);
 		newNote.Position = Vector2.Zero;
 		
 		AddChild(newNote);
@@ -70,6 +72,39 @@ public partial class Chart : Node2D
 				Collumn3.Add(newNote);
 				newNote.Position += Vector2.Right* (_Visual.beatBarWidth*3/8);
 			break;
+		}
+	}
+	public Note GetNextNoteInCollumn(NoteData.ECollumn collumnId)
+	{
+		switch (collumnId)
+		{
+			case NoteData.ECollumn.Zero:
+				return Collumn0[_currentNoteLane0];
+			case NoteData.ECollumn.One: 
+				return Collumn1[_currentNoteLane1];
+			case NoteData.ECollumn.Two: 
+				return Collumn2[_currentNoteLane2];
+			case NoteData.ECollumn.Three: 
+				return Collumn3[_currentNoteLane3];
+		}
+		return null;
+	}
+	public void IncrementLanePointer(NoteData.ECollumn collumnId)
+	{
+		switch (collumnId)
+		{
+			case NoteData.ECollumn.Zero:
+				_currentNoteLane0++;
+				break;
+			case NoteData.ECollumn.One: 
+				_currentNoteLane1++;
+				break;
+			case NoteData.ECollumn.Two: 
+				_currentNoteLane2++;
+				break;
+			case NoteData.ECollumn.Three: 
+				_currentNoteLane3++;
+				break;
 		}
 	}
 }
