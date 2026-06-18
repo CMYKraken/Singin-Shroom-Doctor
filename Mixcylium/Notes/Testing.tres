@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_idsqj")
-beatTimestamp = PackedFloat64Array(3)
-beatColumn = Array[int]([0])
+beatTimestamp = PackedFloat64Array(3, 4, 4, 4)
+beatColumn = Array[int]([0, 1, 2, 3])
