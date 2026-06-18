@@ -111,6 +111,9 @@ func _on_return_to_menu_pressed():
 	$Settings_Menu/Settings_Main.visible = false
 	$Button_SFX_Player.play()
 	if $Level_Select.visible == true:
+		$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.stop()
+		$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
+		$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.stop()
 		$Main_Menu_Player.play()
 		$Level_Select.visible = false
 	
