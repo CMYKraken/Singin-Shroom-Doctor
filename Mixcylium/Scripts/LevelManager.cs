@@ -18,10 +18,11 @@ public partial class LevelManager : Node3D
 		//rhythmManager.OnInitialise(notes);
 		currentSceneNum = 0;
 		levelMaxSceneNum = sceneOrder.Count;
-		LoadNextScene(sceneOrder[currentSceneNum]);
+        currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
+        LoadNextScene(sceneOrder[currentSceneNum]);
 	}
 
-	float playerHealth;
+	float playerHealth = 1;
 	public float GetHealth()
 	{
 		return playerHealth;
@@ -50,26 +51,37 @@ public partial class LevelManager : Node3D
 	{
 		if (playerHealth > 0)
 		{
-			currentSceneTimer -= delta;
+			//currentSceneTimer -= delta;
 			CheckTimeStamp();
 		}
 	}
 	void CheckTimeStamp()
 	{
 		if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
-		{           
-			//Change data to next scene
-			currentSceneNum++;
-			currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
-			//Load the next scene and discard the previous
-			GetChild(1).QueueFree();
-			LoadNextScene(sceneOrder[currentSceneNum]);
+		{
+			if (currentSceneNum < levelMaxSceneNum)
+			{
+				//Change data to next scene
+				currentSceneNum++;
+				currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
+				//Load the next scene and discard the previous
+				GetChild(1).QueueFree();
+				LoadNextScene(sceneOrder[currentSceneNum]);
+			}
+			else
+			{
+				END();
+			}
 		}
 	}
 
+	void END()
+	{
+		PackedScene EndScreen = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/end_screen.tscn");
+		AddChild(EndScreen.Instantiate());
+    }
 
-
-	public enum SceneNames { PATIENT_TALK, SHROOM_PLANT, SHROOM_GROW, SHROOM_PROCESS, PILL_PROD, PILL_GIVE }
+	public enum SceneNames { consultation, mushroom_growing_1, mushroom_growing_2, mushroom_growing_3, mortar_and_pestle, pill_delivery }
 	[Export] double[] sceneTransitionTimeStamps;
 	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;
 	[Export] public string[] sceneReferencePaths;

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://b7awdxgkn2pm3"]
 
+[ext_resource type="Texture2D" uid="uid://b087hv0e1ybch" path="res://Mixcylium/ArtAssets/Backgrounds/Bg_outside.png" id="1_x0qy5"]
 [ext_resource type="Texture2D" uid="uid://f17y0wd32kae" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_grass.png" id="5_0q72s"]
 [ext_resource type="Texture2D" uid="uid://uf8dlmd1bjai" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_shroom1.png" id="6_xbffp"]
 [ext_resource type="Texture2D" uid="uid://b1pt8deg655rk" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_1/Lv1_shroom2.png" id="7_oaot3"]
@@ -28,22 +29,36 @@ animations = [{
 }]
 
 [node name="Mushroom_Growing_1" type="Node2D" unique_id=1215845971]
+z_index = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=982001370]
+offset_right = 1154.0
+offset_bottom = 648.0
+texture = ExtResource("1_x0qy5")
+expand_mode = 1
 
 [node name="Mushroom_1" type="AnimatedSprite2D" parent="." unique_id=1861079041]
-position = Vector2(761.00006, 331)
+position = Vector2(907.00006, 471)
 scale = Vector2(0.6486486, 0.671875)
 sprite_frames = SubResource("SpriteFrames_a3tqc")
 frame_progress = 0.8346451
 script = ExtResource("9_ivw5k")
 
 [node name="Mushroom_3" type="AnimatedSprite2D" parent="." unique_id=1021820020]
-position = Vector2(995, 332)
+position = Vector2(1032, 509.5)
 scale = Vector2(0.6486486, 0.671875)
 sprite_frames = SubResource("SpriteFrames_a3tqc")
 frame_progress = 0.9365379
 script = ExtResource("9_ivw5k")
 
+[node name="Mushroom_2" type="AnimatedSprite2D" parent="." unique_id=613985511]
+position = Vector2(798, 508.5)
+scale = Vector2(0.6486486, 0.671875)
+sprite_frames = SubResource("SpriteFrames_a3tqc")
+frame_progress = 0.8346451
+script = ExtResource("9_ivw5k")
+
 [node name="DoctorMc" type="Sprite2D" parent="." unique_id=1384114995]
-position = Vector2(192, 395)
+position = Vector2(168, 460)
 scale = Vector2(0.33826637, 0.38785046)
 texture = ExtResource("9_nr3ta")

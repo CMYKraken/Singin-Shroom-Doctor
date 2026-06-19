@@ -5,6 +5,7 @@ var Input2
 var Input3
 var Input4
 
+
 func _ready():
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "D"
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = "F"

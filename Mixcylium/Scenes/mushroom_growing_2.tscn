@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://beku1u3ds6j2x"]
 
 [ext_resource type="Texture2D" uid="uid://bp17pa5cytfvu" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_2/Lv2_grass.png" id="1_1eis1"]
+[ext_resource type="Texture2D" uid="uid://b087hv0e1ybch" path="res://Mixcylium/ArtAssets/Backgrounds/Bg_outside.png" id="1_k4bgm"]
 [ext_resource type="Texture2D" uid="uid://cuem0jdsmgilb" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_2/Lv2_shroom1.png" id="2_k4bgm"]
 [ext_resource type="Texture2D" uid="uid://4tdsv0nlw8ng" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_2/Lv2_shroom2.png" id="3_b6pxg"]
 [ext_resource type="Texture2D" uid="uid://bfl77u40g81hm" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_2/Lv2_shroom3.png" id="4_825o7"]
 [ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="5_23eee"]
-[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC.png" id="6_vamxa"]
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="6_vamxa"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_si2gf"]
 animations = [{
@@ -28,22 +29,36 @@ animations = [{
 }]
 
 [node name="Mushroom_Growing_2" type="Node2D" unique_id=1215845971]
+z_index = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=513417235]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("1_k4bgm")
+expand_mode = 1
+
+[node name="Mushroom_3" type="AnimatedSprite2D" parent="." unique_id=1821089432]
+position = Vector2(933, 489)
+scale = Vector2(0.45202702, 0.44477054)
+sprite_frames = SubResource("SpriteFrames_si2gf")
+frame_progress = 0.544601
+script = ExtResource("5_23eee")
 
 [node name="Mushroom_1" type="AnimatedSprite2D" parent="." unique_id=1856661702]
-position = Vector2(822, 364)
+position = Vector2(848, 549)
 scale = Vector2(0.45202702, 0.44477054)
 sprite_frames = SubResource("SpriteFrames_si2gf")
 frame_progress = 0.544601
 script = ExtResource("5_23eee")
 
 [node name="Mushroom_2" type="AnimatedSprite2D" parent="." unique_id=239882966]
-position = Vector2(1012, 344)
+position = Vector2(1048, 529)
 scale = Vector2(0.5, 0.571875)
 sprite_frames = SubResource("SpriteFrames_si2gf")
 frame_progress = 0.9372024
 script = ExtResource("5_23eee")
 
 [node name="DoctorMc" type="Sprite2D" parent="." unique_id=1384114995]
-position = Vector2(192, 395)
+position = Vector2(169, 463)
 scale = Vector2(0.33826637, 0.38785046)
 texture = ExtResource("6_vamxa")
