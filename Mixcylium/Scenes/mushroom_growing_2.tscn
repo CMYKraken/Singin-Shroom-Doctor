@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bfl77u40g81hm" path="res://Mixcylium/ArtAssets/Sprites/Mushroom_2/Lv2_shroom3.png" id="4_825o7"]
 [ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="5_23eee"]
 [ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="6_vamxa"]
+[ext_resource type="Texture2D" uid="uid://bdnkmaw3inld8" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC2.png" id="8_b6pxg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_si2gf"]
 animations = [{
@@ -26,6 +27,20 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_825o7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_vamxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b6pxg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }]
 
 [node name="Mushroom_Growing_2" type="Node2D" unique_id=1215845971]
@@ -58,7 +73,8 @@ sprite_frames = SubResource("SpriteFrames_si2gf")
 frame_progress = 0.9372024
 script = ExtResource("5_23eee")
 
-[node name="DoctorMc" type="Sprite2D" parent="." unique_id=1384114995]
-position = Vector2(169, 463)
-scale = Vector2(0.33826637, 0.38785046)
-texture = ExtResource("6_vamxa")
+[node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=1841246277]
+position = Vector2(225.00002, 458)
+scale = Vector2(0.4704017, 0.39719626)
+sprite_frames = SubResource("SpriteFrames_825o7")
+script = ExtResource("5_23eee")
