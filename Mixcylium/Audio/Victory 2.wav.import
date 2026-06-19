@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://5n6lck8bmojh"
+path="res://.godot/imported/Victory 2.wav-5f227f962f363ccb8e1cfd609b0489d0.sample"
+
+[deps]
+
+source_file="res://Mixcylium/Audio/Victory 2.wav"
+dest_files=["res://.godot/imported/Victory 2.wav-5f227f962f363ccb8e1cfd609b0489d0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

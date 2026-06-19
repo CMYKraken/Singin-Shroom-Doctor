@@ -5,4 +5,5 @@
 
 [node name="RhythmManager" type="AudioStreamPlayer" unique_id=1952692846]
 stream = ExtResource("2_4adii")
+bus = &"Music"
 script = ExtResource("1_khmpd")

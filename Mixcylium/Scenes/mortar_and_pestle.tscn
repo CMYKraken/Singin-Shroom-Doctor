@@ -8,6 +8,20 @@
 [ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="5_n66w4"]
 [ext_resource type="Texture2D" uid="uid://bdnkmaw3inld8" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC2.png" id="7_r65x0"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_2sstq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_yii38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_r65x0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_xghwg"]
 animations = [{
 "frames": [{
@@ -28,20 +42,6 @@ animations = [{
 "speed": 2.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_2sstq"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_yii38")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_r65x0")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Mortar_And_Pestle" type="Node2D" unique_id=1072006199]
 z_index = -1
 
@@ -51,15 +51,15 @@ offset_bottom = 648.0
 texture = ExtResource("1_tvsp8")
 expand_mode = 1
 
+[node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=890326200]
+position = Vector2(225.00002, 458)
+scale = Vector2(0.4704017, 0.39719626)
+sprite_frames = SubResource("SpriteFrames_2sstq")
+script = ExtResource("5_n66w4")
+
 [node name="Motar_And_Pestle" type="AnimatedSprite2D" parent="." unique_id=1306044132]
 position = Vector2(311.50003, 509.25)
 scale = Vector2(0.33549985, 0.28399998)
 sprite_frames = SubResource("SpriteFrames_xghwg")
 frame_progress = 0.27018383
-script = ExtResource("5_n66w4")
-
-[node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=890326200]
-position = Vector2(225.00002, 458)
-scale = Vector2(0.4704017, 0.39719626)
-sprite_frames = SubResource("SpriteFrames_2sstq")
 script = ExtResource("5_n66w4")

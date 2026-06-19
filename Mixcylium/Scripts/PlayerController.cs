@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 public partial class PlayerController : Node
 {
+    int score = 0;
 	RhythmManager manager;
 	public PlayerController(RhythmManager rhythm)
 	{
@@ -15,22 +16,23 @@ public partial class PlayerController : Node
         if (@event.IsActionPressed("Action_1"))
         {
             GD.Print("D");
-            manager.CheckHitAccuracy(NoteData.ECollumn.Zero);
+            score += manager.CheckHitAccuracy(NoteData.ECollumn.Zero);
         }
         if (@event.IsActionPressed("Action_2"))
         {
             GD.Print("F");
-            manager.CheckHitAccuracy(NoteData.ECollumn.One);
+            score += manager.CheckHitAccuracy(NoteData.ECollumn.One);
         }
         if (@event.IsActionPressed("Action_3"))
         {
             GD.Print("J");
-            manager.CheckHitAccuracy(NoteData.ECollumn.Two);
+            score += manager.CheckHitAccuracy(NoteData.ECollumn.Two);
         }
         if (@event.IsActionPressed("Action_4"))
         {
             GD.Print("K");
-            manager.CheckHitAccuracy(NoteData.ECollumn.Three);
+            score += manager.CheckHitAccuracy(NoteData.ECollumn.Three);
         }
     }
+
 }

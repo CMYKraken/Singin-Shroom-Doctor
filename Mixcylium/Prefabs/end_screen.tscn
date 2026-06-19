@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://dpcbmovoa7mdk" path="res://Mixcylium/Scripts/end_screen.gd" id="1_vm5tv"]
 [ext_resource type="Texture2D" uid="uid://bqne6kowy784j" path="res://Mixcylium/ArtAssets/Grades/S.png" id="2_4frtt"]
 [ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="2_i0sg4"]
+[ext_resource type="AudioStream" uid="uid://ckn1njjcpc6ro" path="res://Mixcylium/Audio/Fail.wav" id="4_86qju"]
+[ext_resource type="AudioStream" uid="uid://cit7nyfaefc7n" path="res://Mixcylium/Audio/Victory 1.wav" id="5_8g7l8"]
+[ext_resource type="AudioStream" uid="uid://5n6lck8bmojh" path="res://Mixcylium/Audio/Victory 2.wav" id="6_p13ng"]
 
 [node name="End_Screen" type="Control" unique_id=419597738]
 layout_mode = 3
@@ -26,9 +29,13 @@ layout_mode = 2
 
 [node name="Win_Lose" type="Label" parent="PanelContainer/VBoxContainer" unique_id=889999436]
 layout_mode = 2
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
 
 [node name="Score" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1294270599]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer" unique_id=442358892]
 layout_mode = 2
@@ -43,8 +50,23 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 texture_normal = ExtResource("2_i0sg4")
 
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Back to Menu" unique_id=289169531]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 57.0
+text = "Back to Level Select"
+horizontal_alignment = 1
+
 [node name="Lose" type="AudioStreamPlayer" parent="." unique_id=1147891772]
+stream = ExtResource("4_86qju")
+bus = &"SFX"
 
 [node name="Win" type="AudioStreamPlayer" parent="." unique_id=837191925]
+stream = ExtResource("5_8g7l8")
+bus = &"SFX"
 
 [node name="Big_Win" type="AudioStreamPlayer" parent="." unique_id=1757111955]
+stream = ExtResource("6_p13ng")
+bus = &"SFX"
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]

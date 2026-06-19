@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cu8fkl2m7n4bx"]
+
+[ext_resource type="Script" uid="uid://b602wujhr7t7i" path="res://Mixcylium/Scripts/LevelManager.cs" id="1_3t83u"]
+[ext_resource type="Resource" uid="uid://bjv5kb2vmu04d" path="res://Mixcylium/Songs/Song2.tres" id="2_3t83u"]
+[ext_resource type="Resource" uid="uid://dp4wc2vvwovg8" path="res://Mixcylium/Notes/Level2H.tres" id="3_rhk5j"]
+
+[node name="LevelManager" type="Node3D" unique_id=527219553]
+script = ExtResource("1_3t83u")
+sceneTransitionTimeStamps = PackedFloat64Array(22, 44, 66, 88, 110, 132.41)
+sceneOrder = Array[int]([0, 1, 2, 3, 4, 5])
+sceneReferencePaths = PackedStringArray("res://Mixcylium/Scenes/consultation.tscn", "res://Mixcylium/Scenes/mushroom_growing_1.tscn", "res://Mixcylium/Scenes/mushroom_growing_2.tscn", "res://Mixcylium/Scenes/mushroom_growing_3.tscn", "res://Mixcylium/Scenes/mortar_and_pestle.tscn", "res://Mixcylium/Scenes/pill_delivery.tscn")
+currentSong = ExtResource("2_3t83u")
+noteData = ExtResource("3_rhk5j")
+NoteSpeedModifier = 10

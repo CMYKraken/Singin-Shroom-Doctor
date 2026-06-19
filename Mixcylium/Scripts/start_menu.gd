@@ -4,7 +4,24 @@ var Input1
 var Input2
 var Input3
 var Input4
-
+var Easy1 = 0
+var Medium1 = 0
+var Hard1 = 0
+var Easy2 = 0
+var Medium2 = 0
+var Hard2 = 0
+var Easy3 = 0
+var Medium3 = 0
+var Hard3 = 0
+var Easy1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Medium1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Hard1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Easy2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Medium2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Hard2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Easy3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Medium3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var Hard3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
 
 func _ready():
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "D"
@@ -21,9 +38,31 @@ func _ready():
 	$Level_Select/Right_Side/Level_1_Preview.visible = true
 	$Level_Select/Right_Side/Level_2_Preview.visible = false
 	$Level_Select/Right_Side/Level_3_Preview.visible = false
+	Update_Scores()
 
 func _process(delta):
 	Button_Check()
+
+func Update_Scores():
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Score.text = str(Easy1)
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Score.text = str(Medium1)
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Score.text = str(Hard1)
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Score.text = str(Easy2)
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Score.text = str(Medium2)
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Score.text = str(Hard2)
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Score.text = str(Easy3)
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Score.text = str(Medium3)
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Score.text = str(Hard3)
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Rank.texture = Easy1IMG
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Rank.texture = Medium1IMG
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Rank.texture = Hard1IMG
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Rank.texture = Easy2IMG
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Rank.texture = Medium2IMG
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Rank.texture = Hard2IMG
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Rank.texture = Easy3IMG
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Rank.texture = Medium3IMG
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Rank.texture = Hard3IMG
+	print_debug("Updated")
 
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -224,9 +263,11 @@ func _on_start_level_1_pressed():
 	$Button_SFX_Player.play()
 	var speed = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected
 	var difficulty = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected -1
-	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#difficulty)
+	var Level = preload("res://Mixcylium/Prefabs/level_manager1.tscn")
+	var Scene = Level.instantiate()
 	add_child(Scene)
+	get_child(-1).Difficulty = difficulty
+	get_child(-1).Level_Number = 1
 	var bpm = get_child(-1).get_child(0).bpm
 	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
 	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
@@ -238,9 +279,11 @@ func _on_start_level_2_pressed():
 	$Button_SFX_Player.play()
 	var speed = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected 
 	var difficulty = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected -1
-	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#difficulty)
+	var Level = preload("res://Mixcylium/Prefabs/level_manager2.tscn")
+	var Scene = Level.instantiate()
 	add_child(Scene)
+	get_child(-1).Difficulty = difficulty
+	get_child(-1).Level_Number = 2
 	var bpm = get_child(-1).get_child(0).bpm
 	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
 	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
@@ -252,9 +295,11 @@ func _on_start_level_3_pressed():
 	$Button_SFX_Player.play()
 	var speed = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected
 	var difficulty = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected -1
-	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()#difficulty)
+	var Level = preload("res://Mixcylium/Prefabs/level_manager3.tscn")
+	var Scene = Level.instantiate()
 	add_child(Scene)
+	get_child(-1).Difficulty = difficulty
+	get_child(-1).Level_Number = 3
 	var bpm = get_child(-1).get_child(0).bpm
 	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
 	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)

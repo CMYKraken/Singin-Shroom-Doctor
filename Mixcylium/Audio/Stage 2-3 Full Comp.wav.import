@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btcy8gy0kxr31"
+path="res://.godot/imported/Stage 2-3 Full Comp.wav-e2a1e6ba6065a858c066b2b9246de244.sample"
+
+[deps]
+
+source_file="res://Mixcylium/Audio/Stage 2-3 Full Comp.wav"
+dest_files=["res://.godot/imported/Stage 2-3 Full Comp.wav-e2a1e6ba6065a858c066b2b9246de244.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

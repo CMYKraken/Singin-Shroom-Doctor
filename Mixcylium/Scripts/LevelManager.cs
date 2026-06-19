@@ -57,20 +57,23 @@ public partial class LevelManager : Node3D
 	}
 	void CheckTimeStamp()
 	{
-		if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
+		if (Stopper == false)
 		{
-			if (currentSceneNum < levelMaxSceneNum)
+			if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
 			{
-				//Change data to next scene
-				currentSceneNum++;
-				currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
-				//Load the next scene and discard the previous
-				GetChild(-1).QueueFree();
-				LoadNextScene(sceneOrder[currentSceneNum]);
-			}
-			else
-			{
-				END();
+				if (currentSceneNum < levelMaxSceneNum)
+				{
+					//Change data to next scene
+					currentSceneNum++;
+					currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
+					//Load the next scene and discard the previous
+					GetChild(-1).QueueFree();
+					LoadNextScene(sceneOrder[currentSceneNum]);
+				}
+				else
+				{
+					END();
+				}
 			}
 		}
 	}
@@ -79,8 +82,12 @@ public partial class LevelManager : Node3D
 	{
 		PackedScene EndScreen = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/end_screen.tscn");
 		AddChild(EndScreen.Instantiate());
+		Stopper = true;
     }
 
+	private bool Stopper = false;
+	public int Difficulty;
+	public int Level_Number;
 	public enum SceneNames { consultation, mushroom_growing_1, mushroom_growing_2, mushroom_growing_3, mortar_and_pestle, pill_delivery }
 	[Export] double[] sceneTransitionTimeStamps;
 	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;
