@@ -65,7 +65,7 @@ public partial class LevelManager : Node3D
 				currentSceneNum++;
 				currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
 				//Load the next scene and discard the previous
-				GetChild(1).QueueFree();
+				GetChild(-1).QueueFree();
 				LoadNextScene(sceneOrder[currentSceneNum]);
 			}
 			else
