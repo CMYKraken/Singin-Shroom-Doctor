@@ -56,7 +56,18 @@ public partial class RhythmManager : AudioStreamPlayer
 		double currentTime =GetCurrentPlaybackTime();
 		// Get closest active note
 		Note nextNoteInLane = _chart.GetNextNoteInCollumn(hitLane);
-		
+
+		// remove and ignore missed notes
+		if(nextNoteInLane._time - currentTime< -ScoringUtils.EarlyLateInterval)
+		{
+			GD.Print(nextNoteInLane._time, " - ", currentTime, " : ", -ScoringUtils.EarlyLateInterval);
+			_chart.IncrementLanePointer(hitLane);
+			nextNoteInLane.DestroyNote();
+			CheckHitAccuracy(hitLane);
+			return 0;
+
+		}
+
 		// Check note playback time against current playback time
 		// determine and return a Perfect, good or miss 
 		if(nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
@@ -70,6 +81,8 @@ public partial class RhythmManager : AudioStreamPlayer
 			}
 			return ScoringUtils.EarlyLateScore;
 		}
+
+		
 		return 0;
 	}
 
