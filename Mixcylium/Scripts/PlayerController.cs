@@ -4,11 +4,14 @@ using System.Diagnostics;
 
 public partial class PlayerController : Node
 {
-    int score = 0;
+    public int score = 0;
 	RhythmManager manager;
+    ScoreLabel label;
 	public PlayerController(RhythmManager rhythm)
 	{
         manager = rhythm;
+        label = new();
+        AddChild(label);
     }
 
     public override void _Input(InputEvent @event)
