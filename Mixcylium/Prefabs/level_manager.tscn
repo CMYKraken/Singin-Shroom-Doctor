@@ -6,8 +6,9 @@
 
 [node name="LevelManager" type="Node3D" unique_id=527219553]
 script = ExtResource("1_mdxxl")
-sceneOrder = Array[int]([0, 1, 2, 4, 5])
-sceneReferencePaths = PackedStringArray("res://Mixcylium/Scenes/Patient_Talking.tscn", "res://Mixcylium/Scenes/Pill_Giving.tscn", "res://Mixcylium/Scenes/Pill_Production.tscn", "res://Mixcylium/Scenes/Shoom_Planting.tscn", "res://Mixcylium/Scenes/Shroom_Growing.tscn", "res://Mixcylium/Scenes/Shroom_Processing.tscn")
+sceneTransitionTimeStamps = PackedFloat64Array(22, 44, 66, 88, 110, 132)
+sceneOrder = Array[int]([0, 1, 2, 3, 4, 5])
+sceneReferencePaths = PackedStringArray("res://Mixcylium/Scenes/consultation.tscn", "res://Mixcylium/Scenes/mushroom_growing_1.tscn", "res://Mixcylium/Scenes/mushroom_growing_2.tscn", "res://Mixcylium/Scenes/mushroom_growing_3.tscn", "res://Mixcylium/Scenes/mortar_and_pestle.tscn", "res://Mixcylium/Scenes/pill_delivery.tscn")
 currentSong = ExtResource("2_r6i15")
 noteData = ExtResource("2_n33tk")
 NoteSpeedModifier = 10

@@ -14,8 +14,8 @@ public partial class Note : Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		Texture = (Texture2D) ResourceLoader.Load("res://Mixcylium/ArtAssets/Sprites/Beats/Half_Beat.png");
-		Scale = new Vector2(0.75f,0.75f);
+		Texture = (Texture2D) ResourceLoader.Load("res://Mixcylium/ArtAssets/Sprites/Beats/GameJam.jpg");
+		Scale = new Vector2(0.075f,0.075f);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
