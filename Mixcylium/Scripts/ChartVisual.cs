@@ -21,7 +21,7 @@ public partial class ChartVisual : Node2D
 
 		AddChild(_beatBar);
 
-		Chart.SpawnHeight = beatBarHeight + _screenSize.Y/2;
+		Chart.SpawnHeight = beatBarHeight; 
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -53,7 +53,7 @@ public partial class Chart : Node2D
 		
 		AddChild(newNote);
 
-		newNote.Position = (Vector2.Up *SpawnHeight + Vector2.Right * GetWindow().Size.X)/2;
+		newNote.Position = Vector2.Up *SpawnHeight + (Vector2.Right * GetWindow().Size.X)/2;
 		switch (CollumnId)
 		{
 			case NoteData.ECollumn.Zero:

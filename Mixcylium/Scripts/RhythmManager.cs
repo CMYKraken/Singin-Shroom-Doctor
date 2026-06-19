@@ -117,8 +117,10 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		_screenHeight = GetWindow().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
-		_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
-		_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
+		_noteSpeed = _screenHeight /(BeatsPerBar/_BeatsPerSecond * (double)SpeedModifier/10);
+		
+		//_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
+		//_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
 
 		_chart = new(_noteSpeed);
 		AddChild(_chart);
