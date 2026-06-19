@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://da8d5hxiff28q"]
+
+[ext_resource type="Script" uid="uid://dpcbmovoa7mdk" path="res://Mixcylium/Scripts/end_screen.gd" id="1_vm5tv"]
+[ext_resource type="Texture2D" uid="uid://bqne6kowy784j" path="res://Mixcylium/ArtAssets/Grades/S.png" id="2_4frtt"]
+[ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="2_i0sg4"]
+
+[node name="End_Screen" type="Control" unique_id=419597738]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vm5tv")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1409424502]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 54.0
+offset_right = 787.0
+offset_bottom = 523.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=2025120714]
+process_mode = 4
+layout_mode = 2
+
+[node name="Win_Lose" type="Label" parent="PanelContainer/VBoxContainer" unique_id=889999436]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1294270599]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer" unique_id=442358892]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_4frtt")
+expand_mode = 1
+
+[node name="Back to Menu" type="TextureButton" parent="PanelContainer/VBoxContainer" unique_id=1285107168]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_i0sg4")
+
+[node name="Lose" type="AudioStreamPlayer" parent="." unique_id=1147891772]
+
+[node name="Win" type="AudioStreamPlayer" parent="." unique_id=837191925]
+
+[node name="Big_Win" type="AudioStreamPlayer" parent="." unique_id=1757111955]

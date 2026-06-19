@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://21uem0rckyxg"]
 
+[ext_resource type="Texture2D" uid="uid://eft7mrwswbi2" path="res://Mixcylium/ArtAssets/Backgrounds/Bg_inside.png" id="1_vou07"]
 [ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="1_ypaje"]
 [ext_resource type="Texture2D" uid="uid://bdnkmaw3inld8" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC2.png" id="2_rx7oc"]
 [ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="3_rx7oc"]
@@ -24,7 +25,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_0w41c"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2eh4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7ofca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_sp3im")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vou07"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -41,37 +56,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 1.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_2eh4m"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_7ofca")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_sp3im")
-}],
-"loop": true,
-"name": &"default",
 "speed": 5.0
 }]
 
 [node name="Consultation" type="Node2D" unique_id=1468905792]
+z_index = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1311368263]
+offset_right = 1146.0
+offset_bottom = 647.0
+texture = ExtResource("1_vou07")
+expand_mode = 1
 
 [node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=1138136047]
-position = Vector2(223, 453.99997)
+position = Vector2(225.00002, 458)
 scale = Vector2(0.4704017, 0.39719626)
 sprite_frames = SubResource("SpriteFrames_4xoqi")
 frame_progress = 0.5237476
-script = ExtResource("3_rx7oc")
-
-[node name="Speech" type="AnimatedSprite2D" parent="." unique_id=1463658524]
-position = Vector2(317.625, 283.37503)
-scale = Vector2(0.37525004, 0.35325)
-sprite_frames = SubResource("SpriteFrames_0w41c")
-frame_progress = 0.89782405
 script = ExtResource("3_rx7oc")
 
 [node name="Female_Patient" type="AnimatedSprite2D" parent="." unique_id=1637127489]
@@ -81,10 +82,15 @@ sprite_frames = SubResource("SpriteFrames_2eh4m")
 frame_progress = 0.20711319
 script = ExtResource("3_rx7oc")
 
-[node name="Speech2" type="AnimatedSprite2D" parent="." unique_id=302263990]
-position = Vector2(888, 297.99997)
-scale = Vector2(0.38734826, 0.30382732)
-sprite_frames = SubResource("SpriteFrames_0w41c")
-frame_progress = 0.2219413
+[node name="Bubble_1" type="AnimatedSprite2D" parent="." unique_id=1395002116]
+position = Vector2(345, 283)
+scale = Vector2(0.42550007, 0.34999993)
+sprite_frames = SubResource("SpriteFrames_vou07")
+script = ExtResource("3_rx7oc")
+
+[node name="Bubble_2" type="AnimatedSprite2D" parent="." unique_id=1174403606]
+position = Vector2(878.99994, 289)
+scale = Vector2(0.42286375, 0.31715)
+sprite_frames = SubResource("SpriteFrames_vou07")
 flip_h = true
 script = ExtResource("3_rx7oc")

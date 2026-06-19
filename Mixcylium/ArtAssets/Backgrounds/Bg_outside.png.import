@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jhwdktt34enp"
-path="res://.godot/imported/2.png-d548a83bb030d8f9f1490490add661b7.ctex"
+uid="uid://b087hv0e1ybch"
+path="res://.godot/imported/Bg_outside.png-bbf415f118817af6a3e1b3eed7bf7b39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mixcylium/ArtAssets/Sprites/Motar+Pestle/2.png"
-dest_files=["res://.godot/imported/2.png-d548a83bb030d8f9f1490490add661b7.ctex"]
+source_file="res://Mixcylium/ArtAssets/Backgrounds/Bg_outside.png"
+dest_files=["res://.godot/imported/Bg_outside.png-bbf415f118817af6a3e1b3eed7bf7b39.ctex"]
 
 [params]
 

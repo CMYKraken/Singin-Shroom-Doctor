@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://nbwblxm3d426"]
+
+[ext_resource type="Texture2D" uid="uid://eft7mrwswbi2" path="res://Mixcylium/ArtAssets/Backgrounds/Bg_inside.png" id="1_v3pdk"]
+[ext_resource type="Texture2D" uid="uid://cww4byqa1fvhg" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC.png" id="2_pa5n7"]
+[ext_resource type="Texture2D" uid="uid://bdnkmaw3inld8" path="res://Mixcylium/ArtAssets/Sprites/Doctor_MC/Doctor_MC2.png" id="3_2tg2w"]
+[ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="4_laxpr"]
+[ext_resource type="Texture2D" uid="uid://ctqb3yram0t5a" path="res://Mixcylium/ArtAssets/Sprites/Patient/Female/Patient_F1.png" id="5_n0u04"]
+[ext_resource type="Texture2D" uid="uid://co2lje6axeeuw" path="res://Mixcylium/ArtAssets/Sprites/Patient/Female/Patient_F2.png" id="6_0snmt"]
+[ext_resource type="Texture2D" uid="uid://o602wqrhoo1b" path="res://Mixcylium/ArtAssets/Sprites/Pills/Pill.png" id="7_nhq8y"]
+[ext_resource type="Texture2D" uid="uid://dm3nayumb146b" path="res://Mixcylium/ArtAssets/Sprites/Pills/Open Pill.png" id="8_delo7"]
+[ext_resource type="Texture2D" uid="uid://c2cstqxyu1np" path="res://Mixcylium/ArtAssets/Sprites/Pills/Open pill Nothing.png" id="9_vslk8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xoqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pa5n7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2tg2w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2eh4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n0u04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0snmt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sp37y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_nhq8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_delo7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vslk8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Pill_Delivery" type="Node2D" unique_id=1468905792]
+z_index = -1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1311368263]
+offset_right = 1146.0
+offset_bottom = 647.0
+texture = ExtResource("1_v3pdk")
+expand_mode = 1
+
+[node name="Doctor" type="AnimatedSprite2D" parent="." unique_id=1138136047]
+position = Vector2(225.00002, 458)
+scale = Vector2(0.4704017, 0.39719626)
+sprite_frames = SubResource("SpriteFrames_4xoqi")
+frame_progress = 0.5237476
+script = ExtResource("4_laxpr")
+
+[node name="Female_Patient" type="AnimatedSprite2D" parent="." unique_id=1637127489]
+position = Vector2(1003, 440.00003)
+scale = Vector2(0.3961474, 0.4176707)
+sprite_frames = SubResource("SpriteFrames_2eh4m")
+frame_progress = 0.20711319
+script = ExtResource("4_laxpr")
+
+[node name="Pill" type="AnimatedSprite2D" parent="." unique_id=959685982]
+position = Vector2(970, 201)
+scale = Vector2(0.377, 0.436)
+sprite_frames = SubResource("SpriteFrames_sp37y")
+frame_progress = 0.19999655
+script = ExtResource("4_laxpr")
