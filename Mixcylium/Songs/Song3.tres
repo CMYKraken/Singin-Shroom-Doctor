@@ -6,5 +6,5 @@
 [resource]
 script = ExtResource("2_mjniw")
 Audio = ExtResource("1_0yo47")
-BeatsPerBar = 18
+BeatsPerBar = 4
 bpm = 180

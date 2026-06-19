@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b602wujhr7t7i" path="res://Mixcylium/Scripts/LevelManager.cs" id="1_fqv08"]
 [ext_resource type="Resource" uid="uid://cka8rfgsxv12e" path="res://Mixcylium/Songs/Song3.tres" id="2_fqv08"]
-[ext_resource type="Resource" uid="uid://b3mesg75k61gi" path="res://Mixcylium/Notes/Level1E.tres" id="3_5a6vv"]
+[ext_resource type="Resource" uid="uid://cig214iime44q" path="res://Mixcylium/Notes/Level3E.tres" id="3_fqv08"]
 
 [node name="LevelManager" type="Node3D" unique_id=527219553]
 script = ExtResource("1_fqv08")
@@ -10,5 +10,5 @@ sceneTransitionTimeStamps = PackedFloat64Array(25.3, 50.6, 75.9, 101.2, 126.5, 1
 sceneOrder = Array[int]([0, 1, 2, 3, 4, 5])
 sceneReferencePaths = PackedStringArray("res://Mixcylium/Scenes/consultation.tscn", "res://Mixcylium/Scenes/mushroom_growing_1.tscn", "res://Mixcylium/Scenes/mushroom_growing_2.tscn", "res://Mixcylium/Scenes/mushroom_growing_3.tscn", "res://Mixcylium/Scenes/mortar_and_pestle.tscn", "res://Mixcylium/Scenes/pill_delivery.tscn")
 currentSong = ExtResource("2_fqv08")
-noteData = ExtResource("3_5a6vv")
+noteData = ExtResource("3_fqv08")
 NoteSpeedModifier = 10

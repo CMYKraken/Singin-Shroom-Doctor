@@ -265,6 +265,7 @@ func _on_start_level_1_pressed():
 	var difficulty = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager1.tscn")
 	var Scene = Level.instantiate()
+	Scene.NoteSpeedModifier = speed *5
 	add_child(Scene)
 	get_child(-1).Difficulty = difficulty
 	get_child(-1).Level_Number = 1
@@ -281,6 +282,7 @@ func _on_start_level_2_pressed():
 	var difficulty = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager2.tscn")
 	var Scene = Level.instantiate()
+	Scene.NoteSpeedModifier = speed *5
 	add_child(Scene)
 	get_child(-1).Difficulty = difficulty
 	get_child(-1).Level_Number = 2
@@ -297,13 +299,14 @@ func _on_start_level_3_pressed():
 	var difficulty = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager3.tscn")
 	var Scene = Level.instantiate()
+	Scene.NoteSpeedModifier = speed *5
 	add_child(Scene)
 	get_child(-1).Difficulty = difficulty
 	get_child(-1).Level_Number = 3
 	var bpm = get_child(-1).get_child(0).bpm
 	var BeatsPerBar = get_child(-1).get_child(0).BeatsPerBar
 	var NoteSpeed = Gen_Speed(speed*5,bpm,BeatsPerBar)
-	get_child(-1).get_child(0).get_child(-1)._noteSpeed = NoteSpeed
+	get_child(-1).NoteSpeedModifier = speed*5
 	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
 	$Level_Select.visible = false
 #endregion

@@ -117,15 +117,19 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		_screenHeight = GetWindow().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
-		_noteSpeed = _screenHeight /(BeatsPerBar/_BeatsPerSecond * (double)SpeedModifier/10);
+		_noteSpeed = _screenHeight /(BeatsPerBar/(_BeatsPerSecond* (double)SpeedModifier/10));
 		
 		//_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
 		//_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
 
+		SpawnTimeOffset =  _screenHeight/_noteSpeed;
+		GD.Print(_noteSpeed," : ", SpawnTimeOffset);
+
 		_chart = new(_noteSpeed);
 		AddChild(_chart);
 
-		SpawnTimeOffset = _screenHeight / _noteSpeed;
+		
+
 
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
