@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w2eshaj10vn8"
-path="res://.godot/imported/GameJam.jpg-2502381f69dac40cb73c3eaef1c83e73.ctex"
+uid="uid://d3irs3m7l4aay"
+path="res://.godot/imported/GameJam.png-84df4236bd6c61c649230692d39110ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Mixcylium/ArtAssets/Sprites/Beats/GameJam.jpg"
-dest_files=["res://.godot/imported/GameJam.jpg-2502381f69dac40cb73c3eaef1c83e73.ctex"]
+source_file="res://Mixcylium/ArtAssets/Sprites/Beats/GameJam.png"
+dest_files=["res://.godot/imported/GameJam.png-84df4236bd6c61c649230692d39110ef.ctex"]
 
 [params]
 
