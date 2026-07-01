@@ -128,9 +128,6 @@ public partial class RhythmManager : AudioStreamPlayer
 		_chart = new(_noteSpeed);
 		AddChild(_chart);
 
-		
-
-
 		_timeBegin = Time.GetTicksUsec();
 		_timeDelay = AudioServer.GetTimeToNextMix() + AudioServer.GetOutputLatency();
 		this.Play();
