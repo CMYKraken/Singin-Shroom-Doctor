@@ -2,13 +2,73 @@
 
 [ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="1_be23h"]
 [ext_resource type="Script" uid="uid://ohii1t75rdck" path="res://Mixcylium/Scripts/start_menu.gd" id="1_m65hu"]
-[ext_resource type="Texture2D" uid="uid://d2mktapghep4k" path="res://Mixcylium/ArtAssets/GUI/Temp/Disk.png" id="3_8iuxd"]
 [ext_resource type="Texture2D" uid="uid://phsaxsl6bctu" path="res://Mixcylium/ArtAssets/GUI/Temp/White.png" id="3_e5q2p"]
+[ext_resource type="Texture2D" uid="uid://kah03vn5eyaq" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_1.png" id="3_eixw3"]
 [ext_resource type="AudioStream" uid="uid://bcx4xnl33mhtu" path="res://Mixcylium/Audio/Main Menu.wav" id="4_3d2w7"]
+[ext_resource type="Texture2D" uid="uid://42acs3khfy0g" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_2.png" id="4_7htk8"]
 [ext_resource type="AudioStream" uid="uid://c1ca3s8rnj2ju" path="res://Mixcylium/Audio/Stage 1 Preview.wav" id="4_bd18b"]
 [ext_resource type="AudioStream" uid="uid://cay72k8xwt5f6" path="res://Mixcylium/Audio/Stage 2 Preview.wav" id="5_8iuxd"]
 [ext_resource type="AudioStream" uid="uid://bjw0228h5m3nm" path="res://Mixcylium/Audio/Bottle Tap 1.wav" id="5_nbwth"]
+[ext_resource type="Texture2D" uid="uid://crulg2t1e3glq" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_3.png" id="5_s2q25"]
+[ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="6_7htk8"]
 [ext_resource type="AudioStream" uid="uid://52sh5w00yius" path="res://Mixcylium/Audio/Stage 3 Preview.wav" id="6_io4bi"]
+[ext_resource type="Texture2D" uid="uid://co0lvr1scjl1s" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_1.png" id="8_gm78g"]
+[ext_resource type="Texture2D" uid="uid://cm0xexlannf0o" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_2.png" id="9_vy0qg"]
+[ext_resource type="Texture2D" uid="uid://bd55xybjnc4o8" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_3.png" id="10_jk2cr"]
+[ext_resource type="Texture2D" uid="uid://b62j2sbbg8s5k" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_1.png" id="12_du523"]
+[ext_resource type="Texture2D" uid="uid://d1l11gvkql35e" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_2.png" id="13_ncdcq"]
+[ext_resource type="Texture2D" uid="uid://c0c2203c6ogle" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_3.png" id="14_32rki"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m0sg7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eixw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7htk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_s2q25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xm641"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gm78g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vy0qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jk2cr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i2x27"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_du523")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ncdcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_32rki")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Start_Menu" type="Control" unique_id=2096915293]
 layout_mode = 3
@@ -759,26 +819,15 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1648278119]
 layout_mode = 0
-offset_right = 553.0
+offset_right = 550.0
 offset_bottom = 450.0
 
-[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_1_Preview/Panel" unique_id=763846923]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -220.0
-offset_right = 220.0
-offset_bottom = 220.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 6.2831855
-pivot_offset = Vector2(215, 215)
-texture = ExtResource("3_8iuxd")
-expand_mode = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_1_Preview/Panel" unique_id=732998373]
+position = Vector2(280, 222)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_m0sg7")
+frame_progress = 0.08102266
+script = ExtResource("6_7htk8")
 
 [node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1418699202]
 layout_mode = 0
@@ -786,7 +835,6 @@ offset_left = 158.0
 offset_top = 419.0
 offset_right = 384.0
 offset_bottom = 442.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Level 1"
 horizontal_alignment = 1
 
@@ -966,26 +1014,15 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1926868931]
 layout_mode = 0
-offset_right = 553.0
+offset_right = 550.0
 offset_bottom = 450.0
 
-[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/Panel" unique_id=1447018173]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -220.0
-offset_right = 220.0
-offset_bottom = 220.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 6.2831855
-pivot_offset = Vector2(215, 215)
-texture = ExtResource("3_8iuxd")
-expand_mode = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_2_Preview/Panel" unique_id=11544678]
+position = Vector2(280, 222)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_xm641")
+frame_progress = 0.07144714
+script = ExtResource("6_7htk8")
 
 [node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1955486974]
 layout_mode = 0
@@ -993,7 +1030,6 @@ offset_left = 158.0
 offset_top = 419.0
 offset_right = 384.0
 offset_bottom = 442.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Level 2"
 horizontal_alignment = 1
 
@@ -1173,34 +1209,21 @@ grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1620329415]
 layout_mode = 0
-offset_right = 553.0
+offset_right = 550.0
 offset_bottom = 450.0
 
-[node name="Preview_Image" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/Panel" unique_id=533370603]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -220.0
-offset_top = -220.0
-offset_right = 220.0
-offset_bottom = 220.0
-grow_horizontal = 2
-grow_vertical = 2
-rotation = 6.2831855
-pivot_offset = Vector2(215, 215)
-texture = ExtResource("3_8iuxd")
-expand_mode = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_3_Preview/Panel" unique_id=323716935]
+position = Vector2(280, 222)
+scale = Vector2(0.7, 0.7)
+sprite_frames = SubResource("SpriteFrames_i2x27")
+script = ExtResource("6_7htk8")
 
 [node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1429408627]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 419.0
-offset_right = 384.0
-offset_bottom = 442.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 160.0
+offset_top = 420.0
+offset_right = 386.0
+offset_bottom = 443.0
 text = "Level 3"
 horizontal_alignment = 1
 
@@ -1209,7 +1232,7 @@ process_mode = 4
 layout_mode = 0
 offset_left = -3.0
 offset_top = 448.0
-offset_right = 552.0
+offset_right = 550.0
 offset_bottom = 489.0
 
 [node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=916490990]
