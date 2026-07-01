@@ -61,7 +61,7 @@ public partial class LevelManager : Node3D
 		{
 			if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
 			{
-				if (currentSceneNum < levelMaxSceneNum)
+				if (currentSceneNum < levelMaxSceneNum - 1)
 				{
 					//Change data to next scene
 					currentSceneNum++;

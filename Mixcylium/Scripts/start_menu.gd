@@ -24,10 +24,10 @@ var Medium3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
 var Hard3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
 
 func _ready():
-	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "D"
-	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = "F"
-	$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = "J"
-	$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = "K"
+	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
+	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = InputMap.action_get_events("Action_2")[0].as_text()
+	$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = InputMap.action_get_events("Action_3")[0].as_text()
+	$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = InputMap.action_get_events("Action_4")[0].as_text()
 	$Main_Menu.visible = true
 	$Level_Select.visible = false
 	$Settings_Menu.visible = false

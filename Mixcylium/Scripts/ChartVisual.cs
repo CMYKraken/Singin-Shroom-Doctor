@@ -11,8 +11,8 @@ public partial class ChartVisual : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		_screenSize = GetWindow().Size;
-
+		_screenSize = (Vector2I)GetViewport().GetVisibleRect().Size;
+		
 		_beatBar = new();
 		_beatBar.Name = "ScoringBar";
 		_beatBar.AddPoint(Vector2.Left*beatBarWidth/2);
@@ -28,7 +28,7 @@ public partial class ChartVisual : Node2D
 		labels[2].Position = _beatBar.Position + (Vector2.Right * 1/8 * beatBarWidth)+Vector2.Down* beatBarHeight/2;
 		labels[3].Position = _beatBar.Position + (Vector2.Right * 3/8 * beatBarWidth)+Vector2.Down* beatBarHeight/2;
 
-		labels[0].Text = "D";labels[1].Text = "F";labels[2].Text = "J";labels[3].Text = "K";
+		labels[0].Text = InputMap.ActionGetEvents("Action_1")[0].AsText();labels[1].Text = InputMap.ActionGetEvents("Action_2")[0].AsText(); labels[2].Text = InputMap.ActionGetEvents("Action_3")[0].AsText(); labels[3].Text = InputMap.ActionGetEvents("Action_4")[0].AsText();
 
 		foreach(Label label in labels)
 		{
