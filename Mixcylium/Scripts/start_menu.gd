@@ -4,6 +4,10 @@ var Input1
 var Input2
 var Input3
 var Input4
+var MasterVolume = 0.75
+var SFXVolume = 0.75
+var MusicVolume = 0.75
+var MusicBeatsVolume = 0.75
 var ConfigScore = ConfigFile.new()
 var ConfigSetting = ConfigFile.new()
 var LevelCount = 3
@@ -15,6 +19,8 @@ var ScoreData = {
 
 
 func _ready():
+	LoadSettings()
+	Update_Volume()
 	LoadScore()
 	Update_Scores()
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
@@ -36,11 +42,52 @@ func _ready():
 func _process(delta):
 	Button_Check()
 
+func SaveSettings():
+	#Volume
+	ConfigSetting.set_value("Volume", "Master", MasterVolume)
+	ConfigSetting.set_value("Volume", "SFX", SFXVolume)
+	ConfigSetting.set_value("Volume", "Music", MusicVolume)
+	ConfigSetting.set_value("Volume", "MusicBeats", MusicBeatsVolume)
+	#Controls
+	ConfigSetting.set_value("Controls","Action_1", InputMap.action_get_events("Action_1")[0])
+	ConfigSetting.set_value("Controls","Action_2", InputMap.action_get_events("Action_2")[0])
+	ConfigSetting.set_value("Controls","Action_3", InputMap.action_get_events("Action_3")[0])
+	ConfigSetting.set_value("Controls","Action_4", InputMap.action_get_events("Action_4")[0])
+	
+	ConfigSetting.save("user://settings.cfg")
+
 func LoadSettings():
 	var SettingFile = ConfigSetting.load("user://settings.cfg")
 	if SettingFile != OK:
 		return
-	
+	for setting in ConfigSetting.get_sections():
+		if setting == "Volume":
+			MasterVolume = ConfigSetting.get_value("Volume","Master")
+			SFXVolume = ConfigSetting.get_value("Volume","SFX")
+			MusicVolume = ConfigSetting.get_value("Volume","Music")
+			MusicBeatsVolume = ConfigSetting.get_value("Volume","MusicBeats")
+		if setting == "Controls":
+			InputMap.action_erase_events("Action_1")
+			InputMap.action_add_event("Action_1",ConfigSetting.get_value("Controls","Action_1"))
+			InputMap.action_erase_events("Action_2")
+			InputMap.action_add_event("Action_2",ConfigSetting.get_value("Controls","Action_2"))
+			InputMap.action_erase_events("Action_3")
+			InputMap.action_add_event("Action_3",ConfigSetting.get_value("Controls","Action_3"))
+			InputMap.action_erase_events("Action_4")
+			InputMap.action_add_event("Action_4",ConfigSetting.get_value("Controls","Action_4"))
+		if setting == "General":
+			pass
+
+func Update_Volume():
+	AudioServer.set_bus_volume_db(0, linear_to_db(MasterVolume))
+	AudioServer.set_bus_volume_db(1, linear_to_db(SFXVolume))
+	AudioServer.set_bus_volume_db(2, linear_to_db(MusicVolume))
+	AudioServer.set_bus_volume_db(3, linear_to_db(MusicBeatsVolume))
+	$Settings_Menu/Volume_Settings/Master_Slider.value = MasterVolume
+	$Settings_Menu/Volume_Settings/SFX_Slider.value = SFXVolume
+	$Settings_Menu/Volume_Settings/Music_Slider.value = MusicVolume
+	$Settings_Menu/Volume_Settings/Music_Beats_Slider.value = MusicBeatsVolume
+
 func SaveScore():
 	for I in LevelCount:
 		for P in 3:
@@ -81,6 +128,7 @@ func Update_Scores():
 	SaveScore()
 	print_debug("Updated")
 
+
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:
 	if Input1 == true:
@@ -89,6 +137,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_1",event)
 			$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = event.as_text()
 			Input1 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "Key Already Bound"
 	if Input2 == true:
@@ -97,6 +146,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_2",event)
 			$Settings_Menu/Controls_Settings/Input_2_Container/Label.text =  event.as_text()
 			Input2 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = "Key Already Bound"
 	if Input3 == true:
@@ -105,6 +155,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_3",event)
 			$Settings_Menu/Controls_Settings/Input_3_Container/Label.text =  event.as_text()
 			Input3 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = "Key Already Bound"
 	if Input4 == true:
@@ -113,6 +164,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_4",event)
 			$Settings_Menu/Controls_Settings/Input_4_Container/Label.text =  event.as_text()
 			Input4 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = "Key Already Bound"
 
@@ -189,15 +241,23 @@ func _on_window_mode_button_item_selected(index: int) -> void:
 #region Volume Settings
 func _on_master_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(0, linear_to_db(value))
+	MasterVolume = value
+	SaveSettings()
 
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(1, linear_to_db(value))
-	
+	SFXVolume = value
+	SaveSettings()
+
 func _on_music_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(2, linear_to_db(value))
-	
+	MusicVolume = value
+	SaveSettings()
+
 func _on_music_beats_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(3, linear_to_db(value))
+	MusicBeatsVolume = value
+	SaveSettings()
 #endregion
 #region Controls Settings
 func _on_input_1_pressed():
