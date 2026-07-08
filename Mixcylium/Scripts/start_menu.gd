@@ -15,7 +15,7 @@ var ScoreData = {
 
 
 func _ready():
-	
+	LoadScore()
 	Update_Scores()
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = InputMap.action_get_events("Action_2")[0].as_text()
@@ -31,7 +31,6 @@ func _ready():
 	$Level_Select/Right_Side/Level_1_Preview.visible = true
 	$Level_Select/Right_Side/Level_2_Preview.visible = false
 	$Level_Select/Right_Side/Level_3_Preview.visible = false
-	
 
 
 func _process(delta):
@@ -44,15 +43,20 @@ func LoadSettings():
 	
 func SaveScore():
 	for I in LevelCount:
-		ConfigScore.set_value("Level_"+str(I+1), "Level_name", "Level_"+str(I+1))
-		ConfigScore.set_value("Level_1", "difficulty", ScoreData["Level_1"]["Easy"][0])
-	#Level 1
-	
-	#Level 2
-	ConfigScore.set_value("Level_2", "level_name", "Level_2")
-	
-	#Level 3
-	ConfigScore.set_value("Level_3", "level_name", "Level_3")
+		for P in 3:
+			var Diff
+			match P:
+				0:
+					Diff = "Easy"
+				1:
+					Diff = "Medium"
+				2:
+					Diff = "Hard"
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_name", "Level_"+str(I+1))
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_difficulty", Diff)
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_score", ScoreData["Level_"+str(I+1)][Diff][0])
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_grade", ScoreData["Level_"+str(I+1)][Diff][1])
+	ConfigScore.save("user://scores.cfg")
 
 func LoadScore():
 	var ScoreFile = ConfigScore.load("user://scores.cfg")
@@ -64,7 +68,7 @@ func LoadScore():
 		var LevelScore = ConfigScore.get_value(level, "Level_score")
 		var LevelGrade = ConfigScore.get_value(level, "Level_grade")
 		var LevelDict = {LevelDiff: [LevelScore,LevelGrade]}
-		ScoreData[LevelName] = LevelName.merge(LevelDict, true)
+		ScoreData[LevelName].merge(LevelDict, true)
 
 func Update_Scores():
 	for I in LevelCount:
@@ -74,6 +78,7 @@ func Update_Scores():
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel/Rank").texture = ScoreData["Level_"+str(I+1)]["Easy"][1]
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel2/Rank").texture = ScoreData["Level_"+str(I+1)]["Medium"][1]
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
+	SaveScore()
 	print_debug("Updated")
 
 #region Changing Controls
