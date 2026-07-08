@@ -4,8 +4,13 @@ var Input1
 var Input2
 var Input3
 var Input4
+var MasterVolume = 0.75
+var SFXVolume = 0.75
+var MusicVolume = 0.75
+var MusicBeatsVolume = 0.75
 var ConfigScore = ConfigFile.new()
 var ConfigSetting = ConfigFile.new()
+var LevelCount = 3
 var ScoreData = {
 	"Level_1":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
 	"Level_2":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
@@ -14,7 +19,9 @@ var ScoreData = {
 
 
 func _ready():
-	
+	LoadSettings()
+	Update_Volume()
+	LoadScore()
 	Update_Scores()
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = InputMap.action_get_events("Action_2")[0].as_text()
@@ -30,50 +37,97 @@ func _ready():
 	$Level_Select/Right_Side/Level_1_Preview.visible = true
 	$Level_Select/Right_Side/Level_2_Preview.visible = false
 	$Level_Select/Right_Side/Level_3_Preview.visible = false
-	
 
 
 func _process(delta):
 	Button_Check()
 
+func SaveSettings():
+	#Volume
+	ConfigSetting.set_value("Volume", "Master", MasterVolume)
+	ConfigSetting.set_value("Volume", "SFX", SFXVolume)
+	ConfigSetting.set_value("Volume", "Music", MusicVolume)
+	ConfigSetting.set_value("Volume", "MusicBeats", MusicBeatsVolume)
+	#Controls
+	ConfigSetting.set_value("Controls","Action_1", InputMap.action_get_events("Action_1")[0])
+	ConfigSetting.set_value("Controls","Action_2", InputMap.action_get_events("Action_2")[0])
+	ConfigSetting.set_value("Controls","Action_3", InputMap.action_get_events("Action_3")[0])
+	ConfigSetting.set_value("Controls","Action_4", InputMap.action_get_events("Action_4")[0])
+	
+	ConfigSetting.save("user://settings.cfg")
+
 func LoadSettings():
 	var SettingFile = ConfigSetting.load("user://settings.cfg")
 	if SettingFile != OK:
 		return
-	
+	for setting in ConfigSetting.get_sections():
+		if setting == "Volume":
+			MasterVolume = ConfigSetting.get_value("Volume","Master")
+			SFXVolume = ConfigSetting.get_value("Volume","SFX")
+			MusicVolume = ConfigSetting.get_value("Volume","Music")
+			MusicBeatsVolume = ConfigSetting.get_value("Volume","MusicBeats")
+		if setting == "Controls":
+			InputMap.action_erase_events("Action_1")
+			InputMap.action_add_event("Action_1",ConfigSetting.get_value("Controls","Action_1"))
+			InputMap.action_erase_events("Action_2")
+			InputMap.action_add_event("Action_2",ConfigSetting.get_value("Controls","Action_2"))
+			InputMap.action_erase_events("Action_3")
+			InputMap.action_add_event("Action_3",ConfigSetting.get_value("Controls","Action_3"))
+			InputMap.action_erase_events("Action_4")
+			InputMap.action_add_event("Action_4",ConfigSetting.get_value("Controls","Action_4"))
+		if setting == "General":
+			pass
+
+func Update_Volume():
+	AudioServer.set_bus_volume_db(0, linear_to_db(MasterVolume))
+	AudioServer.set_bus_volume_db(1, linear_to_db(SFXVolume))
+	AudioServer.set_bus_volume_db(2, linear_to_db(MusicVolume))
+	AudioServer.set_bus_volume_db(3, linear_to_db(MusicBeatsVolume))
+	$Settings_Menu/Volume_Settings/Master_Slider.value = MasterVolume
+	$Settings_Menu/Volume_Settings/SFX_Slider.value = SFXVolume
+	$Settings_Menu/Volume_Settings/Music_Slider.value = MusicVolume
+	$Settings_Menu/Volume_Settings/Music_Beats_Slider.value = MusicBeatsVolume
+
+func SaveScore():
+	for I in LevelCount:
+		for P in 3:
+			var Diff
+			match P:
+				0:
+					Diff = "Easy"
+				1:
+					Diff = "Medium"
+				2:
+					Diff = "Hard"
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_name", "Level_"+str(I+1))
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_difficulty", Diff)
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_score", ScoreData["Level_"+str(I+1)][Diff][0])
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_grade", ScoreData["Level_"+str(I+1)][Diff][1])
+	ConfigScore.save("user://scores.cfg")
 
 func LoadScore():
 	var ScoreFile = ConfigScore.load("user://scores.cfg")
 	if ScoreFile != OK:
 		return
 	for level in ConfigScore.get_sections():
-		var LevelName = ConfigScore.get_value(level,"level_name")
+		var LevelName = ConfigScore.get_value(level,"Level_name")
 		var LevelDiff = ConfigScore.get_value(level, "Level_difficulty")
 		var LevelScore = ConfigScore.get_value(level, "Level_score")
 		var LevelGrade = ConfigScore.get_value(level, "Level_grade")
 		var LevelDict = {LevelDiff: [LevelScore,LevelGrade]}
-		ScoreData[LevelName] = LevelName.merge(LevelDict, true)
+		ScoreData[LevelName].merge(LevelDict, true)
 
 func Update_Scores():
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_1"]["Easy"][0])
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_1"]["Medium"][0])
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_1"]["Hard"][0])
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_2"]["Easy"][0])
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_2"]["Medium"][0])
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_2"]["Hard"][0])
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_3"]["Easy"][0])
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_3"]["Medium"][0])
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_3"]["Hard"][0])
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_1"]["Easy"][1]
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_1"]["Medium"][1]
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_1"]["Hard"][1]
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_2"]["Easy"][1]
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_2"]["Medium"][1]
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_2"]["Hard"][1]
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_3"]["Easy"][1]
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_3"]["Medium"][1]
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_3"]["Hard"][1]
+	for I in LevelCount:
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel/Score").text = str(ScoreData["Level_"+str(I+1)]["Easy"][0])
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel2/Score").text = str(ScoreData["Level_"+str(I+1)]["Medium"][0])
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Score").text = str(ScoreData["Level_"+str(I+1)]["Hard"][0])
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel/Rank").texture = ScoreData["Level_"+str(I+1)]["Easy"][1]
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel2/Rank").texture = ScoreData["Level_"+str(I+1)]["Medium"][1]
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
+	SaveScore()
 	print_debug("Updated")
+
 
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -83,6 +137,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_1",event)
 			$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = event.as_text()
 			Input1 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = "Key Already Bound"
 	if Input2 == true:
@@ -91,6 +146,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_2",event)
 			$Settings_Menu/Controls_Settings/Input_2_Container/Label.text =  event.as_text()
 			Input2 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = "Key Already Bound"
 	if Input3 == true:
@@ -99,6 +155,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_3",event)
 			$Settings_Menu/Controls_Settings/Input_3_Container/Label.text =  event.as_text()
 			Input3 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = "Key Already Bound"
 	if Input4 == true:
@@ -107,6 +164,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			InputMap.action_add_event("Action_4",event)
 			$Settings_Menu/Controls_Settings/Input_4_Container/Label.text =  event.as_text()
 			Input4 = false
+			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = "Key Already Bound"
 
@@ -183,15 +241,23 @@ func _on_window_mode_button_item_selected(index: int) -> void:
 #region Volume Settings
 func _on_master_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(0, linear_to_db(value))
+	MasterVolume = value
+	SaveSettings()
 
 func _on_sfx_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(1, linear_to_db(value))
-	
+	SFXVolume = value
+	SaveSettings()
+
 func _on_music_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(2, linear_to_db(value))
-	
+	MusicVolume = value
+	SaveSettings()
+
 func _on_music_beats_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(3, linear_to_db(value))
+	MusicBeatsVolume = value
+	SaveSettings()
 #endregion
 #region Controls Settings
 func _on_input_1_pressed():
