@@ -8,9 +8,12 @@ var Level_Number
 
 
 func _ready():
+	Difficulty = get_parent().Difficulty
+	Level_Number = get_parent().Level_Number
 	Score = get_parent().get_child(1).score
-	Max_Score = 215 * 555
+	Max_Score = get_parent().noteData.beatColumn.size() * 555
 	Score_Percent = float(float(Score)/float(Max_Score))
+	print_debug(Max_Score)
 	print_debug(Score_Percent)
 	#Grading
 	if Score_Percent == 1:
@@ -38,8 +41,7 @@ func _ready():
 		Grade = load("res://Mixcylium/ArtAssets/Grades/F.png")
 		$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 	
-	Difficulty = get_parent().Difficulty
-	Level_Number = get_parent().Level_Number
+	
 	if Score_Percent >= 0.4 and Score_Percent < 0.8:
 		$PanelContainer/VBoxContainer/Win_Lose.text = "Win"
 		$Win.play()
@@ -51,51 +53,19 @@ func _ready():
 		$Lose.play()
 	$PanelContainer/VBoxContainer/Score.text = str(Score)
 	#Setting High Score
-	if Difficulty == 0 and Level_Number == 1:
-		if Score > get_parent().get_parent().Easy1:
-			get_parent().get_parent().Easy1 = Score
-			get_parent().get_parent().Easy1IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 1 and Level_Number == 1:
-		if Score > get_parent().get_parent().Medium1:
-			get_parent().get_parent().Medium1 = Score
-			get_parent().get_parent().Medium1IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 2 and Level_Number == 1:
-		if Score > get_parent().get_parent().Hard1:
-			get_parent().get_parent().Hard1 = Score
-			get_parent().get_parent().Hard1IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 0 and Level_Number == 2:
-		if Score > get_parent().get_parent().Easy2:
-			get_parent().get_parent().Easy2 = Score
-			get_parent().get_parent().Easy2IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 1 and Level_Number == 2:
-		if Score > get_parent().get_parent().Medium2:
-			get_parent().get_parent().Medium2 = Score
-			get_parent().get_parent().Medium2IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 2 and Level_Number == 2:
-		if Score > get_parent().get_parent().Hard2:
-			get_parent().get_parent().Hard2 = Score
-			get_parent().get_parent().Hard2IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	elif Difficulty == 0 and Level_Number == 3:
-		if Score > get_parent().get_parent().Easy3:
-			get_parent().get_parent().Easy3 = Score
-			get_parent().get_parent().Easy3IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	if Difficulty == 1 and Level_Number == 3:
-		if Score > get_parent().get_parent().Medium3:
-			get_parent().get_parent().Medium3 = Score
-			get_parent().get_parent().Medium3IMG = Grade
-			get_parent().get_parent().Update_Scores()
-	if Difficulty == 2 and Level_Number == 3:
-		if Score > get_parent().get_parent().Hard3:
-			get_parent().get_parent().Hard3 = Score
-			get_parent().get_parent().Hard3IMG = Grade
-			get_parent().get_parent().Update_Scores()
+	match Difficulty:
+		0:
+			Difficulty = "Easy"
+		1:
+			Difficulty = "Medium"
+		2:
+			Difficulty = "Hard"
+	
+	if Score > get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][0]:
+		get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][0] = Score
+		get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][1] = Grade
+		get_parent().get_parent().Update_Scores()
+
 
 
 func _on_back_to_menu_pressed():

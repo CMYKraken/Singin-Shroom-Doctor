@@ -4,26 +4,18 @@ var Input1
 var Input2
 var Input3
 var Input4
-var Easy1 = 0
-var Medium1 = 0
-var Hard1 = 0
-var Easy2 = 0
-var Medium2 = 0
-var Hard2 = 0
-var Easy3 = 0
-var Medium3 = 0
-var Hard3 = 0
-var Easy1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Medium1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Hard1IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Easy2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Medium2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Hard2IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Easy3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Medium3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
-var Hard3IMG = load("res://Mixcylium/ArtAssets/Grades/F.png")
+var ConfigScore = ConfigFile.new()
+var ConfigSetting = ConfigFile.new()
+var ScoreData = {
+	"Level_1":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_2":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_3":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]}
+}
+
 
 func _ready():
+	
+	Update_Scores()
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = InputMap.action_get_events("Action_2")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = InputMap.action_get_events("Action_3")[0].as_text()
@@ -38,30 +30,49 @@ func _ready():
 	$Level_Select/Right_Side/Level_1_Preview.visible = true
 	$Level_Select/Right_Side/Level_2_Preview.visible = false
 	$Level_Select/Right_Side/Level_3_Preview.visible = false
-	Update_Scores()
+	
+
 
 func _process(delta):
 	Button_Check()
 
+func LoadSettings():
+	var SettingFile = ConfigSetting.load("user://settings.cfg")
+	if SettingFile != OK:
+		return
+	
+
+func LoadScore():
+	var ScoreFile = ConfigScore.load("user://scores.cfg")
+	if ScoreFile != OK:
+		return
+	for level in ConfigScore.get_sections():
+		var LevelName = ConfigScore.get_value(level,"level_name")
+		var LevelDiff = ConfigScore.get_value(level, "Level_difficulty")
+		var LevelScore = ConfigScore.get_value(level, "Level_score")
+		var LevelGrade = ConfigScore.get_value(level, "Level_grade")
+		var LevelDict = {LevelDiff: [LevelScore,LevelGrade]}
+		ScoreData[LevelName] = LevelName.merge(LevelDict, true)
+
 func Update_Scores():
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Score.text = str(Easy1)
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Score.text = str(Medium1)
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Score.text = str(Hard1)
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Score.text = str(Easy2)
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Score.text = str(Medium2)
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Score.text = str(Hard2)
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Score.text = str(Easy3)
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Score.text = str(Medium3)
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Score.text = str(Hard3)
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Rank.texture = Easy1IMG
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Rank.texture = Medium1IMG
-	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Rank.texture = Hard1IMG
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Rank.texture = Easy2IMG
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Rank.texture = Medium2IMG
-	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Rank.texture = Hard2IMG
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Rank.texture = Easy3IMG
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Rank.texture = Medium3IMG
-	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Rank.texture = Hard3IMG
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_1"]["Easy"][0])
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_1"]["Medium"][0])
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_1"]["Hard"][0])
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_2"]["Easy"][0])
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_2"]["Medium"][0])
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_2"]["Hard"][0])
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Score.text = str(ScoreData["Level_3"]["Easy"][0])
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Score.text = str(ScoreData["Level_3"]["Medium"][0])
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Score.text = str(ScoreData["Level_3"]["Hard"][0])
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_1"]["Easy"][1]
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_1"]["Medium"][1]
+	$Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_1"]["Hard"][1]
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_2"]["Easy"][1]
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_2"]["Medium"][1]
+	$Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_2"]["Hard"][1]
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel/Rank.texture = ScoreData["Level_3"]["Easy"][1]
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2/Rank.texture = ScoreData["Level_3"]["Medium"][1]
+	$Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3/Rank.texture = ScoreData["Level_3"]["Hard"][1]
 	print_debug("Updated")
 
 #region Changing Controls
