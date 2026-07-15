@@ -8,6 +8,7 @@ var MasterVolume = 0.75
 var SFXVolume = 0.75
 var MusicVolume = 0.75
 var MusicBeatsVolume = 0.75
+var HitMarkerVolume = 0.75
 var ConfigScore = ConfigFile.new()
 var ConfigSetting = ConfigFile.new()
 var LevelCount = 3
@@ -40,14 +41,18 @@ func _ready():
 
 
 func _process(delta):
-	Button_Check()
+	if $Level_Select.visible:
+		Button_Check()
 
+#region Savining and loading
+#region Settings
 func SaveSettings():
 	#Volume
 	ConfigSetting.set_value("Volume", "Master", MasterVolume)
 	ConfigSetting.set_value("Volume", "SFX", SFXVolume)
 	ConfigSetting.set_value("Volume", "Music", MusicVolume)
 	ConfigSetting.set_value("Volume", "MusicBeats", MusicBeatsVolume)
+	ConfigSetting.set_value("Volume", "HitMarker", HitMarkerVolume)
 	#Controls
 	ConfigSetting.set_value("Controls","Action_1", InputMap.action_get_events("Action_1")[0])
 	ConfigSetting.set_value("Controls","Action_2", InputMap.action_get_events("Action_2")[0])
@@ -66,6 +71,7 @@ func LoadSettings():
 			SFXVolume = ConfigSetting.get_value("Volume","SFX")
 			MusicVolume = ConfigSetting.get_value("Volume","Music")
 			MusicBeatsVolume = ConfigSetting.get_value("Volume","MusicBeats")
+			HitMarkerVolume = ConfigSetting.get_value("Volume","HitMarker")
 		if setting == "Controls":
 			InputMap.action_erase_events("Action_1")
 			InputMap.action_add_event("Action_1",ConfigSetting.get_value("Controls","Action_1"))
@@ -83,11 +89,14 @@ func Update_Volume():
 	AudioServer.set_bus_volume_db(1, linear_to_db(SFXVolume))
 	AudioServer.set_bus_volume_db(2, linear_to_db(MusicVolume))
 	AudioServer.set_bus_volume_db(3, linear_to_db(MusicBeatsVolume))
+	AudioServer.set_bus_volume_db(4, linear_to_db(HitMarkerVolume))
 	$Settings_Menu/Volume_Settings/Master_Slider.value = MasterVolume
 	$Settings_Menu/Volume_Settings/SFX_Slider.value = SFXVolume
 	$Settings_Menu/Volume_Settings/Music_Slider.value = MusicVolume
 	$Settings_Menu/Volume_Settings/Music_Beats_Slider.value = MusicBeatsVolume
-
+	$Settings_Menu/Volume_Settings/Hit_Marker_Slider.value = HitMarkerVolume
+#endregion
+#region Scores
 func SaveScore():
 	for I in LevelCount:
 		for P in 3:
@@ -127,7 +136,8 @@ func Update_Scores():
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
 	SaveScore()
 	print_debug("Updated")
-
+#endregion
+#endregion
 
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -257,6 +267,11 @@ func _on_music_slider_value_changed(value):
 func _on_music_beats_slider_value_changed(value):
 	AudioServer.set_bus_volume_db(3, linear_to_db(value))
 	MusicBeatsVolume = value
+	SaveSettings()
+
+func _on_hit_marker_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(4, linear_to_db(value))
+	HitMarkerVolume = value
 	SaveSettings()
 #endregion
 #region Controls Settings

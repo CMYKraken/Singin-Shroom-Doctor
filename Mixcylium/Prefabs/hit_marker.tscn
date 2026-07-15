@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://6oa7t63jps2s"]
+
+[ext_resource type="Script" uid="uid://bl1hjd1lbukt5" path="res://Mixcylium/Scripts/hit_marker.gd" id="1_xwftn"]
+[ext_resource type="AudioStream" uid="uid://ckn1njjcpc6ro" path="res://Mixcylium/Audio/Fail.wav" id="2_xs0q5"]
+[ext_resource type="AudioStream" uid="uid://cit7nyfaefc7n" path="res://Mixcylium/Audio/Victory 1.wav" id="3_e5duh"]
+[ext_resource type="AudioStream" uid="uid://5n6lck8bmojh" path="res://Mixcylium/Audio/Victory 2.wav" id="4_swsuj"]
+
+[node name="Hit_Marker" type="Label" unique_id=1507194212]
+offset_left = -253.0
+offset_top = -356.0
+offset_right = -207.0
+offset_bottom = -321.0
+scale = Vector2(10, 10)
+theme_override_font_sizes/font_size = 25
+text = "test"
+script = ExtResource("1_xwftn")
+
+[node name="Timer" type="Timer" parent="." unique_id=780328953]
+autostart = true
+
+[node name="Miss_Sound" type="AudioStreamPlayer" parent="." unique_id=1172785628]
+stream = ExtResource("2_xs0q5")
+bus = &"Hit_Marker"
+
+[node name="Ok_Sound" type="AudioStreamPlayer" parent="." unique_id=2082622250]
+stream = ExtResource("3_e5duh")
+bus = &"Hit_Marker"
+
+[node name="Perfect_Sound" type="AudioStreamPlayer" parent="." unique_id=135571203]
+stream = ExtResource("4_swsuj")
+bus = &"Hit_Marker"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

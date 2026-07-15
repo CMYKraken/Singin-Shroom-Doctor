@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\GitHub\\Singin-Shroom-Doctor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 304,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerController.cs",
+              "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\PlayerController.cs",
+              "RelativeDocumentMoniker": "Mixcylium\\Scripts\\PlayerController.cs",
+              "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\PlayerController.cs",
+              "RelativeToolTip": "Mixcylium\\Scripts\\PlayerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T09:32:23.79Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -62,7 +62,7 @@ public partial class RhythmManager : AudioStreamPlayer
 		{
 			GD.Print(nextNoteInLane._time, " - ", currentTime, " : ", -ScoringUtils.EarlyLateInterval);
 			_chart.IncrementLanePointer(hitLane);
-			nextNoteInLane.DestroyNote();
+			nextNoteInLane.DestroyNote(0);
 			CheckHitAccuracy(hitLane);
 			return 0;
 
@@ -73,13 +73,15 @@ public partial class RhythmManager : AudioStreamPlayer
 		if(nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
 		{
 			_chart.IncrementLanePointer(hitLane);
-			nextNoteInLane.DestroyNote();
+			
 			
 			if(nextNoteInLane._time - currentTime < ScoringUtils.PerfectInterval)
 			{
-				return ScoringUtils.PerfectScore;
+                nextNoteInLane.DestroyNote(ScoringUtils.PerfectScore);
+                return ScoringUtils.PerfectScore;
 			}
-			return ScoringUtils.EarlyLateScore;
+            nextNoteInLane.DestroyNote(ScoringUtils.EarlyLateScore);
+            return ScoringUtils.EarlyLateScore;
 		}
 
 		
