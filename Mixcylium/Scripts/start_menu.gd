@@ -40,8 +40,11 @@ func _ready():
 
 
 func _process(delta):
-	Button_Check()
+	if $Level_Select.visible:
+		Button_Check()
 
+#region Savining and loading
+#region Settings
 func SaveSettings():
 	#Volume
 	ConfigSetting.set_value("Volume", "Master", MasterVolume)
@@ -87,7 +90,8 @@ func Update_Volume():
 	$Settings_Menu/Volume_Settings/SFX_Slider.value = SFXVolume
 	$Settings_Menu/Volume_Settings/Music_Slider.value = MusicVolume
 	$Settings_Menu/Volume_Settings/Music_Beats_Slider.value = MusicBeatsVolume
-
+#endregion
+#region Scores
 func SaveScore():
 	for I in LevelCount:
 		for P in 3:
@@ -127,7 +131,8 @@ func Update_Scores():
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
 	SaveScore()
 	print_debug("Updated")
-
+#endregion
+#endregion
 
 #region Changing Controls
 func _unhandled_key_input(event: InputEvent) -> void:

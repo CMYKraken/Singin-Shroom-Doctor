@@ -3,13 +3,16 @@ using System;
 
 public partial class Note : Sprite2D
 {
+	public int score;
 	public double _time;
 	private double _Speed;
+	private bool stopped;
 	public Note(){}
 	public Note(double movementSpeed,double noteTime){
 		_Speed = movementSpeed;
 		_time = noteTime;
-	}
+        stopped = false;
+    }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -21,10 +24,17 @@ public partial class Note : Sprite2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Position += Vector2.Down * (float)(_Speed * delta);
+		if (!stopped)
+		{
+            Position += Vector2.Down * (float)(_Speed * delta);
+        }
 	}
 
-	public void DestroyNote(){
-		Visible = false;
+	public void DestroyNote(int worth){
+		stopped = true;
+		score = worth;
+        PackedScene HitMarker = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/hit_marker.tscn");
+		AddChild(HitMarker.Instantiate());
+		Texture = null;
 	}
 }
