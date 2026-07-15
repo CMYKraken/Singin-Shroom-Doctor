@@ -15,7 +15,19 @@ var LevelCount = 3
 var ScoreData = {
 	"Level_1":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
 	"Level_2":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
-	"Level_3":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]}
+	"Level_3":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_4":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_5":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_6":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_7":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_8":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_9":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_10":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_11":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_12":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_13":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_14":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]},
+	"Level_15":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png")]}
 }
 
 
