@@ -43,6 +43,20 @@ size_flags_vertical = 3
 texture = ExtResource("2_4frtt")
 expand_mode = 1
 
+[node name="Replay" type="TextureButton" parent="PanelContainer/VBoxContainer" unique_id=28539883]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_i0sg4")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Replay" unique_id=1498936265]
+layout_mode = 0
+offset_right = 195.0
+offset_bottom = 57.0
+text = "Replay"
+horizontal_alignment = 1
+
 [node name="Back to Menu" type="TextureButton" parent="PanelContainer/VBoxContainer" unique_id=1285107168]
 process_mode = 3
 layout_mode = 2
@@ -69,4 +83,5 @@ bus = &"SFX"
 stream = ExtResource("6_p13ng")
 bus = &"SFX"
 
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/Back to Menu" to="." method="_on_back_to_menu_pressed"]

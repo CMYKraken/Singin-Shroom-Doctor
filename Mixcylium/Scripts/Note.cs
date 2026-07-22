@@ -31,7 +31,7 @@ public partial class Note : Sprite2D
 	}
 
 	public void DestroyNote(int worth){
-		stopped = true;
+        stopped = true;
 		score = worth;
         PackedScene HitMarker = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/hit_marker.tscn");
 		AddChild(HitMarker.Instantiate());

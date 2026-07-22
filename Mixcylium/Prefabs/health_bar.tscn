@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bnvmt0kqk0nyt"]
+
+[ext_resource type="Texture2D" uid="uid://phsaxsl6bctu" path="res://Mixcylium/ArtAssets/GUI/Temp/White.png" id="1_4u27c"]
+[ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="2_ylv0k"]
+[ext_resource type="Script" uid="uid://cvov8d7bwabn3" path="res://Mixcylium/Scripts/health_bar.gd" id="3_ylv0k"]
+
+[node name="Health_Bar" type="TextureProgressBar" unique_id=807879595]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -202.0
+offset_bottom = 40.0
+grow_horizontal = 0
+max_value = 25.0
+value = 25.0
+nine_patch_stretch = true
+texture_under = ExtResource("1_4u27c")
+texture_progress = ExtResource("2_ylv0k")
+script = ExtResource("3_ylv0k")
