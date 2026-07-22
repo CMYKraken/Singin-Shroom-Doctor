@@ -5,7 +5,8 @@ func _ready():
 	var levelManager = get_parent().get_parent().get_parent().get_parent()
 	match get_parent().score:
 		0:
-			levelManager.SetHealth(-5);
+			if levelManager.GetHealth() > -1:
+				levelManager.SetHealth(-5);
 		333:
 			if levelManager.GetHealth() < 25:
 				levelManager.SetHealth(1);

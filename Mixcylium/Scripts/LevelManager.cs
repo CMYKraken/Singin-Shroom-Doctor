@@ -35,7 +35,7 @@ public partial class LevelManager : Node3D
 	public void SetHealth(float healthChange)
 	{
 		playerHealth += healthChange;
-		if (playerHealth < 1)
+		if (playerHealth < 0)
 			Death();
 	}
 
