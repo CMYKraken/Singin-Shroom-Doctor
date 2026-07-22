@@ -2,6 +2,17 @@ extends Label
 
 func _ready():
 	position = get_parent().position
+	var levelManager = get_parent().get_parent().get_parent().get_parent()
+	match get_parent().score:
+		0:
+			levelManager.SetHealth(-5);
+		333:
+			if levelManager.GetHealth() < 25:
+				levelManager.SetHealth(1);
+		555:
+			if levelManager.GetHealth() < 20:
+				levelManager.SetHealth(5);
+
 	position += Vector2(-500,-1000)
 	match get_parent().score:
 		0:

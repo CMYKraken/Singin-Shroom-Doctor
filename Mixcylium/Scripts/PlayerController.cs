@@ -19,22 +19,28 @@ public partial class PlayerController : Node
         if (@event.IsActionPressed("Action_1"))
         {
             GD.Print("D");
-            score += manager.CheckHitAccuracy(NoteData.ECollumn.Zero);
+            int scorevalue = manager.CheckHitAccuracy(NoteData.ECollumn.Zero);
+            score += scorevalue;
         }
         if (@event.IsActionPressed("Action_2"))
         {
             GD.Print("F");
-            score += manager.CheckHitAccuracy(NoteData.ECollumn.One);
+            int scorevalue = manager.CheckHitAccuracy(NoteData.ECollumn.One);
+            score += scorevalue;
         }
         if (@event.IsActionPressed("Action_3"))
         {
             GD.Print("J");
-            score += manager.CheckHitAccuracy(NoteData.ECollumn.Two);
+            int scorevalue = manager.CheckHitAccuracy(NoteData.ECollumn.Two);
+            score += scorevalue;
+
         }
         if (@event.IsActionPressed("Action_4"))
         {
             GD.Print("K");
-            score += manager.CheckHitAccuracy(NoteData.ECollumn.Three);
+            int scorevalue = manager.CheckHitAccuracy(NoteData.ECollumn.Three);
+            score += scorevalue;
+            
         }
     }
 

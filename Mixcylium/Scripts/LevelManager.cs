@@ -7,22 +7,26 @@ public partial class LevelManager : Node3D
 	public PlayerController player;
 	int currentSceneNum;
 	int levelMaxSceneNum;
+	
 	//Used by the Main Menu to start the level and pass in the correct levels
 	public void OnInitialise()//Notes[] notes)
 	{
-		rhythmManager = new(currentSong,noteData,NoteSpeedModifier);
+        rhythmManager = new(currentSong,noteData,NoteSpeedModifier);
 		AddChild(rhythmManager);
 		player = new(rhythmManager);
 		AddChild(player);
-		//rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
-		//rhythmManager.OnInitialise(notes);
-		currentSceneNum = 0;
+        PackedScene HealthBar = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/health_bar.tscn");
+        AddChild(HealthBar.Instantiate());
+        //rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
+        //rhythmManager.OnInitialise(notes);
+        currentSceneNum = 0;
 		levelMaxSceneNum = sceneOrder.Count;
         currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
         LoadNextScene(sceneOrder[currentSceneNum]);
-	}
+        
+    }
 
-	float playerHealth = 1;
+	float playerHealth = 25;
 	public float GetHealth()
 	{
 		return playerHealth;
@@ -31,12 +35,15 @@ public partial class LevelManager : Node3D
 	public void SetHealth(float healthChange)
 	{
 		playerHealth += healthChange;
-		if (playerHealth < 0)
+		if (playerHealth < 1)
 			Death();
 	}
 
 	void Death()
 	{
+		Dead = true;
+		PackedScene EndScreen = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/end_screen.tscn");
+		AddChild(EndScreen.Instantiate());
 		//Run the code to stop the current scene and display the loss screen
 	}
 
@@ -80,6 +87,7 @@ public partial class LevelManager : Node3D
 
 	void END()
 	{
+		Dead = false;
 		PackedScene EndScreen = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/end_screen.tscn");
 		AddChild(EndScreen.Instantiate());
 		Stopper = true;
@@ -88,6 +96,7 @@ public partial class LevelManager : Node3D
 	private bool Stopper = false;
 	public int Difficulty;
 	public int Level_Number;
+	public bool Dead;
 	public enum SceneNames { consultation, mushroom_growing_1, mushroom_growing_2, mushroom_growing_3, mortar_and_pestle, pill_delivery }
 	[Export] double[] sceneTransitionTimeStamps;
 	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;

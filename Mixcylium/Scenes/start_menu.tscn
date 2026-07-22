@@ -80,7 +80,6 @@ grow_vertical = 2
 script = ExtResource("1_m65hu")
 
 [node name="Main_Menu" type="Control" parent="." unique_id=1404796883]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,6 +173,7 @@ grow_vertical = 2
 text = "Exit"
 
 [node name="Settings_Menu" type="Control" parent="." unique_id=1648289953]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -369,6 +369,7 @@ popup/item_1/text = "Fullscreen"
 popup/item_1/id = 1
 
 [node name="Volume_Settings" type="Control" parent="Settings_Menu" unique_id=489232059]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
