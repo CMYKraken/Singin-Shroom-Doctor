@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\GitHub\\Singin-Shroom-Doctor\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 304,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +27,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LevelManager.cs",
+              "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs",
+              "RelativeDocumentMoniker": "Mixcylium\\Scripts\\LevelManager.cs",
+              "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs",
+              "RelativeToolTip": "Mixcylium\\Scripts\\LevelManager.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwB0AAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-29T09:50:37.347Z",
+              "EditorCaption": ""
             }
           ]
         }
