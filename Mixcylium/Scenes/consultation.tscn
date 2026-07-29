@@ -65,6 +65,7 @@ z_index = -1
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1311368263]
 offset_right = 1156.0
 offset_bottom = 649.0
+mouse_filter = 2
 texture = ExtResource("1_vou07")
 expand_mode = 1
 

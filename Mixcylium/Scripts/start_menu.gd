@@ -394,7 +394,6 @@ func _on_start_level_3_pressed():
 	var speed = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected
 	var difficulty = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	Level.Difficulty
 	var Scene = Level.instantiate()
 	Scene.Difficulty = difficulty
 	Scene.Level_Number = 3

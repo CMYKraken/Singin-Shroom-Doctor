@@ -32,6 +32,8 @@ public partial class LevelManager : Node3D
 		AddChild(player);
         PackedScene HealthBar = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/health_bar.tscn");
         AddChild(HealthBar.Instantiate());
+        PackedScene PauseMenu = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/pause_menu.tscn");
+        AddChild(PauseMenu.Instantiate());
         //rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
         //rhythmManager.OnInitialise(notes);
         currentSceneNum = 0;
