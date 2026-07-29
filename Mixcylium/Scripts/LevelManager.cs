@@ -11,6 +11,21 @@ public partial class LevelManager : Node3D
 	//Used by the Main Menu to start the level and pass in the correct levels
 	public void OnInitialise()//Notes[] notes)
 	{
+		if (Difficulty == 0)
+		{
+            currentSong = ResourceLoader.Load<Song>("res://Mixcylium/Songs/Song"+Level_Number.ToString()+"E.tres");
+            noteData = ResourceLoader.Load<NoteData>("res://Mixcylium/Notes/Level"+Level_Number.ToString()+"E.tres");
+        }
+        if (Difficulty == 1)
+        {
+            currentSong = ResourceLoader.Load<Song>("res://Mixcylium/Songs/Song" + Level_Number.ToString() + "M.tres");
+            noteData = ResourceLoader.Load<NoteData>("res://Mixcylium/Notes/Level" + Level_Number.ToString() + "M.tres");
+        }
+        if (Difficulty == 2)
+        {
+            currentSong = ResourceLoader.Load<Song>("res://Mixcylium/Songs/Song" + Level_Number.ToString() + "H.tres");
+            noteData = ResourceLoader.Load<NoteData>("res://Mixcylium/Notes/Level" + Level_Number.ToString() + "H.tres");
+        }
         rhythmManager = new(currentSong,noteData,NoteSpeedModifier);
 		AddChild(rhythmManager);
 		player = new(rhythmManager);
