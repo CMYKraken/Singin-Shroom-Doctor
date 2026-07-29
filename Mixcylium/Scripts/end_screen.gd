@@ -78,6 +78,7 @@ func _ready():
 
 func _on_back_to_menu_pressed():
 	get_parent().get_parent().get_node("Level_Select").visible = true
+	get_parent().get_parent().get_node("Level_Select/Right_Side/Level_"+str(get_parent().Level_Number)+"_Preview/Level_"+str(get_parent().Level_Number)+"_Preview_Player").play()
 	get_tree().paused = false
 	get_parent().queue_free()
 
