@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cd3qkiwo70g43"]
+
+[ext_resource type="Script" uid="uid://bx1iq1c6gq2rd" path="res://Mixcylium/Scripts/score_and_combo_label.gd" id="1_cod88"]
+[ext_resource type="Texture2D" uid="uid://b2dgjavmioy0c" path="res://Mixcylium/ArtAssets/GUI/Temp/Black.png" id="2_8b5c0"]
+
+[node name="ScoreAndComboLabel" type="Control" unique_id=1980081427]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cod88")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1628307491]
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 81.0
+texture = ExtResource("2_8b5c0")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1487515472]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Score" type="Label" parent="VBoxContainer" unique_id=1422028904]
+layout_mode = 2
+text = "0"
+
+[node name="ScoreMultiplyer" type="Label" parent="VBoxContainer" unique_id=1580516594]
+layout_mode = 2
+text = "1"
+
+[node name="Combo" type="Label" parent="VBoxContainer" unique_id=256941296]
+layout_mode = 2
+text = "0"

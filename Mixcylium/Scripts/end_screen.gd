@@ -14,13 +14,13 @@ func _ready():
 	Difficulty = get_parent().Difficulty
 	Level_Number = get_parent().Level_Number
 	Score = get_parent().get_child(1).score
-	Max_Score = get_parent().noteData.beatColumn.size() * 555
+	Max_Score = (get_parent().noteData.beatColumn.size() * 555) * 3
 	Score_Percent = float(float(Score)/float(Max_Score))
 	print_debug(Max_Score)
 	print_debug(Score_Percent)
 	if Death != true:
 		#Grading
-		if Score_Percent == 1:
+		if Score_Percent >= 1:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/S++.png")
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 1 and Score_Percent >= 0.9:
