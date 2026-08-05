@@ -91,7 +91,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	
 	public double GetCurrentPlaybackTime()
 	{
-		double time = (Time.GetTicksUsec() - _timeBegin) / 1000000.0d;
+		double time = this.GetPlaybackPosition() + AudioServer.GetTimeSinceLastMix();
 		time = Math.Max(0.0d,time - _timeDelay);
 		return time;
 	}
