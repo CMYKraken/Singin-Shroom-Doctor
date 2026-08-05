@@ -34,8 +34,9 @@ public partial class LevelManager : Node3D
         AddChild(HealthBar.Instantiate());
         PackedScene PauseMenu = ResourceLoader.Load<PackedScene>("res://Mixcylium/Prefabs/pause_menu.tscn");
         AddChild(PauseMenu.Instantiate());
-        //rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
-        //rhythmManager.OnInitialise(notes);
+		//rhythmManager = GetNode<RhythmManager>(GetChild(0).GetPath());
+		//rhythmManager.OnInitialise(notes);
+		finalScene = sceneOrder.Count - 1;
         currentSceneNum = 0;
 		levelMaxSceneNum = sceneOrder.Count;
         currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
@@ -43,7 +44,7 @@ public partial class LevelManager : Node3D
         
     }
 
-	float playerHealth = 25;
+	float playerHealth = 50;
 	public float GetHealth()
 	{
 		return playerHealth;
@@ -83,22 +84,28 @@ public partial class LevelManager : Node3D
 	{
 		if (Stopper == false)
 		{
-			if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
+			if (currentSceneNum != finalScene)
 			{
-				if (currentSceneNum < levelMaxSceneNum - 1)
+				if (rhythmManager.GetCurrentPlaybackTime() > currentSceneTimer)
 				{
-					//Change data to next scene
-					currentSceneNum++;
-					currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
-					//Load the next scene and discard the previous
-					GetChild(-1).QueueFree();
-					LoadNextScene(sceneOrder[currentSceneNum]);
-				}
-				else
-				{
-					END();
+					if (currentSceneNum < levelMaxSceneNum - 1)
+					{
+						//Change data to next scene
+						currentSceneNum++;
+						currentSceneTimer = sceneTransitionTimeStamps[currentSceneNum];
+						//Load the next scene and discard the previous
+						GetChild(-1).QueueFree();
+						LoadNextScene(sceneOrder[currentSceneNum]);
+					}
 				}
 			}
+			else
+			{
+				if (rhythmManager.GetPlaybackPosition() == 0)
+				{  
+					END();
+				}
+            }
 		}
 	}
 
@@ -114,6 +121,7 @@ public partial class LevelManager : Node3D
 	public int Difficulty;
 	public int Level_Number;
 	public bool Dead;
+	private int finalScene;
 	public enum SceneNames { consultation, mushroom_growing_1, mushroom_growing_2, mushroom_growing_3, mortar_and_pestle, pill_delivery }
 	[Export] double[] sceneTransitionTimeStamps;
 	[Export] public Godot.Collections.Array<SceneNames> sceneOrder;

@@ -46,9 +46,9 @@ public partial class Chart : Node2D
 
 	}
 
-	public void CreateNoteInCollumn(NoteData.ECollumn CollumnId,double noteTime)
+	public void CreateNoteInCollumn(NoteData.ECollumn CollumnId,double noteTime,RhythmManager manager)
 	{
-		Note newNote = new(_noteSpeed,noteTime);
+		Note newNote = new(_noteSpeed,noteTime,manager,CollumnId);
 		newNote.Position = Vector2.Zero;
 		
 		AddChild(newNote);
