@@ -255,9 +255,9 @@ func _on_window_mode_button_item_selected(index: int) -> void:
 	$Button_SFX_Player.play()
 	match index:
 		0:
-			DisplayServer.WINDOW_MODE_WINDOWED
+			DisplayServer.window_set_mode(0)
 		1:
-			DisplayServer.WINDOW_MODE_FULLSCREEN
+			DisplayServer.window_set_mode(3)
 
 #endregion
 #region Volume Settings
