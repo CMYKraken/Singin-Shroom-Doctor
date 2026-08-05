@@ -79,14 +79,42 @@ public partial class Chart : Node2D
 		switch (collumnId)
 		{
 			case NoteData.ECollumn.Zero:
-				return Collumn0[_currentNoteLane0];
-			case NoteData.ECollumn.One: 
-				return Collumn1[_currentNoteLane1];
-			case NoteData.ECollumn.Two: 
-				return Collumn2[_currentNoteLane2];
-			case NoteData.ECollumn.Three: 
-				return Collumn3[_currentNoteLane3];
-		}
+				if (Collumn0.Count >= _currentNoteLane0+1)
+				{
+					return Collumn0[_currentNoteLane0];
+				}
+				else
+				{
+					return null;
+				}
+			case NoteData.ECollumn.One:
+                if (Collumn1.Count >= _currentNoteLane1 + 1)
+                {
+                    return Collumn1[_currentNoteLane1];
+                }
+                else
+                {
+                    return null;
+                }
+            case NoteData.ECollumn.Two:
+                if (Collumn2.Count >= _currentNoteLane2 + 1)
+                {
+                    return Collumn2[_currentNoteLane2];
+                }
+                else
+                {
+                    return null;
+                }
+            case NoteData.ECollumn.Three:
+                if (Collumn3.Count >= _currentNoteLane3 + 1)
+                {
+                    return Collumn3[_currentNoteLane3];
+                }
+                else
+                {
+                    return null;
+                }
+        }
 		return null;
 	}
 	public void IncrementLanePointer(NoteData.ECollumn collumnId)

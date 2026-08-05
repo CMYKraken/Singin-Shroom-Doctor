@@ -55,35 +55,37 @@ public partial class RhythmManager : AudioStreamPlayer
 	{
 		double currentTime =GetCurrentPlaybackTime();
 		// Get closest active note
-		Note nextNoteInLane = _chart.GetNextNoteInCollumn(hitLane);
-
-		// remove and ignore missed notes
-		if(nextNoteInLane._time - currentTime< -ScoringUtils.EarlyLateInterval)
+		if (_chart.GetNextNoteInCollumn(hitLane) != null)
 		{
-			GD.Print(nextNoteInLane._time, " - ", currentTime, " : ", -ScoringUtils.EarlyLateInterval);
-			_chart.IncrementLanePointer(hitLane);
-			nextNoteInLane.DestroyNote(0);
-			CheckHitAccuracy(hitLane);
-			return 0;
+			Note nextNoteInLane = _chart.GetNextNoteInCollumn(hitLane);
 
-		}
-
-		// Check note playback time against current playback time
-		// determine and return a Perfect, good or miss 
-		if(nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
-		{
-			_chart.IncrementLanePointer(hitLane);
-			
-			
-			if(nextNoteInLane._time - currentTime < ScoringUtils.PerfectInterval)
+			// remove and ignore missed notes
+			if (nextNoteInLane._time - currentTime < -ScoringUtils.EarlyLateInterval)
 			{
-                nextNoteInLane.DestroyNote(ScoringUtils.PerfectScore);
-                return ScoringUtils.PerfectScore;
-			}
-            nextNoteInLane.DestroyNote(ScoringUtils.EarlyLateScore);
-            return ScoringUtils.EarlyLateScore;
-		}
+				GD.Print(nextNoteInLane._time, " - ", currentTime, " : ", -ScoringUtils.EarlyLateInterval);
+				_chart.IncrementLanePointer(hitLane);
+				nextNoteInLane.DestroyNote(0);
+				CheckHitAccuracy(hitLane);
+				return 0;
 
+			}
+
+			// Check note playback time against current playback time
+			// determine and return a Perfect, good or miss 
+			if (nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
+			{
+				_chart.IncrementLanePointer(hitLane);
+
+
+				if (nextNoteInLane._time - currentTime < ScoringUtils.PerfectInterval)
+				{
+					nextNoteInLane.DestroyNote(ScoringUtils.PerfectScore);
+					return ScoringUtils.PerfectScore;
+				}
+				nextNoteInLane.DestroyNote(ScoringUtils.EarlyLateScore);
+				return ScoringUtils.EarlyLateScore;
+			}
+		}
 		
 		return 0;
 	}
