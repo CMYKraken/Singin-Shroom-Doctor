@@ -117,6 +117,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		this.Bus = "Music";
 		_screenHeight = GetWindow().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
 		_noteSpeed = _screenHeight /(BeatsPerBar/(_BeatsPerSecond* (double)SpeedModifier/10));
