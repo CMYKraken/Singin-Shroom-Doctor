@@ -118,7 +118,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	public override void _Ready()
 	{
 		this.Bus = "Music";
-		_screenHeight = GetWindow().Size.Y;
+		_screenHeight = (int)GetViewport().GetVisibleRect().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
 		_noteSpeed = _screenHeight /(BeatsPerBar/(_BeatsPerSecond* (double)SpeedModifier/10));
 		
