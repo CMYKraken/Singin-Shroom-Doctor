@@ -8,13 +8,13 @@ func _ready():
 			if levelManager.GetHealth() > -1:
 				levelManager.SetHealth(-5);
 		333:
-			if levelManager.GetHealth() < 25:
+			if levelManager.GetHealth() < 50:
 				levelManager.SetHealth(1);
 		555:
-			if levelManager.GetHealth() < 20:
+			if levelManager.GetHealth() < 45:
 				levelManager.SetHealth(5);
-			elif levelManager.GetHealth() < 25:
-				levelManager.playerHealth = 25
+			elif levelManager.GetHealth() < 50:
+				levelManager.playerHealth = 50
 
 	position += Vector2(-500,-1000)
 	match get_parent().score:

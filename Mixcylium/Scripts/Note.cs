@@ -7,8 +7,12 @@ public partial class Note : Sprite2D
 	public double _time;
 	private double _Speed;
 	private bool stopped;
+	private RhythmManager Rhythm;
+	private NoteData.ECollumn _Lane;
 	public Note(){}
-	public Note(double movementSpeed,double noteTime){
+	public Note(double movementSpeed,double noteTime, RhythmManager manager, NoteData.ECollumn Lane){
+		Rhythm = manager;
+		_Lane = Lane;
 		_Speed = movementSpeed;
 		_time = noteTime;
         stopped = false;
@@ -27,6 +31,11 @@ public partial class Note : Sprite2D
 		if (!stopped)
 		{
             Position += Vector2.Down * (float)(_Speed * delta);
+			if (_time - Rhythm.GetCurrentPlaybackTime() < -ScoringUtils.EarlyLateInterval)
+			{
+                Rhythm._chart.IncrementLanePointer(_Lane);
+                DestroyNote(0);
+            }
         }
 	}
 

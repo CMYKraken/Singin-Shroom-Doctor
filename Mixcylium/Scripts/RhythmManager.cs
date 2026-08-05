@@ -111,7 +111,7 @@ public partial class RhythmManager : AudioStreamPlayer
 	}
 
 	private void SpawnNote(NoteData.ECollumn collumn,double timestamp){
-		_chart.CreateNoteInCollumn(collumn,timestamp);
+		_chart.CreateNoteInCollumn(collumn,timestamp,this);
 	}
 
 	// Called when the node enters the scene tree for the first time.

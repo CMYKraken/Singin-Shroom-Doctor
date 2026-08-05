@@ -44,7 +44,7 @@ public partial class LevelManager : Node3D
         
     }
 
-	float playerHealth = 25;
+	float playerHealth = 50;
 	public float GetHealth()
 	{
 		return playerHealth;
