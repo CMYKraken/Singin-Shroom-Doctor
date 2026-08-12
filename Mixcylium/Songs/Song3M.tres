@@ -1,6 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://ci13vpxtm18pn"]
 
-[ext_resource type="AudioStream" uid="uid://2ocwajt4ay4k" path="res://Mixcylium/Audio/Stage 3E Full Comp.wav" id="1_asyta"]
+[ext_resource type="AudioStream" uid="uid://2ocwajt4ay4k" path="res://Mixcylium/Audio/Music/Stages/Stage 3E Full Comp.wav" id="1_asyta"]
 [ext_resource type="Script" uid="uid://c8d5r0skm3h6r" path="res://Mixcylium/Scripts/Song.cs" id="2_2bxxj"]
 
 [resource]

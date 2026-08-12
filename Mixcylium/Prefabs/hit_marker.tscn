@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://6oa7t63jps2s"]
 
 [ext_resource type="Script" uid="uid://bl1hjd1lbukt5" path="res://Mixcylium/Scripts/hit_marker.gd" id="1_xwftn"]
+[ext_resource type="AudioStream" uid="uid://bvpga3muj16xm" path="res://Mixcylium/Audio/SFX/Late SFX.wav" id="2_xs0q5"]
+[ext_resource type="AudioStream" uid="uid://dedf7ntdcgkv4" path="res://Mixcylium/Audio/SFX/Early SFX.wav" id="3_e5duh"]
+[ext_resource type="AudioStream" uid="uid://1pvv30ir0iqg" path="res://Mixcylium/Audio/SFX/Perfect SFX.wav" id="4_swsuj"]
 
 [node name="Hit_Marker" type="Label" unique_id=1507194212]
 offset_left = -253.0
@@ -16,12 +19,15 @@ script = ExtResource("1_xwftn")
 autostart = true
 
 [node name="Miss_Sound" type="AudioStreamPlayer" parent="." unique_id=1172785628]
+stream = ExtResource("2_xs0q5")
 bus = &"Hit_Marker"
 
 [node name="Ok_Sound" type="AudioStreamPlayer" parent="." unique_id=2082622250]
+stream = ExtResource("3_e5duh")
 bus = &"Hit_Marker"
 
 [node name="Perfect_Sound" type="AudioStreamPlayer" parent="." unique_id=135571203]
+stream = ExtResource("4_swsuj")
 bus = &"Hit_Marker"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

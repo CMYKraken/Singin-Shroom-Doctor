@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckn1njjcpc6ro"
-path="res://.godot/imported/Fail.wav-8e09f1d2aa20284b0c8b07ce81480dae.sample"
+path="res://.godot/imported/Fail.wav-f4725fa87270b506dd855bb26d457ae2.sample"
 
 [deps]
 
-source_file="res://Mixcylium/Audio/Fail.wav"
-dest_files=["res://.godot/imported/Fail.wav-8e09f1d2aa20284b0c8b07ce81480dae.sample"]
+source_file="res://Mixcylium/Audio/SFX/Fail.wav"
+dest_files=["res://.godot/imported/Fail.wav-f4725fa87270b506dd855bb26d457ae2.sample"]
 
 [params]
 

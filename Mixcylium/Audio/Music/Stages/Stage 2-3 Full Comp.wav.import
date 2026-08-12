@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://btcy8gy0kxr31"
-path="res://.godot/imported/Stage 2-3 Full Comp.wav-e2a1e6ba6065a858c066b2b9246de244.sample"
+path="res://.godot/imported/Stage 2-3 Full Comp.wav-3065b1fe3d185ea6c7aab14ee8fc2a48.sample"
 
 [deps]
 
-source_file="res://Mixcylium/Audio/Stage 2-3 Full Comp.wav"
-dest_files=["res://.godot/imported/Stage 2-3 Full Comp.wav-e2a1e6ba6065a858c066b2b9246de244.sample"]
+source_file="res://Mixcylium/Audio/Music/Stages/Stage 2-3 Full Comp.wav"
+dest_files=["res://.godot/imported/Stage 2-3 Full Comp.wav-3065b1fe3d185ea6c7aab14ee8fc2a48.sample"]
 
 [params]
 

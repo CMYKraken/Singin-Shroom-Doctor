@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bcx4xnl33mhtu"
-path="res://.godot/imported/Main Menu.wav-160fcee43289177ed2e2af861016d82e.sample"
+path="res://.godot/imported/Main Menu.wav-e01de8fe6ca2b0cb90c9dee37f01990b.sample"
 
 [deps]
 
-source_file="res://Mixcylium/Audio/Main Menu.wav"
-dest_files=["res://.godot/imported/Main Menu.wav-160fcee43289177ed2e2af861016d82e.sample"]
+source_file="res://Mixcylium/Audio/Music/Main Menu.wav"
+dest_files=["res://.godot/imported/Main Menu.wav-e01de8fe6ca2b0cb90c9dee37f01990b.sample"]
 
 [params]
 

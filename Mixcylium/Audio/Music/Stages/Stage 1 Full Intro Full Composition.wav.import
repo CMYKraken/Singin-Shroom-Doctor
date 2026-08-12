@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://baco386ruhhiy"
+path="res://.godot/imported/Stage 1 Full Intro Full Composition.wav-65598938c6b4821d9a4e6fce31bc8acc.sample"
+
+[deps]
+
+source_file="res://Mixcylium/Audio/Music/Stages/Stage 1 Full Intro Full Composition.wav"
+dest_files=["res://.godot/imported/Stage 1 Full Intro Full Composition.wav-65598938c6b4821d9a4e6fce31bc8acc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
