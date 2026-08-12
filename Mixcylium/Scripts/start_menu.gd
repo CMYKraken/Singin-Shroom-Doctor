@@ -329,21 +329,13 @@ func _on_level_pressed(type : int):
 #endregion
 #region Button Check
 func Button_Check():
-	if $Level_Select/Right_Side/Level_1_Preview.visible == true:
-		if $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
-			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1".disabled = false
-		else:
-			$"Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1".disabled = true
-	elif $Level_Select/Right_Side/Level_2_Preview.visible == true:
-		if $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
-			$"Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2".disabled = false
-		else:
-			$"Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2".disabled = true
-	elif $Level_Select/Right_Side/Level_3_Preview.visible == true:
-		if $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected > 0 and $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected > 0:
-			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = false
-		else:
-			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = true
+	for i in LevelCount:
+		if get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview").visible == true:
+			if get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/HBoxContainer2/Select_Speed").selected > 0 and get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/HBoxContainer2/Select_Dificulty").selected > 0:
+				get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/HBoxContainer2/Start_Level_"+str(i+1)).disabled = false
+			else:
+				get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/HBoxContainer2/Start_Level_"+str(i+1)).disabled = true
+
 #endregion
 #region Start Level
 func _on_start_level_pressed(type: int):
@@ -357,32 +349,6 @@ func _on_start_level_pressed(type: int):
 	Scene.Level_Number = type
 	add_child(Scene)
 	get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview/Level_"+str(type)+"_Preview_Player").stop()
-	$Level_Select.visible = false
-
-func _on_start_level_2_pressed():
-	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Speed.selected 
-	var difficulty = $Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Select_Dificulty.selected -1
-	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()
-	Scene.Difficulty = difficulty
-	Scene.Level_Number = 2
-	Scene.NoteSpeedModifier = speed *5
-	add_child(Scene)
-	$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.stop()
-	$Level_Select.visible = false
-
-func _on_start_level_3_pressed():
-	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Speed.selected
-	var difficulty = $Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Select_Dificulty.selected -1
-	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
-	var Scene = Level.instantiate()
-	Scene.Difficulty = difficulty
-	Scene.Level_Number = 3
-	Scene.NoteSpeedModifier = speed *5
-	add_child(Scene)
-	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
 	$Level_Select.visible = false
 #endregion
 #endregion
