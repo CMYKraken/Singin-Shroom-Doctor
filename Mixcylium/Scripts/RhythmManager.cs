@@ -60,7 +60,7 @@ public partial class RhythmManager : AudioStreamPlayer
 			Note nextNoteInLane = _chart.GetNextNoteInCollumn(hitLane);
 
 			// remove and ignore missed notes
-			if (nextNoteInLane._time - currentTime < -ScoringUtils.EarlyLateInterval)
+			if (nextNoteInLane._time - currentTime < (-ScoringUtils.EarlyLateInterval * (SpawnTimeOffset/2)))
 			{
 				GD.Print(nextNoteInLane._time, " - ", currentTime, " : ", -ScoringUtils.EarlyLateInterval);
 				_chart.IncrementLanePointer(hitLane);
@@ -72,12 +72,12 @@ public partial class RhythmManager : AudioStreamPlayer
 
 			// Check note playback time against current playback time
 			// determine and return a Perfect, good or miss 
-			if (nextNoteInLane._time - currentTime < ScoringUtils.EarlyLateInterval)
+			if (nextNoteInLane._time - currentTime < (ScoringUtils.EarlyLateInterval * (SpawnTimeOffset/2)))
 			{
 				_chart.IncrementLanePointer(hitLane);
 
 
-				if (nextNoteInLane._time - currentTime < ScoringUtils.PerfectInterval)
+				if (nextNoteInLane._time - currentTime < (ScoringUtils.PerfectInterval * (SpawnTimeOffset/2)) && nextNoteInLane._time - currentTime > (-ScoringUtils.PerfectInterval * (SpawnTimeOffset / 2)))
 				{
 					nextNoteInLane.DestroyNote(ScoringUtils.PerfectScore);
 					return ScoringUtils.PerfectScore;
@@ -123,11 +123,11 @@ public partial class RhythmManager : AudioStreamPlayer
 		_screenHeight = (int)GetViewport().GetVisibleRect().Size.Y;
 		_BeatsPerSecond = bpm/ 60.0d;
 		_noteSpeed = _screenHeight /(BeatsPerBar/(_BeatsPerSecond* (double)SpeedModifier/10));
-		
+
 		//_SpeedCoefficient = BeatsPerBar*1/((double)SpeedModifier/10);
 		//_noteSpeed = _screenHeight*_BeatsPerSecond/_SpeedCoefficient;
 
-		SpawnTimeOffset =  _screenHeight/_noteSpeed;
+		SpawnTimeOffset = _screenHeight/_noteSpeed;
 		GD.Print(_noteSpeed," : ", SpawnTimeOffset);
 
 		_chart = new(_noteSpeed);

@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\GitHub\\Singin-Shroom-Doctor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\chart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\chart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\rhythmmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\rhythmmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +11,20 @@
       "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\note.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\playercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\scoringutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\scoringutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|d:\\github\\singin-shroom-doctor\\mixcylium\\scripts\\chart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B3D22F4-6221-43BE-8348-5372D9CBCFC6}|Singin- Shroom Doctor.csproj|solutionrelative:mixcylium\\scripts\\chart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,20 +34,21 @@
       "DocumentGroups": [
         {
           "DockedHeight": 304,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Note.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\Note.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\Note.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\Note.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\Note.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowA8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wCIAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-29T11:07:01.36Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -63,65 +64,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ScoringUtils.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\ScoringUtils.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\ScoringUtils.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\ScoringUtils.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\ScoringUtils.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-05T13:19:55.778Z"
+              "WhenOpened": "2026-08-05T13:19:55.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RhythmManager.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\RhythmManager.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\RhythmManager.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\RhythmManager.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\RhythmManager.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAqwDcAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T10:50:44.635Z"
+              "WhenOpened": "2026-07-29T10:50:44.635Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Chart.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\Chart.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\Chart.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\Chart.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\Chart.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAcwHQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-05T13:34:58.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayerController.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\PlayerController.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\PlayerController.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\PlayerController.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\PlayerController.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-08-05T13:14:49.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LevelManager.cs",
               "DocumentMoniker": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs",
               "RelativeDocumentMoniker": "Mixcylium\\Scripts\\LevelManager.cs",
               "ToolTip": "D:\\GitHub\\Singin-Shroom-Doctor\\Mixcylium\\Scripts\\LevelManager.cs",
               "RelativeToolTip": "Mixcylium\\Scripts\\LevelManager.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwC4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-29T09:50:37.347Z"
+              "WhenOpened": "2026-07-29T09:50:37.347Z",
+              "EditorCaption": ""
             }
           ]
         }

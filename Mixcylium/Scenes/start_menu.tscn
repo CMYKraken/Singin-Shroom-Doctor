@@ -4,17 +4,26 @@
 [ext_resource type="Script" uid="uid://ohii1t75rdck" path="res://Mixcylium/Scripts/start_menu.gd" id="1_m65hu"]
 [ext_resource type="Texture2D" uid="uid://phsaxsl6bctu" path="res://Mixcylium/ArtAssets/GUI/Temp/White.png" id="3_e5q2p"]
 [ext_resource type="Texture2D" uid="uid://kah03vn5eyaq" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_1.png" id="3_eixw3"]
+[ext_resource type="Texture2D" uid="uid://d1eaef1xet7nn" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/LV1_ButtonBig.png" id="3_xm641"]
 [ext_resource type="AudioStream" uid="uid://bcx4xnl33mhtu" path="res://Mixcylium/Audio/Main Menu.wav" id="4_3d2w7"]
 [ext_resource type="Texture2D" uid="uid://42acs3khfy0g" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_2.png" id="4_7htk8"]
 [ext_resource type="AudioStream" uid="uid://c1ca3s8rnj2ju" path="res://Mixcylium/Audio/Stage 1 Preview.wav" id="4_bd18b"]
+[ext_resource type="Texture2D" uid="uid://2jmxi3phedun" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/LV1_ButtonBig_Pressed.png" id="4_i2x27"]
 [ext_resource type="AudioStream" uid="uid://cay72k8xwt5f6" path="res://Mixcylium/Audio/Stage 2 Preview.wav" id="5_8iuxd"]
 [ext_resource type="AudioStream" uid="uid://bjw0228h5m3nm" path="res://Mixcylium/Audio/Bottle Tap 1.wav" id="5_nbwth"]
+[ext_resource type="Texture2D" uid="uid://dtr2pdpbjjuiv" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/LV1_ButtonBig_Hover.png" id="5_qeqxl"]
 [ext_resource type="Texture2D" uid="uid://crulg2t1e3glq" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_1/Lv1_Disk_3.png" id="5_s2q25"]
 [ext_resource type="Script" uid="uid://bvx8eopgbyenf" path="res://Mixcylium/Scripts/Run_Animation.gd" id="6_7htk8"]
 [ext_resource type="AudioStream" uid="uid://52sh5w00yius" path="res://Mixcylium/Audio/Stage 3 Preview.wav" id="6_io4bi"]
+[ext_resource type="Texture2D" uid="uid://tfvmgm3gcisy" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/LV2_Button.png" id="6_tj7ly"]
+[ext_resource type="Texture2D" uid="uid://cw1cblu5l8m1u" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/LV2_Button_Pressed.png" id="7_pc15v"]
 [ext_resource type="Texture2D" uid="uid://co0lvr1scjl1s" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_1.png" id="8_gm78g"]
+[ext_resource type="Texture2D" uid="uid://tpcvxof8nyrb" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/LV2_Button_Hover.png" id="8_opx5w"]
+[ext_resource type="Texture2D" uid="uid://dm1054oaqvfb6" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/LV3_Button.png" id="9_tuwvr"]
 [ext_resource type="Texture2D" uid="uid://cm0xexlannf0o" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_2.png" id="9_vy0qg"]
+[ext_resource type="Texture2D" uid="uid://bgu1ps0aagkpo" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/LV3_Button_Pressed.png" id="10_chpp5"]
 [ext_resource type="Texture2D" uid="uid://bd55xybjnc4o8" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_2/Lv2_Disk_3.png" id="10_jk2cr"]
+[ext_resource type="Texture2D" uid="uid://djtau557um7tl" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/LV3_Button_Hover.png" id="11_1kfcm"]
 [ext_resource type="Texture2D" uid="uid://b62j2sbbg8s5k" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_1.png" id="12_du523"]
 [ext_resource type="Texture2D" uid="uid://d1l11gvkql35e" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_2.png" id="13_ncdcq"]
 [ext_resource type="Texture2D" uid="uid://c0c2203c6ogle" path="res://Mixcylium/ArtAssets/GUI/Level_Select/Level_3/Lv3_Disk_3.png" id="14_32rki"]
@@ -748,65 +757,26 @@ alignment = 1
 [node name="Level_1" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=964897537]
 process_mode = 3
 layout_mode = 2
-texture_normal = ExtResource("1_be23h")
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
 stretch_mode = 0
-
-[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" unique_id=1716806943]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Level 1"
 
 [node name="Level_2" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2117327784]
 process_mode = 3
 layout_mode = 2
-texture_normal = ExtResource("1_be23h")
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
 stretch_mode = 0
-
-[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" unique_id=1972428408]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Level 2"
 
 [node name="Level_3" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2028423381]
 process_mode = 3
 layout_mode = 2
-texture_normal = ExtResource("1_be23h")
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
 stretch_mode = 0
-
-[node name="Label" type="Label" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" unique_id=1346467376]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Level 3"
 
 [node name="Select_A_Level" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=1686682031]
 layout_mode = 0

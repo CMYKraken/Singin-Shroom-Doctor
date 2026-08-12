@@ -15,7 +15,6 @@ func _ready():
 			player.combo += 1
 			if levelManager.GetHealth() < 50:
 				levelManager.SetHealth(1);
-				levelManager.get_child(1).combo = 0
 		555:
 			player.combo += 1
 			if levelManager.GetHealth() < 45:

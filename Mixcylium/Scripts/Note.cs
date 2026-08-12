@@ -9,7 +9,8 @@ public partial class Note : Sprite2D
 	private bool stopped;
 	private RhythmManager Rhythm;
 	private NoteData.ECollumn _Lane;
-	public Note(){}
+	private double SpawnTimeOffset;
+    public Note(){}
 	public Note(double movementSpeed,double noteTime, RhythmManager manager, NoteData.ECollumn Lane){
 		Rhythm = manager;
 		_Lane = Lane;
@@ -21,6 +22,7 @@ public partial class Note : Sprite2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		SpawnTimeOffset = (int)GetViewport().GetVisibleRect().Size.Y / _Speed;
         Texture = (Texture2D) ResourceLoader.Load("res://Mixcylium/ArtAssets/Sprites/Beats/GameJam.png");
 		Scale = new Vector2(0.075f,0.075f);
 	}
@@ -30,12 +32,13 @@ public partial class Note : Sprite2D
 	{
 		if (!stopped)
 		{
-            Position += Vector2.Down * (float)(_Speed * delta);
-			if (_time - Rhythm.GetCurrentPlaybackTime() < -ScoringUtils.EarlyLateInterval)
-			{
+            if (_time - Rhythm.GetCurrentPlaybackTime() < (-ScoringUtils.EarlyLateInterval * (SpawnTimeOffset/2)))
+            {
                 Rhythm._chart.IncrementLanePointer(_Lane);
                 DestroyNote(0);
+				return;
             }
+            Position += Vector2.Down * (float)(_Speed * delta);
         }
 	}
 
