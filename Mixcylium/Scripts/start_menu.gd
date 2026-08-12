@@ -316,33 +316,16 @@ func _on_back_to_settings_pressed():
 #endregion
 #region Level Select
 #region Level Options
-func _on_level_1_pressed():
-	$Level_Select/Right_Side/Level_1_Preview.visible = true
-	$Level_Select/Right_Side/Level_2_Preview.visible = false
-	$Level_Select/Right_Side/Level_3_Preview.visible = false
+func _on_level_pressed(type : int):
 	$Button_SFX_Player.play()
-	$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.play()
+	for i in LevelCount:
+		if i == type -1:
+			get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview").visible = true
+			get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview/Level_"+str(type)+"_Preview_Player").play()
+		else:
+			get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview").visible = false
+			get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/Level_"+str(i+1)+"_Preview_Player").stop()
 
-func _on_level_2_pressed():
-	$Level_Select/Right_Side/Level_1_Preview.visible = false
-	$Level_Select/Right_Side/Level_2_Preview.visible = true
-	$Level_Select/Right_Side/Level_3_Preview.visible = false
-	$Button_SFX_Player.play()
-	$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.play()
-	
-
-func _on_level_3_pressed():
-	$Level_Select/Right_Side/Level_1_Preview.visible = false
-	$Level_Select/Right_Side/Level_2_Preview.visible = false
-	$Level_Select/Right_Side/Level_3_Preview.visible = true
-	$Button_SFX_Player.play()
-	$Level_Select/Right_Side/Level_2_Preview/Level_2_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.stop()
-	$Level_Select/Right_Side/Level_3_Preview/Level_3_Preview_Player.play()
 #endregion
 #region Button Check
 func Button_Check():
@@ -363,17 +346,17 @@ func Button_Check():
 			$"Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3".disabled = true
 #endregion
 #region Start Level
-func _on_start_level_1_pressed():
+func _on_start_level_pressed(type: int):
 	$Button_SFX_Player.play()
-	var speed = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Speed.selected
-	var difficulty = $Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Select_Dificulty.selected -1
+	var speed = get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview/HBoxContainer2/Select_Speed").selected
+	var difficulty = get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview/HBoxContainer2/Select_Dificulty").selected -1
 	var Level = preload("res://Mixcylium/Prefabs/level_manager.tscn")
 	var Scene = Level.instantiate()
 	Scene.NoteSpeedModifier = speed *5
 	Scene.Difficulty = difficulty
-	Scene.Level_Number = 1
+	Scene.Level_Number = type
 	add_child(Scene)
-	$Level_Select/Right_Side/Level_1_Preview/Level_1_Preview_Player.stop()
+	get_node("Level_Select/Right_Side/Level_"+str(type)+"_Preview/Level_"+str(type)+"_Preview_Player").stop()
 	$Level_Select.visible = false
 
 func _on_start_level_2_pressed():

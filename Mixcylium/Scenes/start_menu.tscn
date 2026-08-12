@@ -752,6 +752,7 @@ process_mode = 4
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_constants/separation = 5
 alignment = 1
 
 [node name="Level_1" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=964897537]
@@ -771,6 +772,102 @@ texture_hover = ExtResource("8_opx5w")
 stretch_mode = 0
 
 [node name="Level_3" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2028423381]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
+stretch_mode = 0
+
+[node name="Level_4" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1023537524]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+stretch_mode = 0
+
+[node name="Level_5" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1955334782]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+stretch_mode = 0
+
+[node name="Level_6" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=246632188]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
+stretch_mode = 0
+
+[node name="Level_7" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1702758934]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+stretch_mode = 0
+
+[node name="Level_8" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=344659635]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+stretch_mode = 0
+
+[node name="Level_9" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2131732567]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
+stretch_mode = 0
+
+[node name="Level_10" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=617714952]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+stretch_mode = 0
+
+[node name="Level_11" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1479422857]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+stretch_mode = 0
+
+[node name="Level_12" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1696596918]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
+stretch_mode = 0
+
+[node name="Level_13" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=653743160]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+stretch_mode = 0
+
+[node name="Level_14" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=105875409]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+stretch_mode = 0
+
+[node name="Level_15" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=561102631]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
@@ -810,21 +907,21 @@ grow_vertical = 2
 [node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1648278119]
 layout_mode = 0
 offset_right = 550.0
-offset_bottom = 450.0
+offset_bottom = 382.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_1_Preview/Panel" unique_id=732998373]
-position = Vector2(280, 222)
-scale = Vector2(0.7, 0.7)
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_m0sg7")
 frame_progress = 0.08102266
 script = ExtResource("6_7htk8")
 
 [node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1418699202]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 419.0
-offset_right = 384.0
-offset_bottom = 442.0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
 text = "Level 1"
 horizontal_alignment = 1
 
@@ -832,9 +929,9 @@ horizontal_alignment = 1
 process_mode = 4
 layout_mode = 0
 offset_left = -3.0
-offset_top = 448.0
-offset_right = 552.0
-offset_bottom = 489.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
 
 [node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2" unique_id=1512998065]
 process_mode = 3
@@ -898,8 +995,8 @@ text = "Start Game"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1635621249]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 490.0
+offset_left = -2.0
+offset_top = 428.0
 offset_right = 549.0
 offset_bottom = 646.0
 
@@ -931,6 +1028,14 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
+[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=1112402615]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
 [node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer" unique_id=1528889219]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -958,6 +1063,14 @@ offset_top = 50.0
 offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
+
+[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=289389052]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
 
 [node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer" unique_id=539468116]
 layout_mode = 2
@@ -987,11 +1100,20 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
+[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=1422599709]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
 [node name="Level_1_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_1_Preview" unique_id=1009939489]
 stream = ExtResource("4_bd18b")
 bus = &"Music"
 
 [node name="Level_2_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1706485269]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1187,6 +1309,7 @@ stream = ExtResource("5_8iuxd")
 bus = &"Music"
 
 [node name="Level_3_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1511084229]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1410,9 +1533,9 @@ bus = &"SFX"
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 1" to="." method="_on_input_1_pressed"]
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 2" to="." method="_on_input_2_pressed"]
 [connection signal="pressed" from="Level_Select/Left_Side/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
-[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_2_pressed"]
-[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" to="." method="_on_level_3_pressed"]
-[connection signal="pressed" from="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" to="." method="_on_start_level_1_pressed"]
-[connection signal="pressed" from="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" to="." method="_on_start_level_2_pressed"]
-[connection signal="pressed" from="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" to="." method="_on_start_level_3_pressed"]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_pressed" binds= [1]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_pressed" binds= [2]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" to="." method="_on_level_pressed" binds= [3]]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" to="." method="_on_start_level_pressed" binds= [1]]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" to="." method="_on_start_level_pressed" binds= [2]]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" to="." method="_on_start_level_pressed" binds= [3]]
