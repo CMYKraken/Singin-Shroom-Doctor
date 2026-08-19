@@ -13,7 +13,7 @@ var ConfigScore = ConfigFile.new()
 var ConfigSetting = ConfigFile.new()
 var ConfigLevels = ConfigFile.new()
 var SecretCount = 5
-var LevelCount = 3
+var LevelCount = 20
 var LevelSet = 4
 var SecretData = {
 	"Secret_1":false,
