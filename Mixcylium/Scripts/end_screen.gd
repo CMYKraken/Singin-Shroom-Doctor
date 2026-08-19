@@ -1,5 +1,6 @@
 extends Control
 var Grade
+var GradeID
 var Score
 var Max_Score
 var Score_Percent
@@ -22,27 +23,35 @@ func _ready():
 		#Grading
 		if Score_Percent >= 1:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/S++.png")
+			GradeID = 7
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 1 and Score_Percent >= 0.9:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/S+.png")
+			GradeID = 6
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.9 and Score_Percent >= 0.8:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/S.png")
+			GradeID = 5
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.8 and Score_Percent >= 0.7:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/A.png")
+			GradeID = 4
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.7 and Score_Percent >= 0.6:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/B.png")
+			GradeID = 3
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.6 and Score_Percent >= 0.5:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/C.png")
+			GradeID = 2
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.5 and Score_Percent >= 0.4:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/D.png")
+			GradeID = 1
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		elif Score_Percent < 0.4:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/F.png")
+			GradeID = 0
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		
 		
@@ -68,7 +77,9 @@ func _ready():
 		if Score > get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][0]:
 			get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][0] = Score
 			get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][1] = Grade
+			get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][2] = GradeID
 			get_parent().get_parent().Update_Scores()
+			get_parent().get_parent().Unlock_Check()
 	else:
 		$PanelContainer/VBoxContainer/Win_Lose.text = "You ran out of health"
 		$Lose.play()

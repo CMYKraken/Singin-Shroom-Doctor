@@ -761,6 +761,7 @@ layout_mode = 2
 texture_normal = ExtResource("3_xm641")
 texture_pressed = ExtResource("4_i2x27")
 texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
 stretch_mode = 0
 
 [node name="Level_2" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2117327784]
@@ -769,6 +770,7 @@ layout_mode = 2
 texture_normal = ExtResource("6_tj7ly")
 texture_pressed = ExtResource("7_pc15v")
 texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
 [node name="Level_3" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2028423381]
@@ -777,102 +779,160 @@ layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
 texture_pressed = ExtResource("10_chpp5")
 texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
 stretch_mode = 0
 
-[node name="Level_4" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1023537524]
+[node name="Level_4" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=621041905]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("3_xm641")
 texture_pressed = ExtResource("4_i2x27")
 texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
 stretch_mode = 0
 
-[node name="Level_5" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1955334782]
+[node name="Level_5" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=636523276]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("6_tj7ly")
 texture_pressed = ExtResource("7_pc15v")
 texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
-[node name="Level_6" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=246632188]
+[node name="Level_6" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=608926174]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
 texture_pressed = ExtResource("10_chpp5")
 texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
 stretch_mode = 0
 
-[node name="Level_7" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1702758934]
+[node name="Level_7" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1489245532]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("3_xm641")
 texture_pressed = ExtResource("4_i2x27")
 texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
 stretch_mode = 0
 
-[node name="Level_8" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=344659635]
+[node name="Level_8" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1054372078]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("6_tj7ly")
 texture_pressed = ExtResource("7_pc15v")
 texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
-[node name="Level_9" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=2131732567]
+[node name="Level_9" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=974705790]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
 texture_pressed = ExtResource("10_chpp5")
 texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
 stretch_mode = 0
 
-[node name="Level_10" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=617714952]
+[node name="Level_10" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1779130289]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("3_xm641")
 texture_pressed = ExtResource("4_i2x27")
 texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
 stretch_mode = 0
 
-[node name="Level_11" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1479422857]
+[node name="Level_11" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1226162631]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("6_tj7ly")
 texture_pressed = ExtResource("7_pc15v")
 texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
-[node name="Level_12" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1696596918]
+[node name="Level_12" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=260424236]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
 texture_pressed = ExtResource("10_chpp5")
 texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
 stretch_mode = 0
 
-[node name="Level_13" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=653743160]
+[node name="Level_13" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=401341436]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("3_xm641")
 texture_pressed = ExtResource("4_i2x27")
 texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
 stretch_mode = 0
 
-[node name="Level_14" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=105875409]
+[node name="Level_14" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=612288229]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("6_tj7ly")
 texture_pressed = ExtResource("7_pc15v")
 texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
-[node name="Level_15" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=561102631]
+[node name="Level_15" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=761170676]
 process_mode = 3
 layout_mode = 2
 texture_normal = ExtResource("9_tuwvr")
 texture_pressed = ExtResource("10_chpp5")
 texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
+stretch_mode = 0
+
+[node name="Level_16" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1074043065]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
+stretch_mode = 0
+
+[node name="Level_17" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1526581829]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
+stretch_mode = 0
+
+[node name="Level_18" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1140585742]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("9_tuwvr")
+texture_pressed = ExtResource("10_chpp5")
+texture_hover = ExtResource("11_1kfcm")
+texture_disabled = ExtResource("10_chpp5")
+stretch_mode = 0
+
+[node name="Level_19" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=1296342298]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("3_xm641")
+texture_pressed = ExtResource("4_i2x27")
+texture_hover = ExtResource("5_qeqxl")
+texture_disabled = ExtResource("4_i2x27")
+stretch_mode = 0
+
+[node name="Level_20" type="TextureButton" parent="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer" unique_id=238639973]
+process_mode = 3
+layout_mode = 2
+texture_normal = ExtResource("6_tj7ly")
+texture_pressed = ExtResource("7_pc15v")
+texture_hover = ExtResource("8_opx5w")
+texture_disabled = ExtResource("7_pc15v")
 stretch_mode = 0
 
 [node name="Select_A_Level" type="PanelContainer" parent="Level_Select/Left_Side" unique_id=1686682031]
@@ -894,6 +954,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level_1_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=2127101083]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -939,7 +1000,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 4
-popup/item_0/text = "Select Difficulty"
+popup/item_0/text = "Difficulty"
 popup/item_0/id = 0
 popup/item_1/text = "Easy"
 popup/item_1/id = 1
@@ -952,9 +1013,10 @@ popup/item_3/id = 3
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
+expand_icon = true
 selected = 0
 item_count = 7
-popup/item_0/text = "Select Note Speed"
+popup/item_0/text = "Note Fall Speed"
 popup/item_0/id = 0
 popup/item_1/text = "x0.5"
 popup/item_1/id = 1
@@ -1028,7 +1090,7 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=1112402615]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel" unique_id=1112402615]
 layout_mode = 0
 offset_top = 162.0
 offset_right = 182.0
@@ -1064,7 +1126,7 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=289389052]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel2" unique_id=289389052]
 layout_mode = 0
 offset_top = 162.0
 offset_right = 182.0
@@ -1100,7 +1162,7 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Difficulty_Level2" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=1422599709]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_1_Preview/HBoxContainer/Panel3" unique_id=1422599709]
 layout_mode = 0
 offset_top = 162.0
 offset_right = 182.0
@@ -1112,7 +1174,7 @@ horizontal_alignment = 1
 stream = ExtResource("4_bd18b")
 bus = &"Music"
 
-[node name="Level_2_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1706485269]
+[node name="Level_2_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=766116289]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -1124,42 +1186,41 @@ offset_bottom = 608.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1926868931]
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=30300800]
 layout_mode = 0
 offset_right = 550.0
-offset_bottom = 450.0
+offset_bottom = 382.0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_2_Preview/Panel" unique_id=11544678]
-position = Vector2(280, 222)
-scale = Vector2(0.7, 0.7)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_2_Preview/Panel" unique_id=1854133048]
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_xm641")
-frame_progress = 0.07144714
 script = ExtResource("6_7htk8")
 
-[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1955486974]
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1709434375]
 layout_mode = 0
-offset_left = 158.0
-offset_top = 419.0
-offset_right = 384.0
-offset_bottom = 442.0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
 text = "Level 2"
 horizontal_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=291601687]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=68850117]
 process_mode = 4
 layout_mode = 0
 offset_left = -3.0
-offset_top = 448.0
-offset_right = 552.0
-offset_bottom = 489.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
 
-[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1651585054]
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1066209336]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
 item_count = 4
-popup/item_0/text = "Select Difficulty"
+popup/item_0/text = "Difficulty"
 popup/item_0/id = 0
 popup/item_1/text = "Easy"
 popup/item_1/id = 1
@@ -1168,208 +1229,14 @@ popup/item_2/id = 2
 popup/item_3/text = "Hard"
 popup/item_3/id = 3
 
-[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1048600078]
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1609913016]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
+expand_icon = true
 selected = 0
 item_count = 7
-popup/item_0/text = "Select Note Speed"
-popup/item_0/id = 0
-popup/item_1/text = "x0.5"
-popup/item_1/id = 1
-popup/item_2/text = "x1.0"
-popup/item_2/id = 2
-popup/item_3/text = "x1.5"
-popup/item_3/id = 3
-popup/item_4/text = "x2"
-popup/item_4/id = 4
-popup/item_5/text = "x2.5"
-popup/item_5/id = 5
-popup/item_6/text = "x3"
-popup/item_6/id = 6
-
-[node name="Start_Level_2" type="TextureButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=738893603]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-texture_normal = ExtResource("1_be23h")
-texture_disabled = ExtResource("3_e5q2p")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" unique_id=1140084879]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Start Game"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=742391240]
-layout_mode = 0
-offset_left = -3.0
-offset_top = 490.0
-offset_right = 549.0
-offset_bottom = 646.0
-
-[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=46429876]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1653554320]
-layout_mode = 0
-offset_right = 182.0
-offset_bottom = 23.0
-text = "Easy"
-horizontal_alignment = 1
-
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1240671701]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 27.0
-offset_right = 181.0
-offset_bottom = 50.0
-text = "No Score"
-horizontal_alignment = 1
-
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=905544923]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 50.0
-offset_right = 143.0
-offset_bottom = 156.0
-expand_mode = 1
-
-[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=1175331352]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1800801922]
-layout_mode = 0
-offset_right = 182.0
-offset_bottom = 23.0
-text = "Medium"
-horizontal_alignment = 1
-
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1356268982]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 27.0
-offset_right = 181.0
-offset_bottom = 50.0
-text = "No Score"
-horizontal_alignment = 1
-
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=119467655]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 50.0
-offset_right = 143.0
-offset_bottom = 156.0
-expand_mode = 1
-
-[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=1145016186]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1970675566]
-layout_mode = 0
-offset_right = 182.0
-offset_bottom = 23.0
-text = "Hard"
-horizontal_alignment = 1
-
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=88652707]
-layout_mode = 0
-offset_left = -1.0
-offset_top = 27.0
-offset_right = 181.0
-offset_bottom = 50.0
-text = "No Score"
-horizontal_alignment = 1
-
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1678855286]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 50.0
-offset_right = 143.0
-offset_bottom = 156.0
-expand_mode = 1
-
-[node name="Level_2_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1994082908]
-stream = ExtResource("5_8iuxd")
-bus = &"Music"
-
-[node name="Level_3_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=1511084229]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 602.0
-offset_right = 1114.0
-offset_bottom = 608.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1620329415]
-layout_mode = 0
-offset_right = 550.0
-offset_bottom = 450.0
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_3_Preview/Panel" unique_id=323716935]
-position = Vector2(280, 222)
-scale = Vector2(0.7, 0.7)
-sprite_frames = SubResource("SpriteFrames_i2x27")
-script = ExtResource("6_7htk8")
-
-[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1429408627]
-layout_mode = 0
-offset_left = 160.0
-offset_top = 420.0
-offset_right = 386.0
-offset_bottom = 443.0
-text = "Level 3"
-horizontal_alignment = 1
-
-[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1609487370]
-process_mode = 4
-layout_mode = 0
-offset_left = -3.0
-offset_top = 448.0
-offset_right = 550.0
-offset_bottom = 489.0
-
-[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=916490990]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-selected = 0
-item_count = 4
-popup/item_0/text = "Select Difficulty"
-popup/item_0/id = 0
-popup/item_1/text = "Easy"
-popup/item_1/id = 1
-popup/item_2/text = "Medium"
-popup/item_2/id = 2
-popup/item_3/text = "Hard"
-popup/item_3/id = 3
-
-[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=416162935]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-selected = 0
-item_count = 7
-popup/item_0/text = "Select Note Speed"
+popup/item_0/text = "Note Fall Speed"
 popup/item_0/id = 0
 popup/item_1/text = "x0.5"
 popup/item_1/id = 1
@@ -1381,10 +1248,10 @@ popup/item_4/text = "x2.0"
 popup/item_4/id = 4
 popup/item_5/text = "x2.5"
 popup/item_5/id = 5
-popup/item_6/text = "x3.0"
+popup/item_6/text = "x3"
 popup/item_6/id = 6
 
-[node name="Start_Level_3" type="TextureButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=776197365]
+[node name="Start_Level_2" type="TextureButton" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2" unique_id=1280809350]
 process_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1393,7 +1260,7 @@ texture_disabled = ExtResource("3_e5q2p")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" unique_id=442922877]
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" unique_id=66424401]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -1408,25 +1275,25 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Start Game"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=632942418]
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=330557664]
 layout_mode = 0
-offset_left = -3.0
-offset_top = 490.0
+offset_left = -2.0
+offset_top = 428.0
 offset_right = 549.0
 offset_bottom = 646.0
 
-[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=849283356]
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=697714342]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=179772022]
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1956561500]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 23.0
 text = "Easy"
 horizontal_alignment = 1
 
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=1956435109]
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=1071228035]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 27.0
@@ -1435,7 +1302,7 @@ offset_bottom = 50.0
 text = "No Score"
 horizontal_alignment = 1
 
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=720920983]
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=933943338]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 50.0
@@ -1443,18 +1310,26 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1130654245]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel" unique_id=282813190]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=759957920]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1417138226]
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1241752249]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 23.0
 text = "Medium"
 horizontal_alignment = 1
 
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1682485983]
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=148494899]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 27.0
@@ -1463,7 +1338,7 @@ offset_bottom = 50.0
 text = "No Score"
 horizontal_alignment = 1
 
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1885271777]
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=166030491]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 50.0
@@ -1471,18 +1346,26 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1426994346]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel2" unique_id=1147278490]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer" unique_id=1904555993]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=377361713]
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=274384700]
 layout_mode = 0
 offset_right = 182.0
 offset_bottom = 23.0
 text = "Hard"
 horizontal_alignment = 1
 
-[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=2077907118]
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1701024563]
 layout_mode = 0
 offset_left = -1.0
 offset_top = 27.0
@@ -1491,7 +1374,7 @@ offset_bottom = 50.0
 text = "No Score"
 horizontal_alignment = 1
 
-[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=1346678256]
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=571909766]
 layout_mode = 0
 offset_left = 40.0
 offset_top = 50.0
@@ -1499,7 +1382,894 @@ offset_right = 143.0
 offset_bottom = 156.0
 expand_mode = 1
 
-[node name="Level_3_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=2067199243]
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_2_Preview/HBoxContainer/Panel3" unique_id=1397931576]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Level_2_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_2_Preview" unique_id=1734997261]
+stream = ExtResource("5_8iuxd")
+bus = &"Music"
+
+[node name="Level_3_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=577782261]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=733088414]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 382.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_3_Preview/Panel" unique_id=807017724]
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_i2x27")
+script = ExtResource("6_7htk8")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1124503729]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
+text = "Level 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1794479066]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=1271942957]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=1552758281]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+expand_icon = true
+selected = 0
+item_count = 7
+popup/item_0/text = "Note Fall Speed"
+popup/item_0/id = 0
+popup/item_1/text = "x0.5"
+popup/item_1/id = 1
+popup/item_2/text = "x1.0"
+popup/item_2/id = 2
+popup/item_3/text = "x1.5"
+popup/item_3/id = 3
+popup/item_4/text = "x2.0"
+popup/item_4/id = 4
+popup/item_5/text = "x2.5"
+popup/item_5/id = 5
+popup/item_6/text = "x3"
+popup/item_6/id = 6
+
+[node name="Start_Level_3" type="TextureButton" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2" unique_id=1423368650]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" unique_id=1884190241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1190395249]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 428.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1434979395]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=592621826]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=930925659]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=86571134]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel" unique_id=1604523131]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1374000613]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1066530005]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=618164835]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=1754674636]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel2" unique_id=637024162]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer" unique_id=1759968440]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=407899320]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=741151806]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=1544294516]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_3_Preview/HBoxContainer/Panel3" unique_id=935588953]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Level_3_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_3_Preview" unique_id=1293000665]
+stream = ExtResource("6_io4bi")
+bus = &"Music"
+
+[node name="Level_4_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=931309298]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_4_Preview" unique_id=1169149899]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 382.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_4_Preview/Panel" unique_id=1468110813]
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_m0sg7")
+frame_progress = 0.08102266
+script = ExtResource("6_7htk8")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_4_Preview" unique_id=720919508]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
+text = "Level 1"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_4_Preview" unique_id=125174996]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer2" unique_id=778002216]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer2" unique_id=53394448]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+expand_icon = true
+selected = 0
+item_count = 7
+popup/item_0/text = "Note Fall Speed"
+popup/item_0/id = 0
+popup/item_1/text = "x0.5"
+popup/item_1/id = 1
+popup/item_2/text = "x1.0"
+popup/item_2/id = 2
+popup/item_3/text = "x1.5"
+popup/item_3/id = 3
+popup/item_4/text = "x2.0"
+popup/item_4/id = 4
+popup/item_5/text = "x2.5"
+popup/item_5/id = 5
+popup/item_6/text = "x3"
+popup/item_6/id = 6
+
+[node name="Start_Level_1" type="TextureButton" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer2" unique_id=1514592714]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer2/Start_Level_1" unique_id=147972241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_4_Preview" unique_id=30977899]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 428.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer" unique_id=1534018842]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel" unique_id=1677867658]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel" unique_id=914819970]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel" unique_id=739386181]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel" unique_id=1099586509]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer" unique_id=999561536]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel2" unique_id=685276595]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel2" unique_id=1928312540]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel2" unique_id=1189498955]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel2" unique_id=1462753975]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer" unique_id=2009983536]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel3" unique_id=317712414]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel3" unique_id=1555199412]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel3" unique_id=1088011997]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_4_Preview/HBoxContainer/Panel3" unique_id=1499025898]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Level_1_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_4_Preview" unique_id=765243221]
+stream = ExtResource("4_bd18b")
+bus = &"Music"
+
+[node name="Level_5_Preview2" type="Control" parent="Level_Select/Right_Side" unique_id=1116873821]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_5_Preview2" unique_id=491391097]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 382.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_5_Preview2/Panel" unique_id=844222657]
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_xm641")
+script = ExtResource("6_7htk8")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2" unique_id=735840891]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
+text = "Level 2"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_5_Preview2" unique_id=1772009483]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer2" unique_id=841233564]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer2" unique_id=768095798]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+expand_icon = true
+selected = 0
+item_count = 7
+popup/item_0/text = "Note Fall Speed"
+popup/item_0/id = 0
+popup/item_1/text = "x0.5"
+popup/item_1/id = 1
+popup/item_2/text = "x1.0"
+popup/item_2/id = 2
+popup/item_3/text = "x1.5"
+popup/item_3/id = 3
+popup/item_4/text = "x2.0"
+popup/item_4/id = 4
+popup/item_5/text = "x2.5"
+popup/item_5/id = 5
+popup/item_6/text = "x3"
+popup/item_6/id = 6
+
+[node name="Start_Level_2" type="TextureButton" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer2" unique_id=584068272]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer2/Start_Level_2" unique_id=2137692227]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_5_Preview2" unique_id=1232079602]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 428.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer" unique_id=1199309401]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel" unique_id=39402487]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel" unique_id=1241253830]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel" unique_id=708630022]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel" unique_id=1846013471]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer" unique_id=2096548092]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel2" unique_id=1957533114]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel2" unique_id=2028505164]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel2" unique_id=74102756]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel2" unique_id=1640615796]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer" unique_id=1496336402]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel3" unique_id=1738350557]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel3" unique_id=1750534978]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel3" unique_id=395529984]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_5_Preview2/HBoxContainer/Panel3" unique_id=1819734060]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Level_2_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_5_Preview2" unique_id=1662951586]
+stream = ExtResource("5_8iuxd")
+bus = &"Music"
+
+[node name="Level_6_Preview2" type="Control" parent="Level_Select/Right_Side" unique_id=733145305]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 602.0
+offset_right = 1114.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_6_Preview2" unique_id=777737284]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 382.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Level_Select/Right_Side/Level_6_Preview2/Panel" unique_id=507489532]
+position = Vector2(280, 200)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_i2x27")
+script = ExtResource("6_7htk8")
+
+[node name="Level Name" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2" unique_id=1423459822]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 350.0
+offset_right = 394.0
+offset_bottom = 373.0
+text = "Level 3"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Level_Select/Right_Side/Level_6_Preview2" unique_id=1483870275]
+process_mode = 4
+layout_mode = 0
+offset_left = -3.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 426.0
+
+[node name="Select_Dificulty" type="OptionButton" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer2" unique_id=306331008]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 4
+popup/item_0/text = "Difficulty"
+popup/item_0/id = 0
+popup/item_1/text = "Easy"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Hard"
+popup/item_3/id = 3
+
+[node name="Select_Speed" type="OptionButton" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer2" unique_id=2083809221]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+expand_icon = true
+selected = 0
+item_count = 7
+popup/item_0/text = "Note Fall Speed"
+popup/item_0/id = 0
+popup/item_1/text = "x0.5"
+popup/item_1/id = 1
+popup/item_2/text = "x1.0"
+popup/item_2/id = 2
+popup/item_3/text = "x1.5"
+popup/item_3/id = 3
+popup/item_4/text = "x2.0"
+popup/item_4/id = 4
+popup/item_5/text = "x2.5"
+popup/item_5/id = 5
+popup/item_6/text = "x3"
+popup/item_6/id = 6
+
+[node name="Start_Level_3" type="TextureButton" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer2" unique_id=1673600134]
+process_mode = 3
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_be23h")
+texture_disabled = ExtResource("3_e5q2p")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer2/Start_Level_3" unique_id=1208694156]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Level_Select/Right_Side/Level_6_Preview2" unique_id=957577678]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 428.0
+offset_right = 549.0
+offset_bottom = 646.0
+
+[node name="Panel" type="Panel" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer" unique_id=205854731]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel" unique_id=1631498571]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Easy"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel" unique_id=799561765]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel" unique_id=697627344]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel" unique_id=1403355430]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel2" type="Panel" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer" unique_id=769908201]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel2" unique_id=1674223746]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Medium"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel2" unique_id=160826841]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel2" unique_id=690107327]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel2" unique_id=1588835637]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Panel3" type="Panel" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer" unique_id=401339449]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Difficulty_Level" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel3" unique_id=832186983]
+layout_mode = 0
+offset_right = 182.0
+offset_bottom = 23.0
+text = "Hard"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel3" unique_id=1687836201]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 27.0
+offset_right = 181.0
+offset_bottom = 50.0
+text = "No Score"
+horizontal_alignment = 1
+
+[node name="Rank" type="TextureRect" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel3" unique_id=2135676558]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 50.0
+offset_right = 143.0
+offset_bottom = 156.0
+expand_mode = 1
+
+[node name="Max_Combo" type="Label" parent="Level_Select/Right_Side/Level_6_Preview2/HBoxContainer/Panel3" unique_id=649555606]
+layout_mode = 0
+offset_top = 162.0
+offset_right = 182.0
+offset_bottom = 185.0
+text = "No Max Combo"
+horizontal_alignment = 1
+
+[node name="Level_3_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_6_Preview2" unique_id=152102193]
 stream = ExtResource("6_io4bi")
 bus = &"Music"
 
@@ -1536,6 +2306,13 @@ bus = &"SFX"
 [connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_pressed" binds= [1]]
 [connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_pressed" binds= [2]]
 [connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_3" to="." method="_on_level_pressed" binds= [3]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_4" to="." method="_on_level_pressed" binds= [4]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_5" to="." method="_on_level_pressed" binds= [5]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_6" to="." method="_on_level_pressed" binds= [6]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_7" to="." method="_on_level_pressed" binds= [7]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_8" to="." method="_on_level_pressed" binds= [8]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_9" to="." method="_on_level_pressed" binds= [9]]
+[connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_10" to="." method="_on_level_pressed" binds= [10]]
 [connection signal="pressed" from="Level_Select/Right_Side/Level_1_Preview/HBoxContainer2/Start_Level_1" to="." method="_on_start_level_pressed" binds= [1]]
 [connection signal="pressed" from="Level_Select/Right_Side/Level_2_Preview/HBoxContainer2/Start_Level_2" to="." method="_on_start_level_pressed" binds= [2]]
 [connection signal="pressed" from="Level_Select/Right_Side/Level_3_Preview/HBoxContainer2/Start_Level_3" to="." method="_on_start_level_pressed" binds= [3]]
