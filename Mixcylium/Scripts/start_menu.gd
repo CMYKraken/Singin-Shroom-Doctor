@@ -4,6 +4,7 @@ var Input1
 var Input2
 var Input3
 var Input4
+var Pause
 var MasterVolume = 0.75
 var SFXVolume = 0.75
 var MusicVolume = 0.75
@@ -57,6 +58,7 @@ func _ready():
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = InputMap.action_get_events("Action_2")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = InputMap.action_get_events("Action_3")[0].as_text()
 	$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = InputMap.action_get_events("Action_4")[0].as_text()
+	$Settings_Menu/Controls_Settings/Pause_Container/Label.text = InputMap.action_get_events("Pause")[0].as_text()
 	$Main_Menu.visible = true
 	$Level_Select.visible = false
 	$Settings_Menu.visible = false
@@ -87,6 +89,7 @@ func SaveSettings():
 	ConfigSetting.set_value("Controls","Action_2", InputMap.action_get_events("Action_2")[0])
 	ConfigSetting.set_value("Controls","Action_3", InputMap.action_get_events("Action_3")[0])
 	ConfigSetting.set_value("Controls","Action_4", InputMap.action_get_events("Action_4")[0])
+	ConfigSetting.set_value("Controls","Pause", InputMap.action_get_events("Pause")[0])
 	
 	ConfigSetting.save("user://settings.cfg")
 
@@ -110,6 +113,8 @@ func LoadSettings():
 			InputMap.action_add_event("Action_3",ConfigSetting.get_value("Controls","Action_3"))
 			InputMap.action_erase_events("Action_4")
 			InputMap.action_add_event("Action_4",ConfigSetting.get_value("Controls","Action_4"))
+			InputMap.action_erase_events("Pause")
+			InputMap.action_add_event("Pause",ConfigSetting.get_value("Controls","Pause"))
 		if setting == "General":
 			pass
 
@@ -229,6 +234,15 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			SaveSettings()
 		else:
 			$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = "Key Already Bound"
+	if Pause == true:
+		InputMap.action_erase_events("Pause")
+		if CheckConflict(event) == false:
+			InputMap.action_add_event("Pause",event)
+			$Settings_Menu/Controls_Settings/Pause_Container/Label.text =  event.as_text()
+			Pause = false
+			SaveSettings()
+		else:
+			$Settings_Menu/Controls_Settings/Pause_Container/Label.text = "Key Already Bound"
 
 func CheckConflict(Action):
 	if InputMap.action_has_event("Action_1", Action):
@@ -238,6 +252,8 @@ func CheckConflict(Action):
 	if InputMap.action_has_event("Action_3", Action):
 		return true
 	if InputMap.action_has_event("Action_4", Action):
+		return true
+	if InputMap.action_has_event("Pause", Action):
 		return true
 	return false
 #endregion
@@ -337,15 +353,20 @@ func _on_input_2_pressed():
 	Input2 = true
 	$Settings_Menu/Controls_Settings/Input_2_Container/Label.text = ""
 
-func _on_input_3_pressed() -> void:
+func _on_input_3_pressed():
 	$Button_SFX_Player.play()
 	Input3 = true
 	$Settings_Menu/Controls_Settings/Input_3_Container/Label.text = ""
 
-func _on_input_4_pressed() -> void:
+func _on_input_4_pressed():
 	$Button_SFX_Player.play()
 	Input4 = true
 	$Settings_Menu/Controls_Settings/Input_4_Container/Label.text = ""
+
+func _on_pause_pressed():
+	$Button_SFX_Player.play()
+	Pause = true
+	$Settings_Menu/Controls_Settings/Pause_Container/Label.text = ""
 #endregion
 func _on_back_to_settings_pressed():
 	$Settings_Menu/Settings_Main.visible = true

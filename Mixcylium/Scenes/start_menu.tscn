@@ -183,7 +183,6 @@ grow_vertical = 2
 text = "Exit"
 
 [node name="Settings_Menu" type="Control" parent="." unique_id=1648289953]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -521,7 +520,6 @@ text = "Hit Marker"
 horizontal_alignment = 1
 
 [node name="Controls_Settings" type="Control" parent="Settings_Menu" unique_id=1685011507]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -570,10 +568,10 @@ horizontal_alignment = 1
 
 [node name="Input 3" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1929259987]
 layout_mode = 0
-offset_left = 408.0
-offset_top = 331.0
-offset_right = 603.0
-offset_bottom = 391.0
+offset_left = 410.0
+offset_top = 325.0
+offset_right = 605.0
+offset_bottom = 385.0
 texture_normal = ExtResource("1_be23h")
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 3" unique_id=1342649351]
@@ -593,10 +591,10 @@ text = "Input 3"
 
 [node name="Input 4" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1494398120]
 layout_mode = 0
-offset_left = 413.0
-offset_top = 414.0
-offset_right = 608.0
-offset_bottom = 474.0
+offset_left = 410.0
+offset_top = 400.0
+offset_right = 605.0
+offset_bottom = 460.0
 texture_normal = ExtResource("1_be23h")
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 4" unique_id=1983665052]
@@ -616,10 +614,10 @@ text = "Input 4"
 
 [node name="Input_3_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=267386062]
 layout_mode = 0
-offset_left = 633.0
-offset_top = 334.0
-offset_right = 687.0
-offset_bottom = 384.0
+offset_left = 630.0
+offset_top = 330.0
+offset_right = 684.0
+offset_bottom = 380.0
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_3_Container" unique_id=2129194060]
 layout_mode = 2
@@ -627,10 +625,10 @@ horizontal_alignment = 1
 
 [node name="Input_4_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=1875413200]
 layout_mode = 0
-offset_left = 634.0
-offset_top = 417.0
-offset_right = 688.0
-offset_bottom = 467.0
+offset_left = 630.0
+offset_top = 405.0
+offset_right = 684.0
+offset_bottom = 455.0
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_4_Container" unique_id=1804665439]
 layout_mode = 2
@@ -639,9 +637,9 @@ horizontal_alignment = 1
 [node name="Input 1" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1871593581]
 layout_mode = 0
 offset_left = 410.0
-offset_top = 174.0
+offset_top = 175.0
 offset_right = 605.0
-offset_bottom = 234.0
+offset_bottom = 235.0
 texture_normal = ExtResource("1_be23h")
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 1" unique_id=402000910]
@@ -662,9 +660,9 @@ text = "Input 1"
 [node name="Input 2" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=1322835758]
 layout_mode = 0
 offset_left = 410.0
-offset_top = 254.0
+offset_top = 250.0
 offset_right = 605.0
-offset_bottom = 314.0
+offset_bottom = 310.0
 texture_normal = ExtResource("1_be23h")
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input 2" unique_id=971626814]
@@ -684,10 +682,10 @@ text = "Input 2"
 
 [node name="Input_1_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=817703775]
 layout_mode = 0
-offset_left = 631.0
-offset_top = 172.0
-offset_right = 685.0
-offset_bottom = 222.0
+offset_left = 630.0
+offset_top = 180.0
+offset_right = 684.0
+offset_bottom = 230.0
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_1_Container" unique_id=1502176237]
 layout_mode = 2
@@ -696,15 +694,50 @@ horizontal_alignment = 1
 [node name="Input_2_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=2140411697]
 layout_mode = 0
 offset_left = 630.0
-offset_top = 254.0
+offset_top = 255.0
 offset_right = 684.0
-offset_bottom = 304.0
+offset_bottom = 305.0
 
 [node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Input_2_Container" unique_id=628163413]
 layout_mode = 2
 horizontal_alignment = 1
 
+[node name="Pause" type="TextureButton" parent="Settings_Menu/Controls_Settings" unique_id=472651349]
+layout_mode = 0
+offset_left = 410.0
+offset_top = 100.0
+offset_right = 605.0
+offset_bottom = 160.0
+texture_normal = ExtResource("1_be23h")
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Pause" unique_id=1810342562]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pause"
+
+[node name="Pause_Container" type="PanelContainer" parent="Settings_Menu/Controls_Settings" unique_id=298518827]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 105.0
+offset_right = 684.0
+offset_bottom = 155.0
+
+[node name="Label" type="Label" parent="Settings_Menu/Controls_Settings/Pause_Container" unique_id=441209138]
+layout_mode = 2
+horizontal_alignment = 1
+
 [node name="Level_Select" type="Control" parent="." unique_id=2033108005]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -954,7 +987,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level_1_Preview" type="Control" parent="Level_Select/Right_Side" unique_id=2127101083]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -5389,6 +5421,7 @@ bus = &"SFX"
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 4" to="." method="_on_input_4_pressed"]
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 1" to="." method="_on_input_1_pressed"]
 [connection signal="pressed" from="Settings_Menu/Controls_Settings/Input 2" to="." method="_on_input_2_pressed"]
+[connection signal="pressed" from="Settings_Menu/Controls_Settings/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="Level_Select/Left_Side/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]
 [connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_1" to="." method="_on_level_pressed" binds= [1]]
 [connection signal="pressed" from="Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_2" to="." method="_on_level_pressed" binds= [2]]
