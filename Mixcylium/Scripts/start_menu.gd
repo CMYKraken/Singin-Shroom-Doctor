@@ -11,7 +11,7 @@ var MusicBeatsVolume = 0.75
 var HitMarkerVolume = 0.75
 var ConfigScore = ConfigFile.new()
 var ConfigSetting = ConfigFile.new()
-var ConfigLevels = ConfigFile.new()
+var ConfigSecret = ConfigFile.new()
 var SecretCount = 5
 var LevelCount = 20
 var LevelSet = 4
@@ -48,8 +48,9 @@ var ScoreData = {
 
 func _ready():
 	LoadSettings()
-	Update_Volume()
 	LoadScore()
+	LoadSecret()
+	Update_Volume()
 	Update_Scores()
 	Unlock_Check()
 	$Settings_Menu/Controls_Settings/Input_1_Container/Label.text = InputMap.action_get_events("Action_1")[0].as_text()
@@ -166,6 +167,22 @@ func Update_Scores():
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
 	SaveScore()
 	print_debug("Updated")
+#endregion
+#region Secrets
+func SaveSecret():
+	for i in SecretCount:
+		ConfigSecret.set_value("Secret",str(i),SecretData.get("Secret"+str(i+1)))
+	ConfigSecret.save("user://secret.cfg")
+
+func LoadSecret():
+	var SecretFile = ConfigScore.load("user://secret.cfg")
+	if SecretFile != OK:
+		return
+	for i in SecretCount:
+		var SecretVal = ConfigSecret.get_value("Secret",str(i))
+		var SecretDict = {"Secret_"+str(i+1):SecretVal}
+		SecretData.merge(SecretDict, true)
+
 #endregion
 #endregion
 
