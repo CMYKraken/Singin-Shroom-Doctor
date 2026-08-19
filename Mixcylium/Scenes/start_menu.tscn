@@ -5356,7 +5356,7 @@ offset_bottom = 185.0
 text = "No Max Combo"
 horizontal_alignment = 1
 
-[node name="Level_2_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_20_Preview" unique_id=1688125235]
+[node name="Level_20_Preview_Player" type="AudioStreamPlayer" parent="Level_Select/Right_Side/Level_20_Preview" unique_id=1688125235]
 stream = ExtResource("5_8iuxd")
 bus = &"Music"
 
@@ -5429,3 +5429,4 @@ bus = &"SFX"
 [connection signal="pressed" from="Level_Select/Right_Side/Level_17_Preview/HBoxContainer2/Start_Level_17" to="." method="_on_start_level_pressed" binds= [17]]
 [connection signal="pressed" from="Level_Select/Right_Side/Level_18_Preview/HBoxContainer2/Start_Level_18" to="." method="_on_start_level_pressed" binds= [18]]
 [connection signal="pressed" from="Level_Select/Right_Side/Level_19_Preview/HBoxContainer2/Start_Level_19" to="." method="_on_start_level_pressed" binds= [19]]
+[connection signal="pressed" from="Level_Select/Right_Side/Level_20_Preview/HBoxContainer2/Start_Level_20" to="." method="_on_start_level_pressed" binds= [20]]

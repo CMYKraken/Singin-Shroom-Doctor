@@ -23,26 +23,26 @@ var SecretData = {
 	"Secret_5":false
 	}
 var ScoreData = {
-	"Level_1":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_2":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_3":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_4":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_5":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_6":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_7":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_8":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_9":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_10":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_11":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_12":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_13":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_14":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_15":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_16":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_17":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_18":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_19":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]},
-	"Level_20":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0]}
+	"Level_1":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_2":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_3":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_4":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_5":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_6":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_7":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_8":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_9":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_10":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_11":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_12":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_13":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_14":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_15":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_16":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_17":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_18":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_19":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]},
+	"Level_20":{"Easy":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Medium":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0],"Hard":[0,load("res://Mixcylium/ArtAssets/Grades/F.png"),0,0]}
 	}
 
 
@@ -64,9 +64,9 @@ func _ready():
 	$Settings_Menu/General_Settings.visible = false
 	$Settings_Menu/Volume_Settings.visible = false
 	$Settings_Menu/Controls_Settings.visible = false
+	for i in LevelCount:
+		get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview").visible = false
 	$Level_Select/Right_Side/Level_1_Preview.visible = true
-	$Level_Select/Right_Side/Level_2_Preview.visible = false
-	$Level_Select/Right_Side/Level_3_Preview.visible = false
 
 
 func _process(delta):
@@ -142,6 +142,7 @@ func SaveScore():
 			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_score", ScoreData["Level_"+str(I+1)][Diff][0])
 			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_grade", ScoreData["Level_"+str(I+1)][Diff][1])
 			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_grade_id", ScoreData["Level_"+str(I+1)][Diff][2])
+			ConfigScore.set_value("Level_"+str(I+1)+Diff, "Level_combo", ScoreData["Level_"+str(I+1)][Diff][3])
 	ConfigScore.save("user://scores.cfg")
 
 func LoadScore():
@@ -149,12 +150,13 @@ func LoadScore():
 	if ScoreFile != OK:
 		return
 	for level in ConfigScore.get_sections():
-		var LevelName = ConfigScore.get_value(level,"Level_name")
-		var LevelDiff = ConfigScore.get_value(level, "Level_difficulty")
-		var LevelScore = ConfigScore.get_value(level, "Level_score")
-		var LevelGrade = ConfigScore.get_value(level, "Level_grade")
-		var LevelGradeID = ConfigScore.get_value(level, "Level_grade_id")
-		var LevelDict = {LevelDiff: [LevelScore,LevelGrade,LevelGradeID]}
+		var LevelName = ConfigScore.get_value(level,"Level_name",0)
+		var LevelDiff = ConfigScore.get_value(level, "Level_difficulty",0)
+		var LevelScore = ConfigScore.get_value(level, "Level_score",0)
+		var LevelGrade = ConfigScore.get_value(level, "Level_grade",0)
+		var LevelGradeID = ConfigScore.get_value(level, "Level_grade_id",0)
+		var LevelCombo = ConfigScore.get_value(level, "Level_combo",0)
+		var LevelDict = {LevelDiff: [LevelScore,LevelGrade,LevelGradeID,LevelCombo]}
 		ScoreData[LevelName].merge(LevelDict, true)
 
 func Update_Scores():
@@ -165,6 +167,9 @@ func Update_Scores():
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel/Rank").texture = ScoreData["Level_"+str(I+1)]["Easy"][1]
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel2/Rank").texture = ScoreData["Level_"+str(I+1)]["Medium"][1]
 		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Rank").texture = ScoreData["Level_"+str(I+1)]["Hard"][1]
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel/Max_Combo").text = str(ScoreData["Level_"+str(I+1)]["Easy"][3])
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel2/Max_Combo").text = str(ScoreData["Level_"+str(I+1)]["Medium"][3])
+		get_node("Level_Select/Right_Side/Level_"+str(I+1)+"_Preview/HBoxContainer/Panel3/Max_Combo").text = str(ScoreData["Level_"+str(I+1)]["Hard"][3])
 	SaveScore()
 	print_debug("Updated")
 #endregion
@@ -179,7 +184,7 @@ func LoadSecret():
 	if SecretFile != OK:
 		return
 	for i in SecretCount:
-		var SecretVal = ConfigSecret.get_value("Secret",str(i))
+		var SecretVal = ConfigSecret.get_value("Secret",str(i),0)
 		var SecretDict = {"Secret_"+str(i+1):SecretVal}
 		SecretData.merge(SecretDict, true)
 
@@ -360,7 +365,6 @@ func _on_level_pressed(type : int):
 		else:
 			get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview").visible = false
 			get_node("Level_Select/Right_Side/Level_"+str(i+1)+"_Preview/Level_"+str(i+1)+"_Preview_Player").stop()
-
 #endregion
 #region Button Check
 func Button_Check():
@@ -414,3 +418,4 @@ func Unlock_Check():
 			get_node("Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_"+str(d+16)).visible = true
 		else:
 			get_node("Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_"+str(d+16)).visible = false
+#endregion

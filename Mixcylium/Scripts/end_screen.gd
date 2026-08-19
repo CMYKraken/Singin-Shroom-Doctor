@@ -2,6 +2,7 @@ extends Control
 var Grade
 var GradeID
 var Score
+var Max_Combo
 var Max_Score
 var Score_Percent
 var Difficulty
@@ -15,12 +16,13 @@ func _ready():
 	Difficulty = get_parent().Difficulty
 	Level_Number = get_parent().Level_Number
 	Score = get_parent().get_child(1).score
+	Max_Combo = get_parent().get_child(1).Maxcombo
 	Max_Score = (get_parent().noteData.beatColumn.size() * 555) * 3
 	Score_Percent = float(float(Score)/float(Max_Score))
 	print_debug(Max_Score)
 	print_debug(Score_Percent)
 	if Death != true:
-		#Grading
+		#region Grading
 		if Score_Percent >= 1:
 			Grade = load("res://Mixcylium/ArtAssets/Grades/S++.png")
 			GradeID = 7
@@ -54,7 +56,7 @@ func _ready():
 			GradeID = 0
 			$PanelContainer/VBoxContainer/TextureRect.texture = Grade
 		
-		
+		#endregion
 		if Score_Percent >= 0.4 and Score_Percent < 0.8:
 			$PanelContainer/VBoxContainer/Win_Lose.text = "Win"
 			$Win.play()
@@ -80,6 +82,11 @@ func _ready():
 			get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][2] = GradeID
 			get_parent().get_parent().Update_Scores()
 			get_parent().get_parent().Unlock_Check()
+		
+		if Max_Combo > get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][3]:
+			get_parent().get_parent().ScoreData["Level_"+str(Level_Number)][Difficulty][3] =Max_Combo
+			get_parent().get_parent().Update_Scores()
+		
 	else:
 		$PanelContainer/VBoxContainer/Win_Lose.text = "You ran out of health"
 		$Lose.play()
