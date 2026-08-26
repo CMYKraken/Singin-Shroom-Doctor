@@ -9,14 +9,17 @@ func _ready():
 			if player.combo > player.Maxcombo:
 				player.Maxcombo = player.combo
 			player.combo = 0
+			player.Miss += 1
 			if levelManager.GetHealth() > -1:
 				levelManager.SetHealth(-5);
 		333:
 			player.combo += 1
+			player.Ok += 1
 			if levelManager.GetHealth() < 50:
 				levelManager.SetHealth(1);
 		555:
 			player.combo += 1
+			player.Perfect += 1
 			if levelManager.GetHealth() < 45:
 				levelManager.SetHealth(5);
 			elif levelManager.GetHealth() < 50:

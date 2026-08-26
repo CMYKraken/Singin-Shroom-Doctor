@@ -4,6 +4,9 @@ using System.Diagnostics;
 
 public partial class PlayerController : Node
 {
+    public int Ok = 0;
+    public int Miss = 0;
+    public int Perfect = 0;
     public int score = 0;
     public int combo = 0;
     public int Maxcombo = 0;
