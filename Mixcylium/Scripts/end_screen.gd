@@ -8,6 +8,7 @@ var Score_Percent
 var Difficulty
 var Level_Number
 var Death
+var Player
 
 
 func _ready():
@@ -15,12 +16,16 @@ func _ready():
 	Death = get_parent().Dead
 	Difficulty = get_parent().Difficulty
 	Level_Number = get_parent().Level_Number
-	Score = get_parent().get_child(1).score
-	Max_Combo = get_parent().get_child(1).Maxcombo
+	Player = get_parent().get_child(1)
+	Score = Player.score
+	if Player.combo > Player.Maxcombo:
+		Player.Maxcombo = Player.combo
+	Max_Combo = Player.Maxcombo
 	Max_Score = (get_parent().noteData.beatColumn.size() * 555) * 3
 	Score_Percent = float(float(Score)/float(Max_Score))
 	print_debug(Max_Score)
 	print_debug(Score_Percent)
+	
 	if Death != true:
 		#region Grading
 		if Score_Percent >= 1:
@@ -66,8 +71,8 @@ func _ready():
 		else:
 			$PanelContainer/VBoxContainer/Win_Lose.text = "Lose"
 			$Lose.play()
-		$PanelContainer/VBoxContainer/Score.text = "Score: "+str(Score)
-		$PanelContainer/VBoxContainer/Max_Combo.text = "Max Combo: "+str(Max_Combo)
+		$PanelContainer/VBoxContainer/Score.text = "Score: "+str(Score)+"   Max Combo: "+str(Max_Combo)
+		$PanelContainer/VBoxContainer/Max_Combo.text = "Miss: "+str(Player.Miss)+"   Ok: "+str(Player.Ok)+"   Perfect: "+str(Player.Perfect)
 		#Setting High Score
 		match Difficulty:
 			0:
@@ -91,8 +96,8 @@ func _ready():
 	else:
 		$PanelContainer/VBoxContainer/Win_Lose.text = "You ran out of health"
 		$Lose.play()
-		$PanelContainer/VBoxContainer/Score.text = str(Score)
-		$PanelContainer/VBoxContainer/Max_Combo.text = "Max Combo: "+str(Max_Combo)
+		$PanelContainer/VBoxContainer/Score.text = "Score: "+str(Score)+"   Max Combo: "+str(Max_Combo)
+		$PanelContainer/VBoxContainer/Max_Combo.text = "Miss: "+str(Player.Miss)+"   Ok: "+str(Player.Ok)+"   Perfect: "+str(Player.Perfect)
 		$PanelContainer/VBoxContainer/TextureRect.texture = load("res://Mixcylium/ArtAssets/Grades/F.png") #Replace with sad mushroom or something to represent loss
 
 

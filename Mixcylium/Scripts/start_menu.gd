@@ -416,14 +416,15 @@ func _on_start_level_pressed(type: int):
 func Unlock_Check():
 	for i in LevelSet:
 		var p = 3*(i+2)
+		var z = 3*(i+1)
 		var l1 = false 
 		var l2 = false
 		var l3 = false
-		if ScoreData["Level_"+str(i+1)]["Easy"][2] > 0 or ScoreData["Level_"+str(i+1)]["Medium"][2] > 0 or ScoreData["Level_"+str(i+1)]["Hard"][2] > 0:
+		if ScoreData["Level_"+str(z-2)]["Easy"][2] > 0 or ScoreData["Level_"+str(z-2)]["Medium"][2] > 0 or ScoreData["Level_"+str(z-2)]["Hard"][2] > 0:
 			l1 = true
-		if ScoreData["Level_"+str(i+2)]["Easy"][2] > 0 or ScoreData["Level_"+str(i+2)]["Medium"][2] > 0 or ScoreData["Level_"+str(i+2)]["Hard"][2] > 0:
+		if ScoreData["Level_"+str(z-1)]["Easy"][2] > 0 or ScoreData["Level_"+str(z-1)]["Medium"][2] > 0 or ScoreData["Level_"+str(z-1)]["Hard"][2] > 0:
 			l2 = true
-		if ScoreData["Level_"+str(i+3)]["Easy"][2] > 0 or ScoreData["Level_"+str(i+3)]["Medium"][2] > 0 or ScoreData["Level_"+str(i+3)]["Hard"][2] > 0:
+		if ScoreData["Level_"+str(z)]["Easy"][2] > 0 or ScoreData["Level_"+str(z)]["Medium"][2] > 0 or ScoreData["Level_"+str(z)]["Hard"][2] > 0:
 			l3 = true
 		if l1 and l2 and l3:
 			get_node("Level_Select/Left_Side/Level_Options/ScrollContainer/VBoxContainer/Level_"+str(p-2)).disabled = false
