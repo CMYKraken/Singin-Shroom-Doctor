@@ -66,7 +66,8 @@ func _ready():
 		else:
 			$PanelContainer/VBoxContainer/Win_Lose.text = "Lose"
 			$Lose.play()
-		$PanelContainer/VBoxContainer/Score.text = str(Score)
+		$PanelContainer/VBoxContainer/Score.text = "Score: "+str(Score)
+		$PanelContainer/VBoxContainer/Max_Combo.text = "Max Combo: "+str(Max_Combo)
 		#Setting High Score
 		match Difficulty:
 			0:
@@ -91,6 +92,7 @@ func _ready():
 		$PanelContainer/VBoxContainer/Win_Lose.text = "You ran out of health"
 		$Lose.play()
 		$PanelContainer/VBoxContainer/Score.text = str(Score)
+		$PanelContainer/VBoxContainer/Max_Combo.text = "Max Combo: "+str(Max_Combo)
 		$PanelContainer/VBoxContainer/TextureRect.texture = load("res://Mixcylium/ArtAssets/Grades/F.png") #Replace with sad mushroom or something to represent loss
 
 
@@ -102,6 +104,6 @@ func _on_back_to_menu_pressed():
 
 
 func _on_replay_pressed():
-	get_tree().get_root().get_child(0).call("_on_start_level_"+str(Level_Number)+"_pressed")
+	get_tree().get_root().get_child(0)._on_start_level_pressed(Level_Number)
 	get_tree().paused = false
 	get_parent().queue_free()

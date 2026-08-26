@@ -6,7 +6,7 @@ func _ready():
 	var player = levelManager.get_child(1)
 	match get_parent().score:
 		0:
-			if player.combo < player.Maxcombo:
+			if player.combo > player.Maxcombo:
 				player.Maxcombo = player.combo
 			player.combo = 0
 			if levelManager.GetHealth() > -1:

@@ -37,6 +37,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 30
 horizontal_alignment = 1
 
+[node name="Max_Combo" type="Label" parent="PanelContainer/VBoxContainer" unique_id=415697164]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+
 [node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer" unique_id=442358892]
 layout_mode = 2
 size_flags_vertical = 3

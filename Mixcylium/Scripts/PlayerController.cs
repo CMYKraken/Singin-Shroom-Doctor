@@ -25,7 +25,7 @@ public partial class PlayerController : Node
         }
         if (scoreMulti <= 5 && combo <= 40)
         {
-            scoreMulti = (double)combo / 10f + 1f;
+            scoreMulti = ((double)combo / 10f) + 1f;
         }
         else if (scoreMulti <= 5 && combo > 40)
         {

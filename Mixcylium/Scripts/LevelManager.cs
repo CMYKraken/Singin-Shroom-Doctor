@@ -134,5 +134,5 @@ public partial class LevelManager : Node3D
 	{
 		PackedScene sceneLoad = ResourceLoader.Load<PackedScene>(sceneReferencePaths[(int)sceneToLoad]);
 		AddChild(sceneLoad.Instantiate());
-	}
+	}	
 }
